@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Map - Brain-Based Practice: From Understanding to Action</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 15px; line-height: 1.6; color: #222; background: #f8f9fa; padding: 24px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  h1 { font-family: 'Lexend', sans-serif; font-size: 24px; color: #1a3a6b; margin-bottom: 8px; }
+  h2 { font-family: 'Lexend', sans-serif; font-size: 20px; color: #1a3a6b; margin-top: 32px; margin-bottom: 12px; }
+
+  .legend { display: flex; gap: 20px; margin: 16px 0 24px; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 14px; height: 14px; border-radius: 3px; }
+  .dot-have { background: #22c55e; }
+  .dot-partial { background: #f59e0b; }
+  .dot-missing { background: #ef4444; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 32px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  th { background: #1a3a6b; color: #fff; font-family: 'Lexend', sans-serif; font-size: 13px; font-weight: 600; padding: 12px 14px; text-align: left; }
+  td { padding: 12px 14px; border-bottom: 1px solid #eee; vertical-align: top; font-size: 14px; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: #f7f9fc; }
+
+  .status-have { color: #16a34a; font-weight: 600; }
+  .status-partial { color: #d97706; font-weight: 600; }
+  .status-missing { color: #dc2626; font-weight: 600; }
+
+  .step-header td { background: #eef2f7; font-family: 'Lexend', sans-serif; font-weight: 600; font-size: 15px; color: #1a3a6b; }
+  .step-header-why td { background: #fef3c7; font-family: 'Lexend', sans-serif; font-weight: 600; font-size: 15px; color: #92400e; }
+
+  .note { font-size: 13px; color: #666; font-style: italic; }
+  .source { font-size: 12px; color: #888; }
+
+  .summary-box { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); margin-top: 24px; }
+  .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .summary-card { padding: 16px; border-radius: 6px; text-align: center; }
+  .summary-card.green { background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .summary-card.yellow { background: #fffbeb; border: 1px solid #fde68a; }
+  .summary-card.red { background: #fef2f2; border: 1px solid #fecaca; }
+  .summary-card .num { font-family: 'Lexend', sans-serif; font-size: 28px; font-weight: 700; }
+  .summary-card .label { font-size: 13px; color: #555; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Content Map: Brain-Based Practice Journey</h1>
+<p>What we have, what is partial, and what is missing for each step of the learning journey.</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot dot-have"></div> Have content/resource</div>
+  <div class="legend-item"><div class="dot dot-partial"></div> Partial or needs updating</div>
+  <div class="legend-item"><div class="dot dot-missing"></div> Missing or needs to be created</div>
+</div>
+
+<div class="summary-box">
+  <h2 style="margin-top: 0;">Summary</h2>
+  <div class="summary-grid">
+    <div class="summary-card green">
+      <div class="num" style="color: #16a34a;">18</div>
+      <div class="label">Content items we have</div>
+    </div>
+    <div class="summary-card yellow">
+      <div class="num" style="color: #d97706;">8</div>
+      <div class="label">Partial or needs rework</div>
+    </div>
+    <div class="summary-card red">
+      <div class="num" style="color: #dc2626;">9</div>
+      <div class="label">Missing or needs creation</div>
+    </div>
+  </div>
+</div>
+
+<table>
+<thead>
+  <tr>
+    <th style="width: 12%;">Pillar</th>
+    <th style="width: 30%;">What Would Go Here</th>
+    <th style="width: 8%;">Status</th>
+    <th style="width: 25%;">What We Have</th>
+    <th style="width: 25%;">What is Missing</th>
+  </tr>
+</thead>
+<tbody>
+
+<!-- STEP 0 -->
+<tr class="step-header-why"><td colspan="5">Step 0: Why This Matters</td></tr>
+
+<tr>
+  <td>Learn</td>
+  <td>Content explaining why brain-based practice matters, why standard training falls short</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"Benefits of Becoming a Brain-Based Informed Mental Health Clinician" handout (from TFC Starting the Path)<br><span class="source">Source: FC starting-the-path</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Learn</td>
+  <td>Plain language version of the benefits handout</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Plain Language Wording section on FC Starting the Path page<br><span class="source">Source: FC starting-the-path</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Reflect</td>
+  <td>Reflective questions for clinicians entering the journey</td>
+  <td><span class="status-missing">MISSING</span></td>
+  <td></td>
+  <td>Need 2-3 reflective questions like "Think of a client where nothing you tried worked. What questions were you asking about why?"</td>
+</tr>
+<tr>
+  <td>Apply</td>
+  <td>A practical tool or handout to take into your practice</td>
+  <td><span class="status-partial">PARTIAL</span></td>
+  <td>The benefits handout could serve this role</td>
+  <td>Consider a "Brain-Based Readiness Checklist" or quick worksheet</td>
+</tr>
+<tr>
+  <td>Check In</td>
+  <td>Self-assessment items for this step</td>
+  <td><span class="status-partial">PARTIAL</span></td>
+  <td>The full 50-item self-assessment exists but is not broken out by step</td>
+  <td>Need to map specific self-assessment items to this step, or create a quick 3-5 question check</td>
+</tr>
+
+<!-- STEP 1 -->
+<tr class="step-header"><td colspan="5">Step 1: Understanding the Brain</td></tr>
+
+<tr>
+  <td>Learn</td>
+  <td>Webinars and courses on brain development, FASD, neurobiology</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>3 on-demand webinars:<br>1. FASD: What Is It and What Do We Do About It?<br>2. Importance of Screening for PAE<br>3. Mental Health through a Brain-Based Lens<br><span class="source">Source: BBC Foundational Knowledge + FC Education (same content)</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Learn</td>
+  <td>Florida Center Training Institute course catalog</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Embedded course catalog with live and recorded trainings<br><span class="source">Source: BBC Foundational Knowledge + FC Education (same embed)</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Reflect</td>
+  <td>Reflective questions about foundational knowledge</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"When a client's behavior frustrates you, what is your first instinct about why, and where did that instinct come from?"<br><span class="source">Source: BBC Foundational Knowledge</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Apply</td>
+  <td>Handout or tool for this step</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Accessible Language Handout (collapsible on BBC page)<br><span class="source">Source: BBC Foundational Knowledge</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Check In</td>
+  <td>Self-assessment items for foundational knowledge</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Self-assessment Section 1: Foundational Knowledge (5 items)<br><span class="source">Source: BBC Self-Assessment page</span></td>
+  <td>Need to extract and present separately for this step</td>
+</tr>
+
+<!-- STEP 2 -->
+<tr class="step-header"><td colspan="5">Step 2: Trauma, FASD, and the Brain</td></tr>
+
+<tr>
+  <td>Learn</td>
+  <td>Content on trauma-brain intersection, PAE, bottom-up approaches</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Full page text on BBC Brain-Based Fundamentals: trauma integration, informed vs responsive, what makes this hard<br><span class="source">Source: BBC Brain-Based Fundamentals</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Learn</td>
+  <td>Webinars for this step</td>
+  <td><span class="status-missing">MISSING</span></td>
+  <td>BBC page has "On-Demand Webinars" section but it is empty, says "Webinar" with no content</td>
+  <td>Need webinar content for trauma + FASD integration</td>
+</tr>
+<tr>
+  <td>Reflect</td>
+  <td>Reflective questions about trauma and brain differences</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"Think of a client whose trauma history and brain differences felt impossible to hold at the same time. What did you reach for, and did it fit?"<br><span class="source">Source: BBC Brain-Based Fundamentals</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Apply</td>
+  <td>Handout or tool</td>
+  <td><span class="status-missing">MISSING</span></td>
+  <td>BBC page has "Additional Resources" table but it is empty (Resource Title / Description / Link placeholders only)</td>
+  <td>Need a handout or tool for trauma + brain integration</td>
+</tr>
+<tr>
+  <td>Check In</td>
+  <td>Self-assessment items</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Self-assessment Section 2: Trauma Integration (5 items) + Section 3: PAE Understanding (5 items)<br><span class="source">Source: BBC Self-Assessment page</span></td>
+  <td>Need to extract and present separately</td>
+</tr>
+
+<!-- STEP 3 -->
+<tr class="step-header"><td colspan="5">Step 3: Seeing the Brain in Your Clients</td></tr>
+
+<tr>
+  <td>Learn</td>
+  <td>Assessment content, FASD screening, evaluation interpretation</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Full page text on BBC Assessment + FC Assessment with plain language version<br><span class="source">Source: BBC Assessment + FC Assessment</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Learn</td>
+  <td>Webinars for assessment</td>
+  <td><span class="status-missing">MISSING</span></td>
+  <td>BBC page has "On-Demand Webinars" section but only shows "Webinar" placeholder</td>
+  <td>Need webinar content for brain-based assessment</td>
+</tr>
+<tr>
+  <td>Reflect</td>
+  <td>Reflective questions about assessment</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"How often does your intake process screen for prenatal alcohol exposure?"<br><span class="source">Source: BBC Assessment</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Apply</td>
+  <td>Assessment handout/tool</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"Evidence Based Assessments for Brain Based Mental Health Treatment" PDF (4 pages) + FC plain language version<br><span class="source">Source: BBC Assessment + FC Assessment</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Check In</td>
+  <td>Self-assessment items</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Self-assessment Section 6: Case Conceptualization (5 items)<br><span class="source">Source: BBC Self-Assessment page</span></td>
+  <td>Need to extract and present separately</td>
+</tr>
+
+<!-- STEP 4 -->
+<tr class="step-header"><td colspan="5">Step 4: Planning with the Brain in Mind</td></tr>
+
+<tr>
+  <td>Learn</td>
+  <td>Treatment planning content</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Full page text on BBC Treatment Planning + FC Planning with plain language version<br><span class="source">Source: BBC Treatment Planning + FC Planning</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Learn</td>
+  <td>Webinars for treatment planning</td>
+  <td><span class="status-missing">MISSING</span></td>
+  <td>BBC page has "Webinars" section but only shows "Webinar" placeholder</td>
+  <td>Need webinar content for brain-based treatment planning</td>
+</tr>
+<tr>
+  <td>Reflect</td>
+  <td>Reflective questions about treatment planning</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"Think of a treatment plan you wrote in the last month. How much of it assumed the client's brain could do things it might not be able to do?"<br><span class="source">Source: BBC Treatment Planning</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Apply</td>
+  <td>Treatment planning handout/tool</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"Creating a Brain-Based Treatment Plan" PDF (2 pages) + "Tips" collapsible + "Accessible Language Handout" + FC plain language version<br><span class="source">Source: BBC Treatment Planning + FC Planning</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Check In</td>
+  <td>Self-assessment items</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Self-assessment Section 4: Cause-Effect Reasoning (5 items) + Section 5: Client Education (5 items)<br><span class="source">Source: BBC Self-Assessment page</span></td>
+  <td>Need to extract and present separately</td>
+</tr>
+
+<!-- STEP 5 -->
+<tr class="step-header"><td colspan="5">Step 5: Adapting Your Approach</td></tr>
+
+<tr>
+  <td>Learn</td>
+  <td>Content on adapting CBT, DBT, TBRI, PCIT</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Full page text on BBC Therapeutic Strategies + FC Treatment with plain language version<br><span class="source">Source: BBC Therapeutic Strategies + FC Treatment</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Learn</td>
+  <td>Webinars for therapeutic strategies</td>
+  <td><span class="status-missing">MISSING</span></td>
+  <td>BBC page says "Additional training resources for this stage are in development"</td>
+  <td>Need webinar content for adapting therapeutic modalities</td>
+</tr>
+<tr>
+  <td>Reflect</td>
+  <td>Reflective questions</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"When a session does not go as planned, do you adjust your objective or ask the client to adjust their capacity?"<br><span class="source">Source: BBC Therapeutic Strategies</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Apply</td>
+  <td>Treatment adaptations handout</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"Evidenced Based Treatments and Sample Accommodations" PDF (2 pages) + collapsible accessible language version<br><span class="source">Source: BBC Therapeutic Strategies + FC Treatment</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Check In</td>
+  <td>Self-assessment items</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Self-assessment Section 8: Real-Time Adaptation (5 items) + Section 9: Intervention Modification (5 items)<br><span class="source">Source: BBC Self-Assessment page</span></td>
+  <td>Need to extract and present separately</td>
+</tr>
+
+<!-- STEP 6 -->
+<tr class="step-header"><td colspan="5">Step 6: Growing Together</td></tr>
+
+<tr>
+  <td>Learn</td>
+  <td>Content on reflective supervision, professional community</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Full page text on BBC Community + FC Community: reflective supervision, from theory to practice, Mental Health Work Group goals<br><span class="source">Source: BBC Community + FC Community (same content)</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Reflect</td>
+  <td>Reflective questions about professional growth</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>"Who do you call when you are stuck with a complex client? Does that person share your brain-based framework?"<br><span class="source">Source: BBC Community</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Apply</td>
+  <td>Connection to reflective supervision group</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Mental Health Consultation and Reflection Group description + "Join the Movement" Google Form link<br><span class="source">Source: BBC Community + FC Community</span></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Check In</td>
+  <td>Self-assessment items</td>
+  <td><span class="status-have">HAVE</span></td>
+  <td>Self-assessment Section 7: Professional Development (5 items) + Section 10: Reflective Practice (5 items)<br><span class="source">Source: BBC Self-Assessment page</span></td>
+  <td>Need to extract and present separately</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="summary-box">
+  <h2 style="margin-top: 0;">Key Gaps</h2>
+  <p>The biggest gaps across the journey:</p>
+  <ol style="margin-left: 20px; margin-top: 12px;">
+    <li style="margin-bottom: 8px;"><strong>Webinars for Steps 2, 3, 4, and 5</strong> are all empty placeholders on the current BBC site. Step 1 has 3 webinars; Steps 2-5 have none.</li>
+    <li style="margin-bottom: 8px;"><strong>Step 0 (Why This Matters)</strong> needs reflective questions created from scratch and a decision on what tool/handout to offer.</li>
+    <li style="margin-bottom: 8px;"><strong>Step 2 (Trauma, FASD, and the Brain)</strong> has no handout or tool. The BBC page has empty resource table placeholders.</li>
+    <li style="margin-bottom: 8px;"><strong>Self-assessment items need to be broken out by step</strong> rather than existing as one 50-item document. The items exist but are not mapped to individual steps in a user-friendly way.</li>
+    <li style="margin-bottom: 8px;"><strong>Additional Resources tables</strong> on BBC pages for Steps 1, 2, 3, 4, 5 are all empty placeholder tables (Resource Title / Description / Link).</li>
+  </ol>
+</div>
+
+</div>
+</body>
+</html>

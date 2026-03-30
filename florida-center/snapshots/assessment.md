@@ -1,0 +1,306 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic:
+      - banner
+    - generic [ref=e5]:
+      - generic:
+        - generic:
+          - generic:
+            - button "Skip to main content":
+              - generic: Skip to main content
+          - generic:
+            - button "Skip to navigation":
+              - generic: Skip to navigation
+      - generic [ref=e8]:
+        - banner:
+          - generic [ref=e10]:
+            - link "Brain-Based Informed" [ref=e12] [cursor=pointer]:
+              - /url: /thefloridacenter.org/brain-based-informed/home
+              - generic [ref=e13]: Brain-Based Informed
+            - navigation [ref=e14]:
+              - list [ref=e15]:
+                - listitem [ref=e16]:
+                  - link "Home" [ref=e19] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/home
+                - listitem [ref=e21]:
+                  - link "Starting the Path" [ref=e24] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/starting-the-path
+                - listitem [ref=e26]:
+                  - link "Education" [ref=e29] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/education
+                - listitem [ref=e31]:
+                  - link "Assessment" [ref=e34] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/assessment
+                - listitem [ref=e36]:
+                  - link "Planning" [ref=e39] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/planning
+                - listitem [ref=e41]:
+                  - link "Treatment" [ref=e44] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/treatment
+                - listitem [ref=e46]:
+                  - link "Community" [ref=e49] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/community
+                - listitem [ref=e51]:
+                  - link "Caregivers & Self-Advocates" [ref=e54] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/caregivers-self-advocates
+            - button "Open search bar" [ref=e56] [cursor=pointer]:
+              - img [ref=e59]
+        - generic [ref=e63]:
+          - main [ref=e74]:
+            - heading "Assessment" [level=1] [ref=e75]
+          - generic [ref=e78]:
+            - img [ref=e87]
+            - paragraph [ref=e95]: Traditional mental health assessments often overlook brain function, despite the complexity and overlap of many mental health conditions. To gain a more comprehensive understanding, mental health clinicians can integrate additional assessments, such as IEPs, neuropsychological evaluations, and developmental evaluations (OT, PT, SLP), into their treatment approach. As we move toward becoming a brain-based informed clinician, we'll learn how to interpret these reports meaningfully and connect the results to supporting behavior. Additionally, for those without formal evaluations, we can explore alternative methods to assess brain function more effectively.
+          - generic [ref=e101]:
+            - generic [ref=e105]:
+              - heading "Handout" [level=1]:
+                - generic [ref=e106]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Handout
+            - iframe [ref=e114]:
+              - application [active]:
+                - iframe [ref=f48e1]:
+                  
+                - generic "Se está mostrando el lector." [ref=f48e4]:
+                  - generic "Mostrando 2. Evidence Based Assessments for Brain Based Mental Health Treatment Revised 3-9.pdf"
+                  - generic [ref=f48e5]:
+                    - generic [ref=f48e6]:
+                      - generic "Página 1 de 4" [ref=f48e7]:
+                        - generic [ref=f48e8]: Página
+                        - textbox "La página es 1" [ref=f48e10]: "1"
+                        - generic [ref=f48e11]: /
+                        - generic [ref=f48e12]: "4"
+                      - generic [ref=f48e13]:
+                        - button "Alejar" [ref=f48e14] [cursor=pointer]
+                        - button "Ajustar al ancho" [ref=f48e16] [cursor=pointer]
+                        - button "Acercar" [ref=f48e18] [cursor=pointer]
+                    - main [ref=f48e20]:
+                      - generic [ref=f48e21]:
+                        - textbox [ref=f48e22]
+                        - document [ref=f48e24]:
+                          - generic:
+                            - generic:
+                              - heading "Página 1 de 4" [level=2]
+                              - paragraph: Evidence-Based Assessments for Brain-Based
+                              - paragraph: Informed Mental Health Treatment
+                              - paragraph: What Are We Assessing?
+                              - paragraph: Traditional mental health assessments often overlook brain function, despite the
+                              - paragraph: complexity and overlap of many mental health conditions. To gain a more
+                              - paragraph: comprehensive understanding, brain-based informed mental health clinicians can
+                              - paragraph: integrate additional assessments, such as IEPs, neuropsychological evaluations, and
+                              - paragraph: developmental evaluations (OT, PT, SLP), into their treatment approach. As they
+                              - paragraph: transition into a brain-based informed mental health practice, they can learn how to
+                              - paragraph: interpret these reports meaningfully and connect results to behavioral support
+                              - paragraph: strategies. Additionally, for those without formal evaluations, alternative methods can
+                              - paragraph: help assess brain function more effectively.
+                              - paragraph: Prior to Initial Assessment
+                              - paragraph: Requesting and reviewing patients' existing documents can enhance the assessment
+                              - paragraph: "process. Consider obtaining and analyzing the following:"
+                              - paragraph: • Previous neuropsychological assessments
+                              - paragraph: • Previous Occupational Therapy (OT) evaluations and treatment plans
+                              - paragraph: • Previous Speech and Language evaluations and treatment plans
+                              - paragraph: • Previous school evaluations
+                              - paragraph: • Individualized Education Plan (IEP)
+                              - paragraph: • Previous mental health evaluations and treatment plans
+                              - paragraph: • Medical and medication records
+                              - paragraph: • Client/Patient interviews regarding prenatal and birth history, including
+                              - paragraph: assessment of prenatal alcohol exposure (PAE), prenatal drug exposure (PDE),
+                              - paragraph: or other potential factors
+                            - img
+                          - generic:
+                            - generic [ref=f48e26]:
+                              - link "https://downloads.aap.org/AAP/PDF/FASD/FASD_PAE_Implementation_Guide_FINAL.pdf" [ref=f48e45] [cursor=pointer]:
+                                - /url: https://downloads.aap.org/AAP/PDF/FASD/FASD_PAE_Implementation_Guide_FINAL.pdf
+                              - link "https://fasdunited.org/wp-content/uploads/2024/12/FASD-United-Language-and-Stigma-Guide.pdf" [ref=f48e46] [cursor=pointer]:
+                                - /url: https://fasdunited.org/wp-content/uploads/2024/12/FASD-United-Language-and-Stigma-Guide.pdf
+                              - link "https://www.youtube.com/watch?v=Sxhq_35nDEg" [ref=f48e47] [cursor=pointer]:
+                                - /url: https://www.youtube.com/watch?v=Sxhq_35nDEg
+                              - link "http://www.fascets.org/" [ref=f48e48] [cursor=pointer]:
+                                - /url: http://www.fascets.org/
+                            - generic:
+                              - heading "Página 2 de 4" [level=2]
+                              - paragraph: Assessments to Consider
+                              - paragraph: An effective assessment process includes screening for prenatal alcohol exposure.
+                              - paragraph: Familiarizing oneself with language that reduces stigma is essential when assessing for
+                              - paragraph: "PAE. Refer to the following guides:"
+                              - paragraph: • Prenatal Alcohol Exposure Assessment
+                              - paragraph: • Language and Stigma Guide
+                              - paragraph: Experts recommend a comprehensive neuropsychological evaluation to assess
+                              - paragraph: strengths, deficits, co-occurring conditions, and early childhood trauma. If such an
+                              - paragraph: evaluation has not been previously administered, clinicians can rely on their
+                              - paragraph: observations of an individual’s conceptual, social, and practical skills through informal
+                              - paragraph: assessments.
+                              - paragraph: "Two informal assessments include:"
+                              - paragraph: • Vanessa Spiller’s Ability Wheel
+                              - paragraph: • FASCETS Neurobehavioral Exploration Tool (Clinicians must be trained in the
+                              - paragraph: FASCETS Neurobehavioral Model for appropriate application and can access
+                              - paragraph: more information about the training at FASCETS Center for Neurodiversity)
+                              - paragraph: If informal assessments indicate additional needs outside the clinician’s scope, referrals
+                              - paragraph: should be made accordingly.
+                              - paragraph: Common Evidence-Based Assessments for Brain-Based Challenges
+                              - paragraph: The table below outlines common assessments, including who can administer them,
+                              - paragraph: where results may already be available, and appropriate referral sources.
+                              - paragraph: Primary
+                              - paragraph: Characteristic
+                              - paragraph: Evidenced-Based
+                              - paragraph: Assessment
+                              - paragraph: Age
+                              - paragraph: Range
+                              - paragraph: Who Can
+                              - paragraph: Administer/Where to
+                              - paragraph: Find Results
+                              - paragraph: Memory 1. Mini Mental Status
+                              - paragraph: Exam for Children
+                              - paragraph: 2. Children’s Memory
+                              - paragraph: Scale
+                              - paragraph: 3. WRAML-2
+                              - paragraph: 4. NEPSY-II
+                              - paragraph: 1. 3-17
+                              - paragraph: 2. 5-16
+                              - paragraph: 3. 5-90
+                              - paragraph: 4. 7-12
+                              - paragraph: 1. Any trained
+                              - paragraph: professional
+                              - paragraph: 2. Neuropsychologist /
+                              - paragraph: Neuropsychology
+                              - paragraph: report
+                            - img
+                          - generic:
+                            - generic:
+                              - heading "Página 3 de 4" [level=2]
+                              - paragraph: 3. Neuropsychology or
+                              - paragraph: School Psychology
+                              - paragraph: report
+                              - paragraph: 4. Neuropsychology or
+                              - paragraph: School Psychology
+                              - paragraph: report
+                              - paragraph: Development 1. Bayley Scale of
+                              - paragraph: Infant Development
+                              - paragraph: (4th ed.)
+                              - paragraph: 2. 2. Vineland
+                              - paragraph: Adaptive Behavior
+                              - paragraph: Scale
+                              - paragraph: 1. 1 month-43
+                              - paragraph: months
+                              - paragraph: 2. Birth-90
+                              - paragraph: 1. Trained individual
+                              - paragraph: 2. Masters-level
+                              - paragraph: professional in
+                              - paragraph: psychology, education,
+                              - paragraph: or social work
+                              - paragraph: "Sensory Issues 1. Sensory Profile Infant: birth-6"
+                              - paragraph: "months Toddler:"
+                              - paragraph: 7-35 months
+                              - paragraph: "Child: 3-14 years"
+                              - paragraph: Caregivers and teachers
+                              - paragraph: (rating forms) /
+                              - paragraph: Occupational Therapist
+                              - paragraph: Processing Speed
+                              - paragraph: "& Thought"
+                              - paragraph: Process
+                              - paragraph: 1. WPPSI
+                              - paragraph: 2. WISC
+                              - paragraph: 3. WAIS
+                              - paragraph: 4. IQ Tests
+                              - paragraph: 1. 2.6-7.7 years
+                              - paragraph: 2. 6-16 years
+                              - paragraph: 3. 16-90 years
+                              - paragraph: Psychologists /
+                              - paragraph: Psychological & School
+                              - paragraph: Psychological reports
+                              - paragraph: Speech/Language 1. CASL-2 1. 3-21 years old Speech-Language
+                              - paragraph: Pathologist / Speech and
+                              - paragraph: Language Evaluations
+                              - paragraph: (school or private)
+                              - paragraph: Auditory
+                              - paragraph: Processing
+                              - paragraph: 1. Dichotic listening
+                              - paragraph: tests
+                              - paragraph: 2. Speech-in-noise
+                              - paragraph: tests
+                              - paragraph: 3. Auditory
+                              - paragraph: discrimination tests
+                              - paragraph: 4. Monaural low- redundancy tests
+                              - paragraph: 5. Rapid alternating
+                              - paragraph: speech tests
+                              - paragraph: 6. Pitch pattern
+                              - paragraph: sequence tests
+                              - paragraph: 7. SCAN (test for APD)
+                              - paragraph: Varies Speech-Language
+                              - paragraph: Therapists / Audiologists /
+                              - paragraph: Speech-Language or
+                              - paragraph: Audiologist Reports
+                            - img
+                        - generic [ref=f48e29]:
+                          - textbox [ref=f48e32]:
+                            - /placeholder: Buscar en el documento
+                          - button [ref=f48e35] [cursor=pointer]
+                          - button [ref=f48e37] [cursor=pointer]
+                          - button [ref=f48e39] [cursor=pointer]
+                  - button "Ventana emergente" [ref=f48e43] [cursor=pointer]
+                - region
+                - generic [ref=f48e49]: Cargando 2. Evidence Based Assessments for Brain Based Mental Health Treatment Revised 3-9.pdf Página 1 Página 1 de 4
+          - generic [ref=e120]:
+            - generic [ref=e124]:
+              - heading "Plain language wording of handout" [level=2]:
+                - generic [ref=e125]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Plain language wording of handout
+            - generic [ref=e129]:
+              - heading "Using Brain-Based Assessments in Mental Health Therapy" [level=3]:
+                - generic [ref=e130]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Using Brain-Based Assessments in Mental Health Therapy
+              - paragraph [ref=e131]: Why Assess Brain Function?
+              - paragraph [ref=e132]: Traditional mental health assessments often miss key brain-based challenges that impact behavior and emotions. Mental health clinicians can gain a fuller picture by reviewing additional assessments like neuropsychological evaluations, school reports (IEPs), and therapy evaluations (occupational, speech, physical). Even if a client doesn’t have formal assessments, alternative methods can help identify brain function challenges.
+              - paragraph [ref=e133]: Preparing for an Assessment
+              - paragraph [ref=e134]: "Before the first session, reviewing existing documents can provide helpful insights. These may include:"
+              - list [ref=e135]:
+                - listitem [ref=e136]: Neuropsychological and mental health evaluations
+                - listitem [ref=e137]: Occupational, speech, and school assessments
+                - listitem [ref=e138]: Individualized Education Plans (IEPs)
+                - listitem [ref=e139]: Medical and medication history
+                - listitem [ref=e140]: Client and caregiver interviews, including prenatal and birth history
+              - paragraph [ref=e141]: Key Assessments to Consider
+              - paragraph [ref=e142]: "Clinicians should consider screening for prenatal alcohol exposure (PAE) and using language that reduces stigma. Resources like the Prenatal Alcohol Exposure Assessment and Language and Stigma Guide can help. A full neuropsychological evaluation is ideal for identifying strengths, weaknesses, co-occurring conditions, and trauma history. If one isn’t available, clinicians can use informal tools such as:"
+              - list [ref=e143]:
+                - listitem [ref=e144]: Vanessa Spiller’s Ability Wheel – a simple tool to assess cognitive and functional skills
+                - listitem [ref=e145]: FASCETS Neurobehavioral Exploration Tool – a structured assessment requiring specialized training
+              - paragraph [ref=e146]: If informal assessments suggest additional needs, referrals to specialists should be made.
+              - paragraph [ref=e147]: Common Brain-Based Assessments
+              - paragraph [ref=e148]: "Here are some key evidence-based assessments used to evaluate different brain functions:"
+              - list [ref=e149]:
+                - listitem [ref=e150]: "Memory: Tests like the Children’s Memory Scale and NEPSY-II help assess memory challenges."
+                - listitem [ref=e151]: "Developmental Skills: The Bayley Scale and Vineland Adaptive Behavior Scale evaluate overall development."
+                - listitem [ref=e152]: "Sensory Processing: The Sensory Profile helps understand sensory sensitivities in children."
+                - listitem [ref=e153]: "Processing Speed & Thinking: IQ tests like WISC and WAIS measure processing speed and cognitive function."
+                - listitem [ref=e154]: "Speech & Language: The CASL-2 evaluates speech and language skills."
+                - listitem [ref=e155]: "Auditory Processing: Tests like the SCAN assess how well a person processes sounds."
+              - paragraph [ref=e156]: Additional Considerations
+              - paragraph [ref=e157]: "Clinicians should also assess:"
+              - list [ref=e158]:
+                - listitem [ref=e159]: The cognitive abilities of caregivers and their learning styles
+                - listitem [ref=e160]: Stress levels in the client’s environment
+                - listitem [ref=e161]: Available resources for both the client and their support system
+              - paragraph [ref=e162]: By integrating brain-based assessments into mental health treatment, clinicians can provide more personalized, effective care, leading to better outcomes for clients and their families.
+        - generic [ref=e163]:
+          - button [ref=e164] [cursor=pointer]:
+            - img [ref=e167]
+          - generic:
+            - generic [ref=e170]:
+              - text: Page updated
+              - contentinfo
+            - button "Report abuse" [ref=e172] [cursor=pointer]
+  - region

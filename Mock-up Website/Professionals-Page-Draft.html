@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Professionals - Brain-Based Mental Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 17px; line-height: 1.7; color: #222; background: #fff; }
+
+  nav { background: #1a3a6b; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
+  nav .site-name { font-family: 'Lexend', sans-serif; color: #fff; font-size: 16px; font-weight: 500; }
+  nav ul { list-style: none; display: flex; gap: 28px; }
+  nav ul li a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: 'Lexend', sans-serif; font-size: 14px; font-weight: 400; }
+  nav ul li a:hover, nav ul li a.active { color: #fff; }
+
+  .hero-pro {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-pro img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.35);
+  }
+  .hero-pro .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 700px;
+    padding: 0 40px;
+  }
+  .hero-pro h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero-pro p {
+    font-size: 18px;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  section { padding: 60px 40px; max-width: 960px; margin: 0 auto; }
+  .full-bg { max-width: 100%; background: #f7f9fc; }
+  .full-bg-dark { max-width: 100%; background: #1a3a6b; color: #fff; }
+  .inner { max-width: 960px; margin: 0 auto; }
+
+  h2 { font-family: 'Lexend', sans-serif; font-size: 28px; font-weight: 600; color: #1a3a6b; margin-bottom: 16px; }
+  h3 { font-family: 'Lexend', sans-serif; font-size: 20px; font-weight: 600; color: #2c5aa0; margin-bottom: 10px; margin-top: 20px; }
+  p { margin-bottom: 14px; color: #333; }
+  ul { margin-left: 24px; margin-bottom: 14px; }
+  li { margin-bottom: 8px; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .two-col img { width: 100%; border-radius: 10px; object-fit: cover; height: 320px; }
+
+  /* Pathway stages */
+  .pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .stage-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    border-top: 4px solid #2c5aa0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stage-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+  .stage-num {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #2c5aa0;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .stage-card h4 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 6px;
+  }
+  .stage-card p { font-size: 14px; color: #555; margin: 0; }
+
+  /* CTA buttons */
+  .cta-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .cta-primary { background: #2c5aa0; color: #fff; }
+  .cta-primary:hover { background: #1a3a6b; transform: translateY(-2px); }
+  .cta-outline { background: transparent; color: #2c5aa0; border: 2px solid #2c5aa0; }
+  .cta-outline:hover { background: #2c5aa0; color: #fff; }
+  .cta-white { background: #fff; color: #1a3a6b; }
+  .cta-white:hover { background: #e8edf5; }
+
+  /* FAQ accordion */
+  .faq-item { border-bottom: 1px solid #e0e6ed; }
+  .faq-question {
+    padding: 18px 0;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a3a6b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-question::after { content: "+"; font-size: 22px; color: #2c5aa0; transition: transform 0.2s; }
+  .faq-question.open::after { content: "\2212"; }
+  .faq-answer {
+    display: none;
+    padding: 0 0 18px 0;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+  }
+  .faq-answer.show { display: block; }
+
+  footer { background: #111; color: rgba(255,255,255,0.6); text-align: center; padding: 24px 40px; font-size: 13px; }
+
+  .draft-banner { background: #fbbf24; color: #78350f; text-align: center; padding: 8px; font-family: 'Lexend', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; }
+
+  @media (max-width: 768px) {
+    .two-col, .pathway-grid { grid-template-columns: 1fr; }
+    .hero-pro { height: 280px; }
+    .hero-pro h1 { font-size: 28px; }
+    section { padding: 40px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-banner">DRAFT MOCKUP — FOR REVIEW ONLY — NOT FINAL</div>
+
+<nav>
+  <div class="site-name">Brain-Based Mental Health</div>
+  <ul>
+    <li><a href="Home-Page-Draft.html">Home</a></li>
+    <li><a href="About-Us-Page-Draft.html">About Us</a></li>
+    <li><a href="#" class="active">Professionals</a></li>
+    <li><a href="#">Caregivers</a></li>
+    <li><a href="#">Self-Advocates</a></li>
+    <li><a href="#">Organizations</a></li>
+    <li><a href="#">Resources</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero-pro">
+  <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&h=500&fit=crop&q=80" alt="Therapist in a reflective moment during session">
+  <div class="hero-content">
+    <h1>For Mental Health Professionals</h1>
+    <p>Your training gave you strong tools. But when the brain works differently, those tools need a different starting point.</p>
+  </div>
+</div>
+
+<!-- THE PROBLEM: WHY YOU FEEL STUCK -->
+<section>
+  <div class="two-col">
+    <div>
+      <h2>When Nothing Works</h2>
+      <p>You are a competent clinician with solid training and evidence-based interventions. But your go-to approaches are not landing with certain clients, and neurobiology might be why.</p>
+      <p>Most therapeutic models were built around typical brain functioning. They have real limits when the brain works differently. That might look like:</p>
+      <ul>
+        <li>CBT falling flat because cause-and-effect reasoning is impaired</li>
+        <li>DBT skills that do not generalize due to executive functioning limitations</li>
+        <li>Trauma processing that stalls</li>
+        <li>Behavioral plans that backfire when consequences feel arbitrary</li>
+      </ul>
+      <p>The issue is not your competence. The issue is that your training likely did not teach you to assess and understand the brain before choosing how to treat.</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=400&fit=crop&q=80" alt="Clinician in thoughtful reflection">
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH (moved from About Us) -->
+<div class="full-bg" style="padding: 60px 40px;">
+  <div class="inner">
+    <div class="two-col">
+      <div>
+        <img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=500&h=400&fit=crop&q=80" alt="Understanding through curiosity and connection">
+      </div>
+      <div>
+        <h2>The Brain-Based Approach</h2>
+        <p>Brain-based practice sits at the intersection of what you already know. It does not replace your existing modalities. It changes your starting point.</p>
+        <p><strong>Trauma-informed:</strong> Knowledge changes your framework, and a different framework changes your clinical decisions. You stop asking "why won't they change" and start asking "what does this brain need right now."</p>
+        <p><strong>Cultural humility:</strong> You keep examining your assumptions, especially when a client is not responding the way you expected.</p>
+        <p><strong>Neurodiversity-affirming:</strong> Some of what you were taught about behavior, motivation, and compliance does not hold when the brain works differently. The shift is not just clinical, it is in how you see.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- THE PATHWAY -->
+<section>
+  <h2 style="text-align: center;">The Brain-Based Pathway</h2>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 8px;">A developmental framework that guides you from foundational knowledge to advanced, responsive practice across six stages and two levels.</p>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 32px; font-size: 15px; color: #555;"><strong>Brain-Based Informed</strong> = foundational understanding and beginning application<br><strong>Brain-Based Responsive</strong> = advanced integration and real-time adaptation</p>
+
+  <div class="pathway-grid">
+    <div class="stage-card">
+      <div class="stage-num">1</div>
+      <h4>Foundational Knowledge</h4>
+      <p>Understanding brain structure, development, and neuroplasticity and how they shape what you see in the room.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-num">2</div>
+      <h4>Brain-Based Fundamentals</h4>
+      <p>How trauma and prenatal alcohol exposure affect brain function, and what that means for your therapeutic relationship.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-num">3</div>
+      <h4>Assessment</h4>
+      <p>Applying brain-based principles to holistic assessment and case conceptualization that evolves with the client.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-num">4</div>
+      <h4>Treatment Planning</h4>
+      <p>Designing strategies matched to neurobiological capacity, not idealized outcomes. Goals that fit the brain.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-num">5</div>
+      <h4>Therapeutic Strategies</h4>
+      <p>Adapting CBT, DBT, TBRI, and other modalities to work with how the brain actually processes information and stress.</p>
+    </div>
+    <div class="stage-card">
+      <div class="stage-num">6</div>
+      <h4>Professional Community</h4>
+      <p>Reflective supervision, consultation, and a community of practitioners who share your language and your questions.</p>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="#" class="cta-btn cta-primary">Take the Self-Assessment</a>
+    <a href="#" class="cta-btn cta-outline">Explore the Full Pathway</a>
+  </div>
+</section>
+
+<!-- WHAT YOU WILL GAIN -->
+<div class="full-bg-dark" style="padding: 60px 40px;">
+  <div class="inner" style="text-align: center;">
+    <h2 style="color: #fff;">What You Will Gain</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; text-align: left;">
+      <div style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 8px;">
+        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 15px;">Clinical confidence with complex, puzzling presentations</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 8px;">
+        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 15px;">Real-time adaptation skills grounded in neurobiological capacity</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 8px;">
+        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 15px;">A clear developmental roadmap from Informed to Responsive practice</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 8px;">
+        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 15px;">Reduced frustration and blame of yourself, caregivers, and clients</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 8px;">
+        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 15px;">Professional growth in a highly needed specialty area</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 8px;">
+        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 15px;">A professional community that shares language, tools, and mutual support</p>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a href="#" class="cta-btn cta-white">Get Started</a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section>
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">I do not work with FASD specifically. Is this still relevant?</div>
+    <div class="faq-answer">Yes. The brain-based framework applies to any client whose brain works differently, including autism, ADHD, intellectual disabilities, learning differences, traumatic brain injury, and complex trauma. FASD is a primary focus because it is one of the most commonly missed conditions, but the clinical skills transfer broadly.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">How does this relate to trauma-informed care?</div>
+    <div class="faq-answer">Brain-based practice builds on and extends trauma-informed care. Trauma-informed care changed the question from "what is wrong with you" to "what happened to you." Brain-based practice adds "how does your brain process what happened, and what does it need now?" The two frameworks are complementary.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">Will this work with my therapeutic approach?</div>
+    <div class="faq-answer">The brain-based pathway does not replace your existing modalities. It helps you adapt what you already use, whether that is CBT, DBT, EMDR, play therapy, or another approach, so it fits the neurobiological reality of the client in front of you.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">How long does it take to develop these competencies?</div>
+    <div class="faq-answer">Development is not linear and varies by clinician. Some areas may come quickly because they align with your existing experience. Others may take longer. The self-assessment tool helps you identify where you already are and where to focus next.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">Is there certification or CE available?</div>
+    <div class="faq-answer">Training through The Florida Center for Early Childhood offers continuing education credits. Visit the training calendar on the Education page for current offerings and CE details.</div>
+  </div>
+</section>
+
+<footer>
+  <p>Privacy Policy &bull; Disclaimer &bull; Contact</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic:
+      - banner
+    - generic [ref=e5]:
+      - generic:
+        - generic:
+          - generic:
+            - button "Skip to main content":
+              - generic: Skip to main content
+          - generic:
+            - button "Skip to navigation":
+              - generic: Skip to navigation
+      - generic [ref=e8]:
+        - banner:
+          - generic [ref=e10]:
+            - link "Brain-Based Informed" [ref=e12] [cursor=pointer]:
+              - /url: /thefloridacenter.org/brain-based-informed/home
+              - generic [ref=e13]: Brain-Based Informed
+            - navigation [ref=e14]:
+              - list [ref=e15]:
+                - listitem [ref=e16]:
+                  - link "Home" [ref=e19] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/home
+                - listitem [ref=e21]:
+                  - link "Starting the Path" [ref=e24] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/starting-the-path
+                - listitem [ref=e26]:
+                  - link "Education" [ref=e29] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/education
+                - listitem [ref=e31]:
+                  - link "Assessment" [ref=e34] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/assessment
+                - listitem [ref=e36]:
+                  - link "Planning" [ref=e39] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/planning
+                - listitem [ref=e41]:
+                  - link "Treatment" [ref=e44] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/treatment
+                - listitem [ref=e46]:
+                  - link "Community" [ref=e49] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/community
+                - listitem [ref=e51]:
+                  - link "Caregivers & Self-Advocates" [ref=e54] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/caregivers-self-advocates
+            - button "Open search bar" [ref=e56] [cursor=pointer]:
+              - img [ref=e59]
+        - generic [ref=e63]:
+          - main [ref=e74]:
+            - heading "Supporting Caregivers & Self-Advocates Navigate the World of Mental Health" [level=1] [ref=e75]
+          - generic [ref=e78]:
+            - img [ref=e87]
+            - generic [ref=e94]:
+              - heading "Under Construction by the Brain Based Informed" [level=2]:
+                - generic [ref=e95]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Under Construction by the Brain Based Informed
+              - heading "Mental Health Work Group" [level=2]:
+                - generic [ref=e96]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Mental Health Work Group
+              - heading "Coming soon!" [level=2]:
+                - generic [ref=e97]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Coming soon!
+        - generic [ref=e99]:
+          - button [ref=e100] [cursor=pointer]:
+            - img [ref=e103]
+          - generic:
+            - generic [ref=e106]:
+              - text: Page updated
+              - contentinfo
+            - button "Report abuse" [ref=e108] [cursor=pointer]
+  - region

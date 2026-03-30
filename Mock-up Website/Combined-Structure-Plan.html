@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combined Site Structure Plan — Brain-Based Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 1.6; color: #1a1a1a; background: #f8f9fa; padding: 20px; }
+  .container { max-width: 960px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  h1 { font-family: 'Lexend', sans-serif; font-size: 28px; color: #1a3a6b; margin-bottom: 8px; }
+  h2 { font-family: 'Lexend', sans-serif; font-size: 22px; color: #1a3a6b; margin-top: 40px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e0e6ed; }
+  h3 { font-family: 'Lexend', sans-serif; font-size: 18px; color: #2c5aa0; margin-top: 28px; margin-bottom: 8px; }
+  h4 { font-family: 'Lexend', sans-serif; font-size: 16px; color: #444; margin-top: 16px; margin-bottom: 6px; }
+  p { margin-bottom: 12px; }
+  ul, ol { margin-left: 24px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  strong { color: #1a3a6b; }
+  code { background: #eef2f7; padding: 2px 6px; border-radius: 3px; font-size: 14px; }
+  .subtitle { font-size: 14px; color: #666; margin-bottom: 24px; }
+  .nav-preview { background: #1a3a6b; color: #fff; padding: 12px 20px; border-radius: 6px; font-family: 'Lexend', sans-serif; font-size: 14px; margin: 16px 0; letter-spacing: 0.5px; }
+  .nav-preview span { margin: 0 8px; opacity: 0.5; }
+  .page-card { background: #f4f7fb; border-left: 4px solid #2c5aa0; padding: 20px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .page-card h3 { margin-top: 0; }
+  .source-tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 3px; margin-right: 4px; font-weight: 600; }
+  .tag-bbc { background: #dbeafe; color: #1e40af; }
+  .tag-fc { background: #fef3c7; color: #92400e; }
+  .tag-both { background: #d1fae5; color: #065f46; }
+  .merged-note { background: #ecfdf5; border: 1px solid #a7f3d0; padding: 10px 14px; border-radius: 4px; font-size: 14px; margin: 8px 0; }
+  .removed-note { background: #fef2f2; border: 1px solid #fecaca; padding: 10px 14px; border-radius: 4px; font-size: 14px; margin: 8px 0; }
+  .new-note { background: #fffbeb; border: 1px solid #fde68a; padding: 10px 14px; border-radius: 4px; font-size: 14px; margin: 8px 0; }
+  hr { border: none; border-top: 1px solid #e0e6ed; margin: 32px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th, td { border: 1px solid #d1d5db; padding: 10px 14px; text-align: left; font-size: 14px; }
+  th { background: #1a3a6b; color: #fff; font-family: 'Lexend', sans-serif; }
+  .font-sample { padding: 16px; border: 1px solid #e0e6ed; border-radius: 6px; margin: 12px 0; }
+  .font-sample.recommended { border-color: #2c5aa0; background: #f0f5ff; }
+  .badge { display: inline-block; background: #2c5aa0; color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; margin-left: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Combined Site Structure Plan</h1>
+<p style="font-family: 'Lexend', sans-serif; font-size: 20px; color: #2c5aa0; margin-bottom: 4px;">Brain-Based Responsive Mental Health Community</p>
+<p class="subtitle">
+  <strong>Goal:</strong> Merge both sites into one, no duplication, logical organization.<br>
+  <strong>Constraint:</strong> Must work in Google Sites. No content changes — structure only.<br>
+  <strong>Sources:</strong> <span class="source-tag tag-bbc">BBC</span> = Brain-Based Community site &nbsp;|&nbsp; <span class="source-tag tag-fc">FC</span> = Florida Center site
+</p>
+
+<hr>
+
+<h2>Font Recommendations (Dyslexia/Accessibility Friendly)</h2>
+<p>Google Sites offers limited font choices through its theme settings. Here are the best options for accessibility:</p>
+
+<div class="font-sample recommended">
+  <h4>Option A (Recommended) <span class="badge">RECOMMENDED</span></h4>
+  <p><strong>Headings:</strong> <span style="font-family: 'Lexend', sans-serif; font-size: 20px; font-weight: 600;">Lexend</span> — specifically designed for reading proficiency, excellent for dyslexia</p>
+  <p><strong>Body:</strong> <span style="font-family: 'Open Sans', sans-serif;">Open Sans</span> — clean, wide letter spacing, highly legible</p>
+  <p style="font-size: 14px; color: #555;"><strong>Why:</strong> Lexend was created through research at Bonnie Shaver-Troup's lab specifically to reduce visual stress. Open Sans has open apertures and neutral letterforms.</p>
+</div>
+
+<div class="font-sample">
+  <h4>Option B: Roboto + Roboto</h4>
+  <p><strong>Headings:</strong> Roboto (Bold/Medium) &nbsp;|&nbsp; <strong>Body:</strong> Roboto (Regular/Light)</p>
+  <p style="font-size: 14px; color: #555;"><strong>Why:</strong> Excellent letter distinction (b/d, p/q don't mirror). Wide availability in Google Sites.</p>
+</div>
+
+<div class="font-sample">
+  <h4>Option C: Lato + Lato (current BBC site uses this)</h4>
+  <p><strong>Headings:</strong> Lato Bold &nbsp;|&nbsp; <strong>Body:</strong> Lato Regular</p>
+  <p style="font-size: 14px; color: #555;"><strong>Why:</strong> Good readability, semi-rounded letterforms, already in use.</p>
+</div>
+
+<h3>General Accessibility Rules for the Site</h3>
+<ul>
+  <li>Minimum body text size: 16px (Google Sites default)</li>
+  <li>Line spacing: 1.5x minimum</li>
+  <li>High contrast: dark text on light background</li>
+  <li>Avoid italics for long passages</li>
+  <li>Left-align text (not justified)</li>
+  <li>Short paragraphs, generous white space</li>
+  <li>Avoid ALL CAPS for body text (OK sparingly for headings)</li>
+</ul>
+
+<hr>
+
+<h2>Combined Site Map</h2>
+
+<h3>Top-Level Navigation (7 items)</h3>
+<div class="nav-preview">
+  Home <span>|</span> About Us <span>|</span> Professionals &#9662; <span>|</span> Caregivers <span>|</span> Self-Advocates <span>|</span> Organizations <span>|</span> Resources &#9662;
+</div>
+
+<hr>
+
+<!-- PAGE 1: HOME -->
+<div class="page-card">
+  <h3>1. HOME</h3>
+  <p><span class="source-tag tag-bbc">BBC</span> <span class="source-tag tag-fc">FC</span></p>
+  <ul>
+    <li>Hero: "Brain-Based Responsive Mental Health Community" heading</li>
+    <li>Intro paragraphs (from BBC)</li>
+    <li>Three audience cards: Clinicians | Caregivers | Self-Advocates (from BBC)</li>
+    <li>Three CTA buttons: Explore Pathway | Caregiver Resources | Self-Advocate Resources</li>
+    <li>"Why Brain-Based Matters" section (from BBC)</li>
+    <li>"Understanding Brain-Based Differences" section (from BBC)
+      <ul>
+        <li>Developmental Differences</li>
+        <li>Acquired Differences</li>
+        <li>Trauma-Related Changes</li>
+      </ul>
+    </li>
+    <li>Language &amp; Stigma Guide embed (from BBC)</li>
+    <li>Pathway visual overview with FC's numbered brain graphics (1-6) — links to each stage</li>
+  </ul>
+  <div class="merged-note"><strong>Merged:</strong> FC's home page pathway graphic cards integrated into BBC's home layout.</div>
+  <div class="removed-note"><strong>Removed:</strong> FC home feedback form (beta testing artifact), FC poster PDF (move to Resources).</div>
+</div>
+
+<!-- PAGE 2: ABOUT US -->
+<div class="page-card">
+  <h3>2. ABOUT US</h3>
+  <p><span class="source-tag tag-bbc">BBC</span></p>
+  <ul>
+    <li>Who We Are</li>
+    <li>Our Team</li>
+    <li>Our Approach</li>
+    <li>Accessibility &amp; Inclusion</li>
+    <li>Our Partnerships</li>
+    <li>How to Connect</li>
+  </ul>
+  <p style="font-size: 14px; color: #666;">Unchanged from BBC. FC has no equivalent page.</p>
+</div>
+
+<!-- PAGE 3: PROFESSIONALS -->
+<div class="page-card">
+  <h3>3. PROFESSIONALS (landing page)</h3>
+  <p><span class="source-tag tag-bbc">BBC</span> <span class="source-tag tag-fc">FC</span></p>
+  <ul>
+    <li>"Who is this for?" (from BBC)</li>
+    <li>"New to Brain-Based Care?" (from BBC)</li>
+    <li>"When nothing works" (from BBC)</li>
+    <li>"The Shift to Brain-Based Practice" (from BBC)</li>
+    <li>The Brain-Based Pathway overview (from BBC)
+      <ul>
+        <li>Two Levels: Informed vs Responsive</li>
+        <li>Six Competency Stages (summary)</li>
+      </ul>
+    </li>
+    <li>"What You Will Gain" (from BBC)</li>
+    <li>CTA buttons: Self-Assessment Tool | Explore the Pathway</li>
+    <li>"Join the Community" (from BBC)</li>
+    <li>Available Resources (from BBC)</li>
+    <li>FAQs (from BBC)</li>
+    <li>"Real World Application?" (from BBC)</li>
+  </ul>
+  <div class="merged-note"><strong>Merged:</strong> FC "Starting the Path" — its "Benefits of brain-based therapist" content is already covered in BBC's Professionals page. FC's plain language version can be added as a collapsible section.</div>
+</div>
+
+<!-- PAGE 3a: PATHWAY OVERVIEW -->
+<div class="page-card">
+  <h3>3a. PROFESSIONALS &gt; BRAIN-BASED PATHWAY (overview)</h3>
+  <p><span class="source-tag tag-bbc">BBC</span></p>
+  <ul>
+    <li>A Note About Your Journey</li>
+    <li>Your learning will not be linear</li>
+    <li>The Brain-Based Pathway Framework</li>
+    <li>Two Levels of Practice</li>
+    <li>Where Do I Start? + Finding Your Starting Point</li>
+    <li>Six Core Competency Stages (with links)</li>
+    <li>How The Pathway Works</li>
+    <li>Your Next Steps</li>
+    <li>Language &amp; Stigma Guide</li>
+  </ul>
+  <p style="font-size: 14px; color: #666;">Dropdown sub-navigation under Professionals. Unchanged from BBC.</p>
+</div>
+
+<!-- PAGE 3b: STAGE 1 -->
+<div class="page-card">
+  <h3>3b. STAGE 1: FOUNDATIONAL KNOWLEDGE</h3>
+  <p><span class="source-tag tag-bbc">BBC</span> <span class="source-tag tag-fc">FC</span></p>
+  <ul>
+    <li>Opening reflection question (from BBC)</li>
+    <li>Stage description with Informed/Responsive levels (from BBC)</li>
+    <li>"About The Foundational Knowledge Stage" (from BBC)
+      <ul>
+        <li>What this looks like in practice</li>
+        <li>What makes this hard</li>
+        <li>The Benefits of Understanding the Brain</li>
+      </ul>
+    </li>
+    <li>Accessible Language Handout (from BBC)</li>
+    <li>On-Demand Webinars — 3 webinars (same on both sites, listed once):
+      <ol>
+        <li>FASD: What Is It and What Do We Do About It?</li>
+        <li>The Importance of Screening for Prenatal Alcohol Exposure</li>
+        <li>Mental Health through a Brain Based Lens</li>
+      </ol>
+    </li>
+    <li>Florida Center Training Institute Course Catalog embed</li>
+    <li>Additional Resources table (from BBC)</li>
+    <li>"Submit your ideas for future trainings" button</li>
+    <li>NEXT: Brain-Based Fundamentals button</li>
+  </ul>
+  <div class="new-note"><strong>New from FC:</strong> Plain language version of benefits handout (from FC "Starting the Path" — plain language section).</div>
+  <div class="merged-note"><strong>Merged:</strong> FC Education page fully absorbed. Webinars and course catalog were duplicated — now appear once.</div>
+</div>
+
+<!-- PAGE 3c: STAGE 2 -->
+<div class="page-card">
+  <h3>3c. STAGE 2: BRAIN-BASED FUNDAMENTALS</h3>
+  <p><span class="source-tag tag-bbc">BBC</span></p>
+  <ul>
+    <li>Opening reflection</li>
+    <li>Stage description</li>
+    <li>About the stage</li>
+    <li>What this looks like in practice</li>
+    <li>What makes this hard</li>
+    <li>On-Demand Webinars section</li>
+    <li>Additional Resources table</li>
+    <li>NEXT: Assessment button</li>
+  </ul>
+  <p style="font-size: 14px; color: #666;">Unchanged from BBC. FC has no equivalent page.</p>
+</div>
+
+<!-- PAGE 3d: STAGE 3 -->
+<div class="page-card">
+  <h3>3d. STAGE 3: ASSESSMENT</h3>
+  <p><span class="source-tag tag-bbc">BBC</span> <span class="source-tag tag-fc">FC</span></p>
+  <ul>
+    <li>Opening question (from BBC)</li>
+    <li>Stage description (from BBC)</li>
+    <li>"About The Assessment Stage" (from BBC)
+      <ul>
+        <li>What this looks like in practice</li>
+        <li>What makes this hard</li>
+      </ul>
+    </li>
+    <li>Evidenced Based Assessments handout/PDF embed (same PDF on both sites)</li>
+    <li>On-Demand Webinars section (from BBC)</li>
+    <li>Additional Resources table (from BBC)</li>
+    <li>NEXT: Treatment Planning button</li>
+  </ul>
+  <div class="new-note"><strong>New from FC:</strong> Plain language version — "Using Brain-Based Assessments in Mental Health Therapy" (unique content not on BBC).</div>
+  <div class="removed-note"><strong>Eliminated:</strong> FC's intro paragraph (covered by BBC's more detailed version).</div>
+</div>
+
+<!-- PAGE 3e: STAGE 4 -->
+<div class="page-card">
+  <h3>3e. STAGE 4: TREATMENT PLANNING</h3>
+  <p><span class="source-tag tag-bbc">BBC</span> <span class="source-tag tag-fc">FC</span></p>
+  <ul>
+    <li>Opening reflection (from BBC)</li>
+    <li>Stage description (from BBC)</li>
+    <li>"About The Treatment Planning Stage" (from BBC)
+      <ul>
+        <li>What this looks like in practice</li>
+        <li>What makes this hard</li>
+      </ul>
+    </li>
+    <li>"Building a Treatment Plan Around the Brain" section (from BBC)</li>
+    <li>Treatment Plan PDF embed (same PDF on both sites)</li>
+    <li>"Tips for Creating a Brain-Based Informed Treatment Plan" + "Accessible Language Handout" (collapsible, from BBC)</li>
+    <li>Webinars section (from BBC)</li>
+    <li>Additional Resources (from BBC)</li>
+    <li>NEXT: Therapeutic Strategies button</li>
+  </ul>
+  <div class="merged-note"><strong>Confirmed:</strong> FC's plain language version is the same as BBC's "Accessible Language Handout" — no new content to add.</div>
+  <div class="removed-note"><strong>Eliminated:</strong> FC Planning page (complete duplicate).</div>
+</div>
+
+<!-- PAGE 3f: STAGE 5 -->
+<div class="page-card">
+  <h3>3f. STAGE 5: THERAPEUTIC STRATEGIES</h3>
+  <p><span class="source-tag tag-bbc">BBC</span> <span class="source-tag tag-fc">FC</span></p>
+  <ul>
+    <li>Opening reflection (from BBC)</li>
+    <li>Stage description (from BBC)</li>
+    <li>"About The Therapeutic Strategies Stage" (from BBC)
+      <ul>
+        <li>What this looks like in practice</li>
+        <li>What makes this hard</li>
+      </ul>
+    </li>
+    <li>"Evidence-Based Treatments and Helpful Adjustments" section (from BBC)</li>
+    <li>Evidenced Based Treatments PDF embed (same PDF on both sites)</li>
+    <li>"Evidenced-Based Treatments &amp; Sample Accommodations" + "Accessible Language Handout" (collapsible, from BBC)</li>
+    <li>Webinars section (from BBC)</li>
+    <li>Additional Resources (from BBC)</li>
+    <li>NEXT: Professional Community button</li>
+  </ul>
+  <div class="merged-note"><strong>Confirmed:</strong> FC Treatment's plain language version covers same content — already on BBC.</div>
+  <div class="removed-note"><strong>Eliminated:</strong> FC Treatment page (complete duplicate).</div>
+</div>
+
+<!-- PAGE 3g: STAGE 6 -->
+<div class="page-card">
+  <h3>3g. STAGE 6: PROFESSIONAL COMMUNITY</h3>
+  <p><span class="source-tag tag-bbc">BBC</span> <span class="source-tag tag-fc">FC</span></p>
+  <ul>
+    <li>Opening questions (from BBC)</li>
+    <li>Stage description (from BBC)</li>
+    <li>"About The Professional Community Stage" (from BBC)
+      <ul>
+        <li>What this looks like in practice</li>
+        <li>What makes this hard</li>
+      </ul>
+    </li>
+    <li>"The Role of Reflective Supervision" (from BBC)</li>
+    <li>"From Theory to Practice" (from BBC)</li>
+    <li>Mental Health Consultation &amp; Reflective Supervision Group (same on both)</li>
+    <li>Mental Health Workgroup goals (verbatim identical on both)</li>
+    <li>"JOIN THE MOVEMENT" button (same Google Form on both)</li>
+  </ul>
+  <div class="merged-note"><strong>Merged:</strong> FC Community page fully absorbed. Content was nearly identical.</div>
+</div>
+
+<!-- PAGE 4: CAREGIVERS -->
+<div class="page-card">
+  <h3>4. CAREGIVERS</h3>
+  <p><span class="source-tag tag-bbc">BBC</span></p>
+  <ul>
+    <li>Common Challenges You Might Be Facing</li>
+    <li>How We Can Help</li>
+    <li>What brain-based care actually looks like</li>
+    <li>A note on the grief</li>
+    <li>Working with Your Treatment Team</li>
+    <li>Practical Tips</li>
+    <li>Planning for Transitions</li>
+    <li>Your Rights as a Caregiver</li>
+    <li>Resources list</li>
+  </ul>
+  <p style="font-size: 14px; color: #666;">Unchanged from BBC. FC page was "Coming soon!" — empty.</p>
+</div>
+
+<!-- PAGE 5: SELF-ADVOCATES -->
+<div class="page-card">
+  <h3>5. SELF-ADVOCATES</h3>
+  <p><span class="source-tag tag-bbc">BBC</span></p>
+  <ul>
+    <li>Opening message</li>
+    <li>What You Might Be Experiencing</li>
+    <li>What the Research Actually Says</li>
+    <li>Your Brain</li>
+    <li>What Can Actually Help</li>
+    <li>Understanding Your Patterns</li>
+    <li>What You Can Ask For</li>
+    <li>Talking to Providers / Employers / Educators / Friends</li>
+    <li>Your Rights</li>
+    <li>Practical Tips</li>
+    <li>Planning</li>
+  </ul>
+  <p style="font-size: 14px; color: #666;">Unchanged from BBC. FC page was "Coming soon!" — empty.</p>
+</div>
+
+<!-- PAGE 6: ORGANIZATIONS -->
+<div class="page-card">
+  <h3>6. ORGANIZATIONS</h3>
+  <p><span class="source-tag tag-bbc">BBC</span></p>
+  <ul>
+    <li>Building Brain-Based Capacity in Your Team</li>
+    <li>Who Needs Brain-Based Training?</li>
+    <li>Sample Onboarding Plan</li>
+    <li>Supports &amp; Resources (Handouts, Video Library, Organizations)</li>
+    <li>Your Next Steps</li>
+  </ul>
+  <p style="font-size: 14px; color: #666;">Unchanged from BBC. FC has no equivalent page.</p>
+</div>
+
+<!-- PAGE 7: RESOURCES -->
+<div class="page-card">
+  <h3>7. RESOURCES (with dropdown)</h3>
+  <p><span class="source-tag tag-bbc">BBC</span></p>
+
+  <h4>7a. Resources (landing page)</h4>
+  <ul>
+    <li>FASD United Family Navigator</li>
+    <li>Organization links (FASD United, Florida Center, FASCETS, FMF, Think Brain First, THO, IMPACT)</li>
+    <li>Language &amp; Stigma Guide</li>
+    <li>Review metadata fields</li>
+  </ul>
+
+  <h4>7b. Resources &gt; Self-Assessment</h4>
+  <ul>
+    <li>Full 50-item self-assessment tool</li>
+    <li>Scoring guide</li>
+    <li>Pathway recommendations</li>
+    <li>PDF download links</li>
+  </ul>
+
+  <h4>7c. Resources &gt; Brain-Based Competencies</h4>
+  <ul>
+    <li>Full 10-competency framework</li>
+    <li>Informed vs Responsive levels for each</li>
+    <li>Six-Stage Pathway summary</li>
+    <li>Competencies PDF link</li>
+  </ul>
+  <p style="font-size: 14px; color: #666;">All unchanged from BBC.</p>
+</div>
+
+<hr>
+
+<h2>Assets to Carry Over from Florida Center</h2>
+<p>These FC-unique assets should be integrated into the combined site:</p>
+<ol>
+  <li><strong>Cartoon brain stage graphics</strong> (numbered 1-7) — Use on Home page pathway overview and/or as stage page header images</li>
+  <li><strong>Plain language handout versions</strong> — Add to Stage 1 and Stage 3 pages (the only ones with unique plain language content not already on BBC)</li>
+  <li><strong>Poster PDF</strong> — Move to Resources page or About Us</li>
+</ol>
+
+<hr>
+
+<h2>What Gets Eliminated (duplicated across both sites)</h2>
+<ul>
+  <li>FC Home page (replaced by combined Home)</li>
+  <li>FC Starting the Path (absorbed into Professionals + Stage 1)</li>
+  <li>FC Education (absorbed into Stage 1: Foundational Knowledge)</li>
+  <li>FC Assessment (absorbed into Stage 3: Assessment)</li>
+  <li>FC Planning (duplicate of Stage 4: Treatment Planning)</li>
+  <li>FC Treatment (duplicate of Stage 5: Therapeutic Strategies)</li>
+  <li>FC Community (duplicate of Stage 6: Professional Community)</li>
+  <li>FC Caregivers &amp; Self-Advocates (was empty, BBC has full content)</li>
+  <li>FC Feedback form (beta testing artifact — remove)</li>
+</ul>
+
+<hr>
+
+<h2>Total Page Count</h2>
+<table>
+  <tr><th>Before (two sites)</th><th>After (combined)</th></tr>
+  <tr><td>BBC: 16 pages<br>FC: 8 pages<br><strong>Total: 24 pages</strong></td><td>Combined: <strong>16 pages</strong><br>(same structure as BBC, with FC content merged in)</td></tr>
+</table>
+
+</div>
+</body>
+</html>

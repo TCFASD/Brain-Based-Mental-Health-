@@ -1,0 +1,197 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic:
+      - banner
+    - generic [ref=e5]:
+      - generic:
+        - generic:
+          - generic:
+            - button "Skip to main content":
+              - generic: Skip to main content
+          - generic:
+            - button "Skip to navigation":
+              - generic: Skip to navigation
+      - generic [ref=e8]:
+        - banner:
+          - generic [ref=e10]:
+            - link "Brain-Based Informed" [ref=e12] [cursor=pointer]:
+              - /url: /thefloridacenter.org/brain-based-informed/home
+              - generic [ref=e13]: Brain-Based Informed
+            - navigation [ref=e14]:
+              - list [ref=e15]:
+                - listitem [ref=e16]:
+                  - link "Home" [ref=e19] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/home
+                - listitem [ref=e21]:
+                  - link "Starting the Path" [ref=e24] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/starting-the-path
+                - listitem [ref=e26]:
+                  - link "Education" [ref=e29] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/education
+                - listitem [ref=e31]:
+                  - link "Assessment" [ref=e34] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/assessment
+                - listitem [ref=e36]:
+                  - link "Planning" [ref=e39] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/planning
+                - listitem [ref=e41]:
+                  - link "Treatment" [ref=e44] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/treatment
+                - listitem [ref=e46]:
+                  - link "Community" [ref=e49] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/community
+                - listitem [ref=e51]:
+                  - link "Caregivers & Self-Advocates" [ref=e54] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/caregivers-self-advocates
+            - button "Open search bar" [ref=e56] [cursor=pointer]:
+              - img [ref=e59]
+        - generic [ref=e63]:
+          - main [ref=e74]:
+            - heading "Planning" [level=1] [ref=e75]
+          - generic [ref=e78]:
+            - img [ref=e87]
+            - paragraph [ref=e95]: Addressing brain-based differences requires a personalized approach, as there is no one-size-fits-all solution. Effective treatment planning must consider the brain, the environment, and the support systems. By integrating this understanding, brain-based informed mental health clinicians can create individualized treatment plans that address psychological factors, brain functions, learning styles, and support needs, ultimately leading to more successful outcomes.
+          - generic [ref=e101]:
+            - generic [ref=e105]:
+              - heading "Handout" [level=1]:
+                - generic [ref=e106]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Handout
+            - iframe [ref=e114]:
+              - application [active]:
+                - iframe [ref=f54e1]:
+                  
+                - generic "Se está mostrando el lector." [ref=f54e4]:
+                  - generic "Mostrando 4. Creating a Brain-Based Treatment Plan.pdf"
+                  - generic [ref=f54e5]:
+                    - generic [ref=f54e6]:
+                      - generic "Página 1 de 2" [ref=f54e7]:
+                        - generic [ref=f54e8]: Página
+                        - textbox "La página es 1" [ref=f54e10]: "1"
+                        - generic [ref=f54e11]: /
+                        - generic [ref=f54e12]: "2"
+                      - generic [ref=f54e13]:
+                        - button "Alejar" [ref=f54e14] [cursor=pointer]
+                        - button "Ajustar al ancho" [ref=f54e16] [cursor=pointer]
+                        - button "Acercar" [ref=f54e18] [cursor=pointer]
+                    - main [ref=f54e20]:
+                      - generic [ref=f54e21]:
+                        - textbox [ref=f54e22]
+                        - document [ref=f54e24]:
+                          - generic:
+                            - generic:
+                              - heading "Página 1 de 2" [level=2]
+                              - paragraph: Tips for Creating a Brain-Based Informed Mental Health
+                              - paragraph: Treatment Plan
+                              - paragraph: • While the individual is the primary client, clinicians may need to consider involving caregivers and
+                              - paragraph: other supportive adults in treatment. This approach recognizes that the client's mental health
+                              - paragraph: challenges may stem from an environment that does not fully accommodate or understand their
+                              - paragraph: brain-based differences, leading to unrealistic expectations. Equipping caregivers and key adults
+                              - paragraph: can help create a more understanding and adaptive environment, ultimately reducing symptoms.
+                              - paragraph: This collaborative approach is an important consideration at all stages of life, including in
+                              - paragraph: adulthood.
+                              - paragraph: • The goal of treatment is to create an environment of Interdependency versus Independency. It is
+                              - paragraph: important for brain-based informed mental health clinicians to reassess the concepts of
+                              - paragraph: “dependency” and “enabling” within treatment and systems.
+                              - paragraph: • Recognize that caregivers also may have their own brain-based differences and challenges. Set
+                              - paragraph: realistic, brain-friendly goals for caregivers to ensure they are supported in their role.
+                              - paragraph: • A brain-based informed mental health clinician assesses the learning styles of everyone involved
+                              - paragraph: in the treatment plan, including the client, caregivers, and other support providers such as
+                              - paragraph: teachers. Understanding whether they are visual, auditory, or experiential learners allows for the
+                              - paragraph: delivery of information in a way that is most effective for them. This may include using videos,
+                              - paragraph: written materials, hands-on practice, or verbal explanations to ensure meaningful engagement
+                              - paragraph: and understanding.
+                              - paragraph: • An individual with a brain-based difference could have also experienced traumatic events that
+                              - paragraph: affect how they trust and connect with others. To foster an interdependent relationship where they
+                              - paragraph: feel comfortable accepting help, it is essential to first establish a sense of felt safety with both the
+                              - paragraph: clinician and supportive adults. This foundation is crucial for meaningful engagement and
+                              - paragraph: effective growth.
+                            - img
+                          - generic:
+                            - generic:
+                              - heading "Página 2 de 2" [level=2]
+                              - paragraph: • It's important to recognize that while not a formal treatment goal, the environment significantly
+                              - paragraph: influences the therapeutic process. Brain-based informed mental health clinicians should
+                              - paragraph: consider factors such as lighting, colors, clutter, and transitions, as these impact the client not
+                              - paragraph: only in the therapy office but also in other settings like home, school, and the workplace. A well- designed environment can promote regulation, reduce stress, and support skill development,
+                              - paragraph: enhancing the effectiveness of treatment.
+                              - paragraph: • When developing the treatment plan, it is important to review the assessment, focusing on the
+                              - paragraph: individual's brain-based strengths and challenges to ensure the goals are appropriate.
+                              - paragraph: o Encourage the individual to express their own goals and preferences, ensuring their voice is
+                              - paragraph: central to the process.
+                              - paragraph: o While treatment plans often emphasize areas for improvement, it’s equally important to center
+                              - paragraph: them around an individual’s strengths. Incorporating natural abilities and interests into goals
+                              - paragraph: enhances learning, fosters growth, and makes challenges more manageable.
+                              - paragraph: o Treatment objectives should align with their current cognitive and emotional development,
+                              - paragraph: making them both attainable and meaningful.
+                              - paragraph: o Set goals that are aligned with the client’s developmental stage, not chronological age. Each
+                              - paragraph: person has a unique developmental timeline, so interventions should be tailored accordingly.
+                              - paragraph: o Recognize that individuals may struggle to apply skills across different settings. Work with the
+                              - paragraph: whole support system to ensure consistency, understanding, and integration of skills across
+                              - paragraph: all environments (home, school, therapy settings).
+                              - paragraph: o Adjusting the pace of treatment is important, as individuals with brain-based challenges might
+                              - paragraph: require additional time to develop new skills. Their specific challenges may require simplifying
+                              - paragraph: treatment goals and breaking them into manageable steps. Goals should be realistic,
+                              - paragraph: outcome-oriented, and open-ended rather than time-restricted, allowing for steady progress
+                              - paragraph: and lasting change.
+                              - paragraph: Sponsored by The Florida Center in Collaboration
+                              - paragraph: with the FASD United Mental Health Work Group and
+                              - paragraph: the FASD Collaborative SIG Mental Health Group
+                            - img
+                        - generic [ref=f54e27]:
+                          - textbox [ref=f54e30]:
+                            - /placeholder: Buscar en el documento
+                          - button [ref=f54e33] [cursor=pointer]
+                          - button [ref=f54e35] [cursor=pointer]
+                          - button [ref=f54e37] [cursor=pointer]
+                  - button "Ventana emergente" [ref=f54e41] [cursor=pointer]
+                - region
+                - generic [ref=f54e43]: Cargando 4. Creating a Brain-Based Treatment Plan.pdf Página 1 de 2 Página 1 de 2
+          - generic [ref=e120]:
+            - generic [ref=e124]:
+              - heading "Plain Language Wording of Handout" [level=2]:
+                - generic [ref=e125]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Plain Language Wording of Handout
+            - generic [ref=e129]:
+              - heading "Tips for Creating a Brain-Based Mental Health Treatment Plan" [level=3]:
+                - generic [ref=e130]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Tips for Creating a Brain-Based Mental Health Treatment Plan
+              - list [ref=e131]:
+                - listitem [ref=e132]: "Include Caregivers and Supportive Adults: While the client is the focus, involving caregivers and other key adults can help create a more supportive environment. Many mental health challenges come from environments that don’t fully understand the client’s brain differences. Educating caregivers can reduce unrealistic expectations and improve the client’s well-being. This is important at all life stages, including adulthood."
+                - listitem [ref=e133]: "Focus on Interdependence, Not Just Independence: Instead of pushing for complete independence, treatment should support healthy interdependence—where the client can rely on others when needed. Reconsider terms like \"dependency\" and \"enabling\" in this context."
+                - listitem [ref=e134]: "Support Caregivers Too: Caregivers may have their own brain-based challenges. Set realistic, achievable goals for them so they can provide better support."
+                - listitem [ref=e135]: "Match Learning Styles: People learn differently—some prefer visual aids, others learn best through hands-on experience, reading, or listening. Consider these styles when sharing information with the client, caregivers, and other support people (like teachers). Use videos, written guides, hands-on activities, or discussions to ensure understanding."
+                - listitem [ref=e136]: "Build Trust First: Clients with brain-based differences may have experienced trauma that affects their ability to trust and accept help. Establishing safety and trust with both the clinician and caregivers is essential for progress."
+                - listitem [ref=e137]: "Consider the Environment: The surroundings can affect therapy success. Factors like lighting, colors, clutter, and daily transitions impact mood and focus. A well-structured space can reduce stress and improve self-regulation in therapy, at home, in school, or at work."
+                - listitem [ref=e138]:
+                  - text: "Use Strengths to Guide Treatment Goals:"
+                  - list [ref=e139]:
+                    - listitem [ref=e140]: Make sure goals are based on the client’s brain strengths and challenges.
+                    - listitem [ref=e141]: Let the client have a say in their treatment goals.
+                    - listitem [ref=e142]: Don’t just focus on weaknesses—build on strengths and interests to boost learning and confidence.
+                    - listitem [ref=e143]: Goals should match the client’s emotional and cognitive development, not just their age.
+                    - listitem [ref=e144]: Skills may not transfer easily across different settings, so involve all support systems (home, school, therapy) to ensure consistency.
+                    - listitem [ref=e145]: Progress may take time. Set realistic, flexible goals broken into small, manageable steps to support steady growth.
+        - generic [ref=e146]:
+          - button [ref=e147] [cursor=pointer]:
+            - img [ref=e150]
+          - generic:
+            - generic [ref=e153]:
+              - text: Page updated
+              - contentinfo
+            - button "Report abuse" [ref=e155] [cursor=pointer]
+  - region

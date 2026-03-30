@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic:
+      - banner
+    - generic [ref=e5]:
+      - generic:
+        - generic:
+          - generic:
+            - button "Skip to main content":
+              - generic: Skip to main content
+          - generic:
+            - button "Skip to navigation":
+              - generic: Skip to navigation
+      - generic [ref=e8]:
+        - banner:
+          - generic [ref=e10]:
+            - link "Brain-Based Informed" [ref=e12] [cursor=pointer]:
+              - /url: /thefloridacenter.org/brain-based-informed/home
+              - generic [ref=e13]: Brain-Based Informed
+            - navigation [ref=e14]:
+              - list [ref=e15]:
+                - listitem [ref=e16]:
+                  - link "Home" [ref=e19] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/home
+                - listitem [ref=e21]:
+                  - link "Starting the Path" [ref=e24] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/starting-the-path
+                - listitem [ref=e26]:
+                  - link "Education" [ref=e29] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/education
+                - listitem [ref=e31]:
+                  - link "Assessment" [ref=e34] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/assessment
+                - listitem [ref=e36]:
+                  - link "Planning" [ref=e39] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/planning
+                - listitem [ref=e41]:
+                  - link "Treatment" [ref=e44] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/treatment
+                - listitem [ref=e46]:
+                  - link "Community" [ref=e49] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/community
+                - listitem [ref=e51]:
+                  - link "Caregivers & Self-Advocates" [ref=e54] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/caregivers-self-advocates
+            - button "Open search bar" [ref=e56] [cursor=pointer]:
+              - img [ref=e59]
+        - generic [ref=e63]:
+          - main [ref=e74]:
+            - heading "Community" [level=1] [ref=e75]
+          - generic [ref=e78]:
+            - img [ref=e87]
+            - paragraph [ref=e95]: Do you want help in supporting your clients through a brain-based lens? You don’t have to travel this path alone. Together we can bring brain-based informed mental health forward. The Florida Center in collaboration with the FASD United Mental Health Work Group and the FASD Mental Health Reflective Group are here to help!
+          - generic [ref=e101]:
+            - paragraph [ref=e106]: Mental Health Consultation and Reflection Group
+            - iframe [ref=e145]:
+              - iframe [ref=f66e2]:
+                - iframe [ref=f68e2]:
+                  - link "Request More Information" [ref=f69e2] [cursor=pointer]:
+                    - /url: mailto:jnikols@flowcounseling.net?subject=Request%20for%20more%20information%20Brain%20Based%20Reflective
+            - generic [ref=e149]:
+              - paragraph [ref=e150]: The Brain-Based Informed Mental Health Consultation and Reflection Group offers online support for those looking to deepen their understanding of brain-based conditions/neurodivergence, trauma, and relationships by using a neurodevelopmental lens. This framework helps us consider brain development (such as executive functioning, learning, memory, language, and sensory processing) and connect brain functioning with behavioral manifestations (such as difficulties regulating, impulsivity, and social challenges). Using a brain-based approach helps reframe neurodiversity /neurodevelopmental conditions by bringing new perspectives and expanding options, leading to more practical and effective support for a client.
+              - paragraph [ref=e151]
+              - paragraph [ref=e152]: Professionals gather, discuss, and learn about trauma/brain-based informed approaches to increase their ability to recognize and meet their client's needs. With a focus on adapting your current therapeutic treatments using a neurodevelopmental framework, discuss challenging cases, ask questions, and receive feedback on how to best integrate the brain-based approach to provide practical and effective support to your clients.
+          - generic [ref=e158]:
+            - paragraph [ref=e163]: Mental Health Work Group
+            - generic "Join the Movement" [ref=e169] [cursor=pointer]:
+              - link "Join the Movement" [ref=e170]:
+                - /url: https://docs.google.com/forms/d/e/1FAIpQLScbiSaAKM7mQjESYzxUCAxehXVUldxckOidSYBmhfSHY_947w/viewform?usp=preview
+                - paragraph [ref=e172]: Join the Movement
+            - generic [ref=e176]:
+              - list [ref=e177]:
+                - listitem [ref=e178]: To provide clinicians with a deep understanding of brain-based differences (BBDs) to enhance mental health support. The focus is on developing a comprehensive understanding of BBDs to improve assessment, treatment planning, and service delivery.
+                - listitem [ref=e179]: By bringing together the community of providers through education, awareness, and collaboration, we aim to foster more compassionate, tailored, and effective mental health services
+                - listitem [ref=e180]: A core goal of this effort is to establish a Community of Practice (CoP) for FASD, bringing together mental health professionals, caregivers, self-advocates, and other stakeholders.This CoP will facilitate collaboration, knowledge-sharing, and skill-building, creating a network dedicated to improving mental health outcomes for individuals and families affected by FASD.
+              - paragraph [ref=e181]: Engaging caregivers and self-advocates is essential to ensure a well-rounded support system that extends beyond clinicians.
+        - generic [ref=e182]:
+          - button [ref=e183] [cursor=pointer]:
+            - img [ref=e186]
+          - generic:
+            - generic [ref=e189]:
+              - text: Page updated
+              - contentinfo
+            - button "Report abuse" [ref=e191] [cursor=pointer]
+  - region

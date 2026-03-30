@@ -1,0 +1,196 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic:
+      - banner
+    - generic [ref=e5]:
+      - generic:
+        - generic:
+          - generic:
+            - button "Skip to main content":
+              - generic: Skip to main content
+          - generic:
+            - button "Skip to navigation":
+              - generic: Skip to navigation
+      - generic [ref=e8]:
+        - banner:
+          - generic [ref=e10]:
+            - link "Brain-Based Informed" [ref=e12] [cursor=pointer]:
+              - /url: /thefloridacenter.org/brain-based-informed/home
+              - generic [ref=e13]: Brain-Based Informed
+            - navigation [ref=e14]:
+              - list [ref=e15]:
+                - listitem [ref=e16]:
+                  - link "Home" [ref=e19] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/home
+                - listitem [ref=e21]:
+                  - link "Starting the Path" [ref=e24] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/starting-the-path
+                - listitem [ref=e26]:
+                  - link "Education" [ref=e29] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/education
+                - listitem [ref=e31]:
+                  - link "Assessment" [ref=e34] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/assessment
+                - listitem [ref=e36]:
+                  - link "Planning" [ref=e39] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/planning
+                - listitem [ref=e41]:
+                  - link "Treatment" [ref=e44] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/treatment
+                - listitem [ref=e46]:
+                  - link "Community" [ref=e49] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/community
+                - listitem [ref=e51]:
+                  - link "Caregivers & Self-Advocates" [ref=e54] [cursor=pointer]:
+                    - /url: /thefloridacenter.org/brain-based-informed/caregivers-self-advocates
+            - button "Open search bar" [ref=e56] [cursor=pointer]:
+              - img [ref=e59]
+        - generic [ref=e63]:
+          - main [ref=e74]:
+            - heading "Treatment" [level=1] [ref=e75]
+          - generic [ref=e78]:
+            - img [ref=e87]
+            - paragraph [ref=e95]: The challenge of working with brain-based differences lies in the fact that every brain is unique. This means that the effectiveness of any treatment depends on how an individual's brain functions. What works for one person may not be as effective for another due to these differences. As a result, treatment must be adaptable, tailored to meet the specific needs of each person based on their brain’s unique characteristics.
+          - generic [ref=e101]:
+            - generic [ref=e105]:
+              - heading "Handout" [level=1]:
+                - generic [ref=e106]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Handout
+            - iframe [ref=e114]:
+              - application [active]:
+                - iframe [ref=f60e1]:
+                  
+                - generic "Se está mostrando el lector." [ref=f60e4]:
+                  - generic "Mostrando 5. Evidenced Based Treatments.pdf"
+                  - generic [ref=f60e5]:
+                    - generic [ref=f60e6]:
+                      - generic "Página 1 de 2" [ref=f60e7]:
+                        - generic [ref=f60e8]: Página
+                        - textbox "La página es 1" [ref=f60e10]: "1"
+                        - generic [ref=f60e11]: /
+                        - generic [ref=f60e12]: "2"
+                      - generic [ref=f60e13]:
+                        - button "Alejar" [ref=f60e14] [cursor=pointer]
+                        - button "Ajustar al ancho" [ref=f60e16] [cursor=pointer]
+                        - button "Acercar" [ref=f60e18] [cursor=pointer]
+                    - main [ref=f60e20]:
+                      - generic [ref=f60e21]:
+                        - textbox [ref=f60e22]
+                        - document [ref=f60e24]:
+                          - generic:
+                            - generic:
+                              - heading "Página 1 de 2" [level=2]
+                              - paragraph: Evidenced-Based Treatments and Sample
+                              - paragraph: Accommodations Based on Brain-Based Needs
+                              - paragraph: Parent Management Trainings (PMTs)
+                              - paragraph: PMTs, such as Parent-Child Interaction Therapy (PCIT) and Triple P (Positive Parenting Program),
+                              - paragraph: are evidence-based treatments that focus on improving the parent-child relationship and managing
+                              - paragraph: children's behavioral issues.
+                              - paragraph: Cognitive Behavioral Therapy (CBT)
+                              - paragraph: CBT is a therapeutic approach that helps individuals identify and change negative thought patterns
+                              - paragraph: and behaviors that contribute to emotional distress. By developing healthier thinking habits and
+                              - paragraph: coping strategies, CBT enables individuals to improve emotional regulation and manage challenges
+                              - paragraph: more effectively.
+                              - paragraph: If the child and/or caregiver
+                              - paragraph: have a Low IQ
+                              - paragraph: Adjust the treatment pace by slowing it down
+                              - paragraph: and reinforcing session content over multiple
+                              - paragraph: sessions
+                              - paragraph: If the client’s
+                              - paragraph: developmental age is
+                              - paragraph: younger than stated age
+                              - paragraph: Match treatment to developmental level.
+                              - paragraph: Make the steps very simple/concrete with lots
+                              - paragraph: of repetition
+                            - img
+                          - generic:
+                            - generic:
+                              - heading "Página 2 de 2" [level=2]
+                              - paragraph: Dialectical Behavior Therapy (DBT)
+                              - paragraph: DBT is a type of therapy that helps individuals manage intense emotions and improve relationships
+                              - paragraph: by teaching skills like mindfulness, emotional regulation, and distress tolerance. It focuses on
+                              - paragraph: balancing acceptance with the need for change and was initially developed for borderline personality
+                              - paragraph: disorder.
+                              - paragraph: Trust-Based Relational Intervention (TBRI)
+                              - paragraph: TBRI is an attachment-based, trauma-informed therapy designed to help children who have
+                              - paragraph: experienced trauma or adversity. It focuses on building trust, enhancing emotional regulation, and
+                              - paragraph: improving relationships through principles of connection, empowerment, and correction.
+                              - paragraph: If the client has memory
+                              - paragraph: issues or has difficulty
+                              - paragraph: translating information
+                              - paragraph: outside of session
+                              - paragraph: Slow down pace of treatment, focusing on one
+                              - paragraph: skill at a time for multiple sessions, include
+                              - paragraph: support people and have them practice daily with
+                              - paragraph: clients, video skills so they can review between
+                              - paragraph: sessions
+                              - paragraph: If the child has working
+                              - paragraph: memory challenges and a
+                              - paragraph: highly concrete thinking
+                              - paragraph: style
+                              - paragraph: Use Life Value Terms by focusing on one rule at
+                              - paragraph: a time in a concrete manner, incorporating role
+                              - paragraph: play. Reinforce learning through repetition and
+                              - paragraph: frequent review of the rules in each session
+                              - paragraph: Sponsored by The Florida Center in Collaboration
+                              - paragraph: with the FASD United Mental Health Work Group and
+                              - paragraph: the FASD Collaborative SIG Mental Health Group
+                            - img
+                        - generic [ref=f60e27]:
+                          - textbox [ref=f60e30]:
+                            - /placeholder: Buscar en el documento
+                          - button [ref=f60e33] [cursor=pointer]
+                          - button [ref=f60e35] [cursor=pointer]
+                          - button [ref=f60e37] [cursor=pointer]
+                  - button "Ventana emergente" [ref=f60e41] [cursor=pointer]
+                - region
+                - generic [ref=f60e43]: Mostrando 5. Evidenced Based Treatments.pdf Página 1 Página 1 de 2
+          - generic [ref=e120]:
+            - generic [ref=e124]:
+              - heading "Plain Language Wording of Handout" [level=2]:
+                - generic [ref=e125]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Plain Language Wording of Handout
+            - generic [ref=e129]:
+              - heading "Evidence-Based Treatments and Helpful Adjustments for Different Brain-Based Needs" [level=3]:
+                - generic [ref=e130]:
+                  - generic:
+                    - generic:
+                      - button:
+                        - generic:
+                          - img
+                  - text: Evidence-Based Treatments and Helpful Adjustments for Different Brain-Based Needs
+              - paragraph [ref=e131]: Parent Management Trainings (PMTs)
+              - paragraph [ref=e132]: Programs like Parent-Child Interaction Therapy (PCIT) and Triple P (Positive Parenting Program) help parents improve their relationship with their child and manage behavior challenges effectively.
+              - paragraph [ref=e133]: Cognitive Behavioral Therapy (CBT)
+              - paragraph [ref=e134]: CBT helps people recognize and change negative thoughts and behaviors that cause emotional distress. It teaches healthy thinking habits and coping skills to improve emotional regulation.
+              - paragraph [ref=e135]: "Adjustments for Specific Needs:"
+              - list [ref=e136]:
+                - listitem [ref=e137]: If the child or caregiver has a low IQ → Slow down the treatment, repeat important information over multiple sessions.
+                - listitem [ref=e138]: If the child’s developmental level is younger than their actual age → Use simple, step-by-step instructions with lots of repetition.
+              - paragraph [ref=e139]: Dialectical Behavior Therapy (DBT)
+              - paragraph [ref=e140]: DBT teaches skills like mindfulness, managing emotions, and handling stress in a healthy way. It helps people balance accepting themselves with making positive changes. It was originally designed for people with borderline personality disorder but is helpful for others, too.
+              - paragraph [ref=e141]: Trust-Based Relational Intervention (TBRI)
+              - paragraph [ref=e142]: TBRI is a therapy for children who have experienced trauma. It focuses on building trust, improving emotional regulation, and strengthening relationships using connection, empowerment, and correction strategies.
+              - paragraph [ref=e143]: "Adjustments for Specific Needs:"
+              - list [ref=e144]:
+                - listitem [ref=e145]: If the client struggles with memory or applying skills outside of sessions → Teach one skill at a time over multiple sessions, involve caregivers, and have them practice with the child daily. Record videos of skills so they can review at home.
+                - listitem [ref=e146]: If the child has trouble remembering things and thinks very literally → Focus on one simple rule at a time, use role-play, and repeat lessons often to reinforce learning.
+        - generic [ref=e147]:
+          - button [ref=e148] [cursor=pointer]:
+            - img [ref=e151]
+          - generic:
+            - generic [ref=e154]:
+              - text: Page updated
+              - contentinfo
+            - button "Report abuse" [ref=e156] [cursor=pointer]
+  - region
