@@ -94,6 +94,7 @@ nav .nav-links li a.active {
 .hero .subtitle {
   font-size: 19px;
   font-weight: 300;
+  color: #fff;
   opacity: 0.9;
   max-width: 650px;
   margin: 0 auto;
