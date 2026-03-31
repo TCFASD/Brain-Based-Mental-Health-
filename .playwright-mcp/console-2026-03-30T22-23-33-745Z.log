@@ -1,0 +1,11 @@
+[   65891ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQhMs.woff2:0
+[   65891ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DCuXhMs.woff2:0
+[   65891ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/HI_jiYsKILxRpg3hIP6sJ7fM7PqlOPHYvDP_W9O7GQTTbI1rTA.woff2:0
+[   65891ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/HI_jiYsKILxRpg3hIP6sJ7fM7PqlOPHYvDP_W9O7GQTTi4prTA.woff2:0
+[   65892ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/S6u9w4BMUTPHh7USewo.woff2:0
+[   65892ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/S6u_w4BMUTPHjxsI9w2PGQ.woff2:0
+[   65892ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/S6uyw4BMUTPHvxw.woff2:0
+[   65892ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/S6u8w4BMUTPHjxswXg.woff2:0
+[   65892ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/S6u9w4BMUTPHh6UVewo.woff2:0
+[   65892ms] [ERROR] Failed to load resource: net::ERR_FILE_NOT_FOUND @ filesystem:https://sites.google.com/persistent/docs/fonts/S6u_w4BMUTPHjxsI5wqPGQ.woff2:0
+[   66739ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://sites.google.com/drivesharing/clientmodel?id=10bOUJGGwLUWzpNWA3u0gi8D7bJKyBq4P&foreignService=atari&authuser=0&origin=https%3A%2F%2Fsites.google.com:0
