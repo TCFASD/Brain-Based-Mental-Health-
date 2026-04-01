@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips for Creating a Brain-Based Treatment Plan — Brain-Based Mental Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+  /* Handout-specific styles */
+  .handout-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+  }
+  .handout-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 400px 400px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 350px 350px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 300px 300px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 250px 250px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .handout-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 3px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(circle 3px at 90% 15%, rgba(167,139,250,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 15% 80%, rgba(56,189,248,0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .handout-header-inner {
+    position: relative;
+    z-index: 1;
+    padding: 60px 40px 50px;
+  }
+  .handout-header-inner img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+  }
+  .handout-header-inner h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    max-width: 750px;
+    margin: 0 auto 12px;
+  }
+  .handout-header-inner .subtitle {
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .handout-header-rule {
+    height: 4px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  /* Tips grid for web */
+  .handout-tips {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 50px 40px 60px;
+  }
+  .tips-web-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 32px;
+  }
+  .tip-web-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e6ed;
+    background: #fff;
+    transition: box-shadow 0.2s;
+  }
+  .tip-web-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .tip-web-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .tip-web-card .tip-body {
+    padding: 24px;
+  }
+  .tip-web-card h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .tip-web-card p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Full-width tip cards */
+  .tip-web-full {
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    margin-bottom: 28px;
+    transition: box-shadow 0.2s;
+  }
+  .tip-web-full:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .tip-web-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 220px;
+  }
+  .tip-web-full .tip-body {
+    padding: 28px;
+  }
+  .tip-web-full h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .tip-web-full p { font-size: 16px; color: #444; line-height: 1.7; margin-bottom: 12px; }
+  .tip-web-full ul { margin-left: 22px; font-size: 16px; color: #444; line-height: 1.7; }
+  .tip-web-full li { margin-bottom: 6px; }
+
+  /* Download banner */
+  .download-banner {
+    background: #f7f9fc;
+    text-align: center;
+    padding: 32px 40px;
+    border-top: 1px solid #e0e6ed;
+  }
+  .download-banner p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .handout-header-inner { padding: 40px 20px 30px; }
+    .handout-header-inner h1 { font-size: 26px; }
+    .handout-tips { padding: 30px 20px 40px; }
+    .tips-web-grid { grid-template-columns: 1fr; }
+    .tip-web-full { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="site-name">Brain-Based Mental Health</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="professionals.html">Professionals</a></li>
+    <li><a href="caregivers.html">Caregivers</a></li>
+    <li><a href="self-advocates.html">Self-Advocates</a></li>
+    <li><a href="organizations.html">Organizations</a></li>
+    <li><a href="resources.html">Resources</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<div class="handout-header">
+  <div class="handout-header-bg"></div>
+  <div class="handout-header-inner">
+    <img src="images/Brain.png" alt="Brain-Based Mental Health">
+    <h1>Tips for Creating a Brain-Based Mental Health Treatment Plan</h1>
+    <p class="subtitle">A guide for mental health clinicians working with brain-based differences</p>
+  </div>
+  <div class="handout-header-rule"></div>
+</div>
+
+<!-- TIPS -->
+<div class="handout-tips">
+
+  <div class="tips-web-grid">
+    <div class="tip-web-card">
+      <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=500&h=300&fit=crop&q=80" alt="Family in a supportive conversation">
+      <div class="tip-body">
+        <h3>Include Caregivers and Supportive Adults</h3>
+        <p>While the individual is the primary client, involving caregivers and supportive adults in treatment can make a significant difference. Mental health challenges often stem from environments that do not accommodate brain-based differences. Equipping the people around the client helps create a more adaptive environment and reduces symptoms. This applies at all stages of life, including adulthood.</p>
+      </div>
+    </div>
+
+    <div class="tip-web-card">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop&q=80" alt="Clinician reviewing treatment goals with intention">
+      <div class="tip-body">
+        <h3>Focus on Interdependence, Not Just Independence</h3>
+        <p>The goal of treatment is to create an environment of interdependency versus independency. It is important for brain-based informed mental health clinicians to reassess the concepts of "dependency" and "enabling" within treatment and systems.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tips-web-grid">
+    <div class="tip-web-card">
+      <img src="https://images.unsplash.com/photo-1573497620046-54b702d1c001?w=500&h=300&fit=crop&q=80" alt="Therapist supporting an overwhelmed caregiver">
+      <div class="tip-body">
+        <h3>Support Caregivers Too</h3>
+        <p>Recognize that caregivers also may have their own brain-based differences and challenges. Set realistic, brain-friendly goals for caregivers to ensure they are supported in their role.</p>
+      </div>
+    </div>
+
+    <div class="tip-web-card">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=300&fit=crop&q=80" alt="Different ways of learning and engaging">
+      <div class="tip-body">
+        <h3>Match Learning Styles</h3>
+        <p>Assess the learning styles of everyone involved: the client, caregivers, and support providers like teachers. Deliver information in the format that works best for each person, whether that is videos, written materials, hands-on practice, or verbal explanations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-web-full">
+    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=400&h=300&fit=crop&q=80" alt="Supportive conversation between two people">
+    <div class="tip-body">
+      <h3>Build Trust First</h3>
+      <p>Individuals with brain-based differences may have also experienced trauma that affects how they trust and connect. Before meaningful engagement can happen, a sense of felt safety must be established with both the clinician and supportive adults. Trust is the foundation that everything else is built on.</p>
+    </div>
+  </div>
+
+  <div class="tip-web-full">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop&q=80" alt="Clean, calm therapy room with minimal decor">
+    <div class="tip-body">
+      <h3>Consider the Environment</h3>
+      <p>The environment significantly influences the therapeutic process. Consider lighting, colors, clutter, and transitions in the therapy office and across other settings like home, school, and work. A well-designed environment promotes regulation, reduces stress, and supports skill development.</p>
+    </div>
+  </div>
+
+  <div class="tip-web-full">
+    <img src="https://images.unsplash.com/photo-1531747118685-64e4c39e989f?w=400&h=300&fit=crop&q=80" alt="Person smiling and engaged in a positive moment">
+    <div class="tip-body">
+      <h3>Use Strengths to Guide Treatment Goals</h3>
+      <ul>
+        <li>Base goals on the client's brain strengths and challenges</li>
+        <li>Center the client's voice in the goal-setting process</li>
+        <li>Build on natural abilities and interests, not just areas for improvement</li>
+        <li>Align objectives with cognitive and emotional development, not chronological age</li>
+        <li>Expect that skills may not transfer across settings. Involve the full support system for consistency</li>
+        <li>Adjust the pace. Break goals into manageable steps. Keep them realistic, outcome-oriented, and open-ended rather than time-restricted</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- DOWNLOAD BANNER -->
+<div class="download-banner">
+  <p>Download a printable one-page version of this handout.</p>
+  <a href="Mock-up Website/Handout-Treatment-Plan-PDF.html" class="cta-btn cta-primary" target="_blank">Download PDF Version</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>Sponsored by the FASD United Mental Health Work Group</p>
+</footer>
+
+<!-- Mobile menu script -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

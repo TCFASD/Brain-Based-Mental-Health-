@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Benefits of Becoming a Brain-Based Informed Mental Health Clinician — Brain-Based Mental Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+  /* Handout-specific styles */
+  .handout-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+  }
+  .handout-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 400px 400px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 350px 350px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 300px 300px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 250px 250px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .handout-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 3px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(circle 3px at 90% 15%, rgba(167,139,250,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 15% 80%, rgba(56,189,248,0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .handout-header-inner {
+    position: relative;
+    z-index: 1;
+    padding: 60px 40px 50px;
+  }
+  .handout-header-inner img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+  }
+  .handout-header-inner h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    max-width: 750px;
+    margin: 0 auto 12px;
+  }
+  .handout-header-inner .subtitle {
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .handout-header-rule {
+    height: 4px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  /* Section cards for web */
+  .handout-sections {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 40px 60px;
+  }
+  .handout-card {
+    display: grid;
+    grid-template-columns: 5px 1fr;
+    gap: 0;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    transition: box-shadow 0.2s;
+  }
+  .handout-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .handout-card-accent { background: #2c5aa0; }
+  .handout-card-body { padding: 24px 28px; }
+  .handout-card-body h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 10px;
+  }
+  .handout-card-body p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .handout-card:nth-child(even) .handout-card-accent { background: #0e8a6e; }
+  .handout-card:nth-child(even) .handout-card-body h3 { color: #0e8a6e; }
+
+  /* Download banner */
+  .download-banner {
+    background: #f7f9fc;
+    text-align: center;
+    padding: 32px 40px;
+    border-top: 1px solid #e0e6ed;
+  }
+  .download-banner p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .handout-header-inner { padding: 40px 20px 30px; }
+    .handout-header-inner h1 { font-size: 26px; }
+    .handout-sections { padding: 30px 20px 40px; }
+    .handout-card-body { padding: 18px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="site-name">Brain-Based Mental Health</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="professionals.html">Professionals</a></li>
+    <li><a href="caregivers.html">Caregivers</a></li>
+    <li><a href="self-advocates.html">Self-Advocates</a></li>
+    <li><a href="organizations.html">Organizations</a></li>
+    <li><a href="resources.html">Resources</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<div class="handout-header">
+  <div class="handout-header-bg"></div>
+  <div class="handout-header-inner">
+    <img src="images/Brain.png" alt="Brain-Based Mental Health">
+    <h1>The Benefits of Becoming a Brain-Based Informed Mental Health Clinician</h1>
+    <p class="subtitle">Brain-Based Practice: From Understanding to Action</p>
+  </div>
+  <div class="handout-header-rule"></div>
+</div>
+
+<!-- SECTIONS -->
+<div class="handout-sections">
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>Understanding FASD Beyond Diagnosis</h3>
+      <p>Clients may not have a formal FASD diagnosis, but a brain-based informed mental health clinician understands and adapts to challenges such as memory, attention, processing speed, and language delays. This ensures therapy remains relevant and supportive.</p>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>Personalized Treatment Approaches</h3>
+      <p>Since FASD affects each person differently, a brain-based informed mental health clinician incorporates an understanding of brain function and trauma to tailor treatment strategies. This approach builds on strengths while addressing challenges, shifting the focus from shame to acceptance and reducing the severity of mental health symptoms associated with a lack of understanding of the disability.</p>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>Holistic Support for the Entire System</h3>
+      <p>A brain-based informed mental health clinician recognizes that both the client and their caregivers, along with other support members, may face unique brain-based challenges. Each individual may require different accommodations. The therapist considers the entire system, ensuring that all involved receive the support needed to function effectively and foster long-term growth. They also act as part of an interdisciplinary team, referring clients for additional services such as further testing, occupational therapy, speech-language therapy, educational navigation, and coordinating care with other providers.</p>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>Integrating Brain-Based Insights into Existing Practices</h3>
+      <p>Some clinicians may choose to specialize in FASD or other brain-based conditions, while others can integrate these insights into their existing practice. Rather than requiring a new specialization, this approach enhances current treatment modalities by adapting interventions as needed, offering a more comprehensive and tailored approach without shifting focus entirely.</p>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>Support for Cognitive Skills</h3>
+      <p>Clients experiencing cognitive difficulties such as executive functioning deficits, memory problems, focus issues, or decision-making challenges can benefit from structured exercises and strategies. A brain-based informed mental health clinician helps strengthen these cognitive skills, which are often the underlying source of challenging behaviors.</p>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>Sustainable, Long-Term Support</h3>
+      <p>Recognizing that the challenges clients face is ongoing, a brain-based informed mental health clinician provides strategies for managing daily routines, improving organization, and regulating emotions. They also work to build a strong, interdependent support network, equipping both clients and caregivers with the tools needed for long-term success.</p>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Therapist's Role in Self-Assessment and Growth</h3>
+      <p>Brain-based informed mental health clinicians engage in continuous self-reflection by examining their biases, evaluating the content they consume, adjusting their language, and refining their perspectives on disability. Engaging in reflexive practice ensures that therapists provide the most effective and compassionate care.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- DOWNLOAD BANNER -->
+<div class="download-banner">
+  <p>Download a printable version of this handout.</p>
+  <a href="Mock-up Website/Handout-Starting-the-Path-PDF.html" class="cta-btn cta-primary" target="_blank">Download PDF Version</a>
+  <p style="margin-top: 20px; font-size: 14px;">This handout is part of <a href="professionals.html#step-0" style="color: #2c5aa0; font-weight: 500;">Step 0: Why This Matters</a> in the Brain-Based Practice pathway.</p>
+</div>
+
+<!-- FOOTER -->
+<footer style="display: flex; align-items: center; justify-content: space-between; text-align: left;">
+  <img src="images/fasd-united-logo.png" alt="FASD United" style="height: 44px; width: auto;">
+  <p style="margin: 0;">Sponsored by the FASD United Mental Health Work Group</p>
+</footer>
+
+<!-- Mobile menu script -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
