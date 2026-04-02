@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Caregiver's Guide to Mental Health Therapies — Brain-Based Mental Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+  .handout-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+  }
+  .handout-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 400px 400px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 350px 350px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 300px 300px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 250px 250px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .handout-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 3px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(circle 3px at 90% 15%, rgba(167,139,250,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 15% 80%, rgba(56,189,248,0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .handout-header-inner {
+    position: relative;
+    z-index: 1;
+    padding: 60px 40px 50px;
+  }
+  .handout-header-inner img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+  }
+  .handout-header-inner h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    max-width: 800px;
+    margin: 0 auto 12px;
+  }
+  .handout-header-inner .subtitle {
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .handout-header-rule {
+    height: 4px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  /* Key themes intro */
+  .key-themes {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 40px 20px;
+  }
+  .key-themes h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 16px;
+  }
+  .key-themes p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .theme-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .theme-card {
+    background: #f0f5fa;
+    border-radius: 8px;
+    padding: 20px 24px;
+    border-left: 4px solid #2c5aa0;
+  }
+  .theme-card:nth-child(even) {
+    border-left-color: #0e8a6e;
+  }
+  .theme-card h4 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 8px;
+  }
+  .theme-card:nth-child(even) h4 {
+    color: #0e8a6e;
+  }
+  .theme-card p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .theme-card-full {
+    grid-column: 1 / -1;
+    background: #f0f5fa;
+    border-radius: 8px;
+    padding: 20px 24px;
+    border-left: 4px solid #2c5aa0;
+  }
+  .theme-card-full h4 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 8px;
+  }
+  .theme-card-full p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Modality cards */
+  .handout-sections {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 40px 60px;
+  }
+  .section-label {
+    font-family: 'Lexend', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e6ed;
+  }
+  .section-label:first-child {
+    margin-top: 0;
+  }
+  .modality-card {
+    margin-bottom: 28px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    transition: box-shadow 0.2s;
+  }
+  .modality-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .modality-card-header {
+    padding: 20px 28px 16px;
+    border-bottom: 1px solid #f0f3f7;
+  }
+  .modality-card-header h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 4px;
+  }
+  .modality-card-header .also-known {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+  }
+  .modality-card-body {
+    padding: 0 28px 24px;
+  }
+  .modality-field {
+    padding-top: 18px;
+  }
+  .modality-field-label {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c5aa0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .modality-field p, .modality-field ul {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .modality-field ul {
+    padding-left: 20px;
+    margin-top: 4px;
+  }
+  .modality-field li {
+    margin-bottom: 6px;
+  }
+  .modality-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  .tag-high { background: #d1fae5; color: #065f46; }
+  .tag-moderate { background: #fef3c7; color: #92400e; }
+  .tag-limited { background: #fee2e2; color: #991b1b; }
+  .tag-ages { background: #ede9fe; color: #5b21b6; }
+
+  .brain-note {
+    background: #f0f5fa;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 14px;
+    font-size: 15px;
+    color: #1a3a6b;
+    line-height: 1.6;
+    border-left: 3px solid #2c5aa0;
+  }
+  .brain-note strong {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  /* Alternating accent */
+  .modality-card:nth-child(even) .modality-card-header h3 { color: #0e8a6e; }
+  .modality-card:nth-child(even) .modality-field-label { color: #0e8a6e; }
+  .modality-card:nth-child(even) .brain-note { border-left-color: #0e8a6e; }
+
+  /* Download banner */
+  .download-banner {
+    background: #f7f9fc;
+    text-align: center;
+    padding: 32px 40px;
+    border-top: 1px solid #e0e6ed;
+  }
+  .download-banner p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .handout-header-inner { padding: 40px 20px 30px; }
+    .handout-header-inner h1 { font-size: 26px; }
+    .key-themes { padding: 30px 20px 10px; }
+    .theme-cards { grid-template-columns: 1fr; }
+    .handout-sections { padding: 20px 20px 40px; }
+    .modality-card-header { padding: 16px 20px 12px; }
+    .modality-card-body { padding: 0 20px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="site-name">Brain-Based Mental Health</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="professionals.html">Professionals</a></li>
+    <li><a href="caregivers.html">Caregivers</a></li>
+    <li><a href="self-advocates.html">Self-Advocates</a></li>
+    <li><a href="organizations.html">Organizations</a></li>
+    <li><a href="resources.html">Resources</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<div class="handout-header">
+  <div class="handout-header-bg"></div>
+  <div class="handout-header-inner">
+    <img src="images/Brain.png" alt="Brain-Based Mental Health">
+    <h1>A Caregiver's Guide to Mental Health Therapies</h1>
+    <p class="subtitle">What each therapy asks the brain to do, whether caregivers are involved, and how to know if it might be a good fit for your child.</p>
+  </div>
+  <div class="handout-header-rule"></div>
+</div>
+
+<!-- KEY THEMES -->
+<div class="key-themes">
+  <h2>Before You Read: Five Things to Know</h2>
+  <p>Understanding therapy options can feel overwhelming. Here are five ideas that can help you make sense of what you're reading — and ask better questions when you meet with providers.</p>
+
+  <div class="theme-cards">
+    <div class="theme-card">
+      <h4>"Top-Down" vs. "Bottom-Up" Matters</h4>
+      <p>"Top-down" therapies (like CBT) ask the thinking brain to manage emotions and behavior. "Bottom-up" therapies (like Theraplay or Somatic Experiencing) start with the body and nervous system. For children with brain-based differences, bottom-up approaches are often more accessible — you have to calm the survival brain before the thinking brain can learn.</p>
+    </div>
+    <div class="theme-card">
+      <h4>Caregiver Involvement Is Not Optional</h4>
+      <p>The therapies with the strongest evidence for children with brain-based differences are all high-caregiver-involvement. A therapist who sees your child alone for 50 minutes a week cannot change the other 167 hours. Look for approaches where you are trained and supported as a partner.</p>
+    </div>
+    <div class="theme-card">
+      <h4>"Can't" vs. "Won't" Changes Everything</h4>
+      <p>Many standard approaches assume the child CAN do the expected behavior and just needs the right motivation. For brain-based differences, the behavior often reflects a genuine skill deficit or neurological barrier. The best-fit therapies are built on this understanding.</p>
+    </div>
+    <div class="theme-card">
+      <h4>One Therapy Is Rarely Enough</h4>
+      <p>Your child might benefit from a combination — for example, a parent training approach for you, a play-based therapy for your child's individual work, and a problem-solving framework like CPS for daily life. That is normal and often the most effective path.</p>
+    </div>
+    <div class="theme-card-full">
+      <h4>Match the Therapy to the Brain, Not the Diagnosis</h4>
+      <p>A child with FASD, a child with developmental trauma, and a child with autism may all benefit from similar approaches — because their brains need similar things even though their diagnoses differ. When evaluating a therapy, the most important question is: can my child's brain do what this therapy is asking?</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODALITY SECTIONS -->
+<div class="handout-sections">
+
+  <!-- ==================== TALK-BASED / COGNITIVE APPROACHES ==================== -->
+  <div class="section-label">Talk-Based and Cognitive Approaches</div>
+
+  <!-- CBT -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Cognitive Behavioral Therapy (CBT)</h3>
+      <span class="modality-tag tag-ages">Ages 7+</span>
+      <span class="modality-tag tag-limited">Brain-Based Fit: Limited Without Modification</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>CBT asks the brain to notice its own thoughts, evaluate whether those thoughts are accurate, and replace unhelpful thoughts with more helpful ones. It teaches the connection between thoughts, feelings, and behavior — and uses the thinking brain (prefrontal cortex) to regulate emotions. This is a "top-down" approach: it starts with thinking and works down to feelings and behavior.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p>Varies. Traditional CBT is often individual — the child or teen meets alone with the therapist. Some programs include parent sessions, but caregiver involvement is not built into the standard model.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child can identify and talk about their thoughts and feelings</li>
+          <li>Your child can think abstractly (understanding cause and effect, "if/then" reasoning)</li>
+          <li>Anxiety, depression, or distorted thinking is the primary concern</li>
+          <li>Your child can remember and apply skills learned in session to real life</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        CBT relies on self-monitoring, abstract reasoning, working memory, and the ability to generalize skills to new situations — these are often the exact areas where brain-based differences create challenges. Children may appear to "learn" CBT skills in session but be unable to apply them in real life. If your child isn't responding to CBT, the first question should be "Can their brain do what this therapy is asking?" — not "Are they not trying hard enough?"
+      </div>
+    </div>
+  </div>
+
+  <!-- TF-CBT -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Trauma-Focused CBT (TF-CBT)</h3>
+      <span class="modality-tag tag-ages">Ages 3–18</span>
+      <span class="modality-tag tag-moderate">Brain-Based Fit: Moderate With Adaptation</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>TF-CBT is a structured treatment specifically for children who have experienced trauma. It guides the brain through gradual trauma processing using the PRACTICE components: Psychoeducation, Relaxation, Affective modulation, Cognitive coping, Trauma narrative, In-vivo mastery, Conjoint sessions, and Enhancing safety. The child's brain gradually approaches and processes traumatic material in a safe, structured way — rather than avoiding it. It combines cognitive skills with body-based techniques like relaxation.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p><strong>Very high — built into the model.</strong> Sessions are typically 90 minutes: 45 minutes with the child, 45 minutes with the caregiver. Caregivers receive all components in parallel and participate in conjoint sessions where the child shares their trauma narrative. This is a major strength.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child has experienced trauma and is showing symptoms (nightmares, avoidance, hypervigilance, emotional dysregulation)</li>
+          <li>You want to be actively involved in your child's trauma treatment</li>
+          <li>Your child can engage with some level of verbal/cognitive processing (even if simplified)</li>
+          <li>The therapist is trained in both TF-CBT and neurodevelopmental adaptations</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        TF-CBT has the same cognitive demands as CBT plus the added requirement of creating a trauma narrative. However, the strong caregiver involvement and structured approach are significant strengths. For children with brain-based differences who carry trauma, a clinician experienced with both TF-CBT and neurodevelopmental differences should assess whether the child can engage with the cognitive and narrative components — and adapt accordingly.
+      </div>
+    </div>
+  </div>
+
+  <!-- DBT -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Dialectical Behavior Therapy (DBT)</h3>
+      <span class="modality-tag tag-ages">Teens primarily</span>
+      <span class="modality-tag tag-moderate">Brain-Based Fit: Moderate — Skills Are Useful</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>DBT teaches four skill sets: <strong>Mindfulness</strong> (being present-focused), <strong>Distress Tolerance</strong> (surviving a crisis without making it worse), <strong>Emotion Regulation</strong> (understanding and managing emotions), and <strong>Interpersonal Effectiveness</strong> (navigating relationships). The adolescent version adds "Walking the Middle Path" for families. Unlike CBT, some DBT skills work through the body — distress tolerance techniques like ice, paced breathing, and intense exercise directly calm the nervous system without requiring the child to think their way through it.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p><strong>Included in the adolescent version (DBT-A).</strong> Caregivers attend the skills group alongside the teen and learn the same skills. This means the whole family shares a common language for managing emotions and crises.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your teen has intense emotional reactions, self-harm, or difficulty managing crises</li>
+          <li>Emotional dysregulation is the primary concern</li>
+          <li>You want concrete, practical skills (not just "talk about feelings")</li>
+          <li>You are willing to learn and practice the skills alongside your teen</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        Full DBT is complex and demanding: weekly individual therapy, weekly skills group, between-session coaching calls, and homework. This is a heavy load for any family. The body-based distress tolerance skills are often the most accessible and effective piece for brain-based differences. A modified, simplified approach using selected DBT skills may work better than the full protocol. Ask the therapist: "Can we focus on the skills that match my child's abilities?"
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PLAY-BASED AND BODY-BASED ==================== -->
+  <div class="section-label">Play-Based and Body-Based Approaches</div>
+
+  <!-- PLAY THERAPY -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Play Therapy</h3>
+      <div class="also-known">Includes: Child-Centered Play Therapy (CCPT), Directive Play Therapy, Filial Therapy</div>
+      <span class="modality-tag tag-ages">Ages 2–12+</span>
+      <span class="modality-tag tag-high">Brain-Based Fit: Strong</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>Play therapy works through the experiential and emotional brain — not through words or insight. Play is the natural language of childhood, and children under 10 typically lack the cognitive development for abstract talk therapy.</p>
+        <ul>
+          <li><strong>Child-Centered (CCPT):</strong> The child leads; the therapist follows, reflects emotions, and provides unconditional positive regard. The brain expresses and processes emotions through play rather than words.</li>
+          <li><strong>Directive:</strong> The therapist introduces specific activities (sand tray, art, puppets, structured games) to address identified issues. The brain engages with specific content through accessible, concrete means.</li>
+          <li><strong>Filial Therapy:</strong> The therapist trains the caregiver to conduct child-centered play sessions. The caregiver learns to follow the child's lead, reflect emotions, and set limits — strengthening the attachment bond through play.</li>
+        </ul>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p>Varies dramatically by type. CCPT traditionally has low caregiver involvement (the therapy happens between child and therapist). <strong>Filial Therapy has very high caregiver involvement</strong> — the caregiver becomes the therapeutic agent. If caregiver involvement matters to you (and for brain-based differences, it should), ask specifically about Filial Therapy.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child is young or has developmental delays that make talk therapy difficult</li>
+          <li>Your child communicates better through action and play than through words</li>
+          <li>Emotional expression, processing, or attachment is the primary concern</li>
+          <li>Previous talk-based therapies haven't connected with your child</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        Play therapy may be the most accessible individual therapy modality for children with brain-based differences because it works through the experiential brain, bypasses verbal and cognitive demands, and meets children at their developmental (not chronological) level. Filial Therapy is especially promising because it strengthens the caregiver relationship and teaches the caregiver to attune to the child's actual developmental level.
+      </div>
+    </div>
+  </div>
+
+  <!-- EMDR -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>EMDR (Eye Movement Desensitization and Reprocessing)</h3>
+      <span class="modality-tag tag-ages">Ages 4+</span>
+      <span class="modality-tag tag-moderate">Brain-Based Fit: Moderate With Adaptation</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>EMDR asks the brain to reprocess traumatic memories that have gotten "stuck" in the emotional brain (limbic system) without being properly filed away. The therapist uses bilateral stimulation — eye movements, tapping, or sounds — while the person holds a difficult memory in mind. This appears to help the brain move memories from "active threat" storage to "past event" storage. Research shows changes in brain regions responsible for fear, memory, and regulation after EMDR treatment. The child does not need to talk extensively about the trauma.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p>Varies. For children, best practice includes caregiver involvement in preparation, stabilization, and support between sessions. The actual reprocessing is typically between the child and therapist. Some child-specific EMDR protocols include the caregiver more actively.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child has specific traumatic memories that seem to be driving symptoms</li>
+          <li>Talk-based trauma processing hasn't worked because your child can't or won't narrate the experience</li>
+          <li>Your child can hold a memory in mind while simultaneously tracking movement or tapping (a dual-attention task)</li>
+          <li>The therapist has specific training in EMDR with children and neurodevelopmental adaptations</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        EMDR requires working memory — the ability to hold one thing in mind while doing another. For children with brain-based differences, this dual-attention demand may need to be carefully assessed. Adaptations include simpler language, slower pace, more caregiver involvement, and the "storytelling method" for younger developmental ages. EMDR can be effective for children with FASD who carry trauma, but it should not be a first-line standalone approach — it works best as part of a broader plan with a clinician who understands neurodevelopmental adaptations.
+      </div>
+    </div>
+  </div>
+
+  <!-- SOMATIC EXPERIENCING -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Somatic Experiencing (SE)</h3>
+      <span class="modality-tag tag-ages">All ages</span>
+      <span class="modality-tag tag-moderate">Brain-Based Fit: Moderate</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>Somatic Experiencing is a body-based approach to healing trauma. It works "bottom-up" — starting with the body and nervous system rather than thoughts and stories. The idea is that trauma gets "stuck" in the nervous system, and SE helps the brain complete the defensive responses (fight, flight, freeze) that got interrupted during the traumatic event. The child learns to notice and track body sensations, building the brain's capacity to regulate its own arousal. SE specifically avoids intense re-experiencing of trauma.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p>Varies. Caregivers may be included in sessions or coached on how to support regulation at home. Not as consistently caregiver-involved as some other modalities on this list.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child has trauma-related symptoms that seem "stuck in the body" — startling, freezing, physical tension, unexplained pain</li>
+          <li>Talk therapy or cognitive approaches haven't worked because your child can't access or describe their experience in words</li>
+          <li>Your child has meltdowns or shutdowns that seem disproportionate to the trigger</li>
+          <li>There is a trauma history but your child can't narrate it (common in early or preverbal trauma)</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        The body-based approach bypasses the cognitive demands that are challenging for brain-based differences. For children who carry both prenatal and postnatal trauma, SE offers a way to address the nervous system directly without requiring verbal processing. However, SE does require some interoceptive awareness — the ability to notice internal body sensations — which may be variable in children with brain-based differences.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== RELATIONSHIP AND ATTACHMENT ==================== -->
+  <div class="section-label">Relationship and Attachment-Based Approaches</div>
+
+  <!-- THERAPLAY -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Theraplay</h3>
+      <span class="modality-tag tag-ages">Ages 0–12+</span>
+      <span class="modality-tag tag-high">Brain-Based Fit: Strong</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>Theraplay is a structured, relationship-focused play therapy where the therapist (and later the caregiver) leads playful, nurturing interactions that replicate the healthy parent-infant relationship. Unlike child-centered play therapy, Theraplay is adult-directed. It activates the social engagement system — the branch of the nervous system that supports connection rather than fight or flight. It provides the sensorimotor and co-regulation experiences that build the brain's capacity for self-regulation, and rebuilds attachment patterns through repeated experiences of attunement, playfulness, and nurture.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p><strong>Very high.</strong> Caregivers observe sessions initially, then are coached to take over the Theraplay activities. The goal is to transform the caregiver-child interactions at home.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child has attachment disruptions, difficulty trusting adults, or a history of relational trauma</li>
+          <li>Your child is withdrawn, overly controlling, or has difficulty accepting nurture or comfort</li>
+          <li>Your child is young or has developmental delays that make talk-based therapy difficult</li>
+          <li>You want to specifically strengthen the caregiver-child bond</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        Theraplay's sensorimotor, relationship-based approach works well for children whose brains respond better to "bottom-up" (body and relationship) than "top-down" (thinking and reasoning) interventions. Because it doesn't require verbal processing or insight, it's accessible to children with cognitive differences. The adult-directed structure also provides the predictability that many children with brain-based differences need.
+      </div>
+    </div>
+  </div>
+
+  <!-- DDP -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Dyadic Developmental Psychotherapy (DDP)</h3>
+      <div class="also-known">Also known as: Attachment-Focused Family Therapy</div>
+      <span class="modality-tag tag-ages">Children &amp; Teens</span>
+      <span class="modality-tag tag-high">Brain-Based Fit: Strong (especially foster/adoptive families)</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>DDP creates felt safety in the therapy room so the child's brain can come out of defensive mode. It is built around the attitude of <strong>PACE: Playfulness, Acceptance, Curiosity, and Empathy</strong>. The therapist uses PACE to activate the social engagement system (safety, connection) instead of the defensive system (fight, flight, freeze). Over time, DDP helps the child's brain create new narratives about themselves and their experiences, and builds the experience of being truly known and understood by another person — which organizes the developing brain.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p><strong>Very high — the caregiver is in every session.</strong> DDP works to heal the child through the caregiver-child relationship, with the therapist supporting both.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child has a history of abuse, neglect, or multiple placement disruptions</li>
+          <li>Your child has difficulty trusting caregivers or accepting comfort</li>
+          <li>Your child is adopted, fostered, or in kinship care</li>
+          <li>Attachment and relationship are the primary concerns, not just behavior</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        DDP's relational approach is well-suited for children with brain-based differences who also have co-occurring attachment disruptions — which is common among children with FASD who have histories of foster care or adoption. The emphasis on the caregiver's inner state (not just techniques) helps caregivers manage their own frustration and grief. The verbal and narrative elements may need adaptation for children with significant cognitive differences.
+      </div>
+    </div>
+  </div>
+
+  <!-- TBRI -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Trust-Based Relational Intervention (TBRI)</h3>
+      <span class="modality-tag tag-ages">All ages</span>
+      <span class="modality-tag tag-high">Brain-Based Fit: Very Strong (designed for this)</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>TBRI is a trauma-informed, attachment-based intervention built on three principles:</p>
+        <ul>
+          <li><strong>Connecting Principles:</strong> Activate the social engagement system — build felt safety through attunement, eye contact, healthy touch, and playful engagement</li>
+          <li><strong>Empowering Principles:</strong> Address the body's physiological needs that directly affect brain function — blood sugar regulation, sensory needs, hydration, and sleep. TBRI is unique in explicitly addressing the body's physical state as a driver of behavior.</li>
+          <li><strong>Correcting Principles:</strong> Use "connected correction" — maintaining the relationship while setting boundaries. The brain learns it can be redirected without being rejected.</li>
+        </ul>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p><strong>Extremely high.</strong> TBRI is fundamentally a caregiver-training approach. Caregivers learn all three principle sets and implement them in daily life. TBRI also trains professionals, teachers, and entire organizations.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child comes from a "hard place" — trauma, foster care, adoption, institutional care, or prenatal substance exposure</li>
+          <li>Your child has attachment difficulties, sensory needs, or regulation difficulties</li>
+          <li>You want a comprehensive framework that addresses body, relationship, AND behavior together</li>
+          <li>You are adopting or fostering and want a trauma-informed parenting framework from the start</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        TBRI was designed with prenatal substance exposure explicitly in mind. The Empowering Principles directly address blood sugar dysregulation and sensory processing — issues common in FASD that are often missing from other therapies. TBRI's research notes that children with histories of prenatal substance exposure often have significant changes to insulin receptor sites, making them subject to dramatic behavioral shifts when blood sugar drops. This physiological awareness is critical for families navigating brain-based differences.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CAREGIVER-FOCUSED / PROBLEM-SOLVING ==================== -->
+  <div class="section-label">Caregiver-Focused and Problem-Solving Approaches</div>
+
+  <!-- CPS -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Collaborative and Proactive Solutions (CPS)</h3>
+      <div class="also-known">Also known as: Collaborative Problem Solving (former name); "The Explosive Child" approach (Ross Greene, PhD)</div>
+      <span class="modality-tag tag-ages">All ages</span>
+      <span class="modality-tag tag-high">Brain-Based Fit: Very Strong</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>CPS is a non-punitive approach based on the premise that <strong>"kids do well if they can"</strong> — not "kids do well if they want to." Challenging behavior is understood as the result of lagging skills (flexibility, frustration tolerance, problem-solving) rather than lack of motivation. CPS does NOT try to motivate better behavior through rewards and consequences. Instead, it identifies the specific unsolved problems causing the behavior and teaches the child's brain to participate in solving those problems collaboratively with an adult. It uses "Plan B" conversations: an empathy step (understanding the child's concern), a define-the-adult-concern step, and an invitation to brainstorm solutions together.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p><strong>Very high.</strong> Caregivers are taught the CPS framework and implement it at home. The caregiver shifts from trying to impose solutions ("Plan A") or giving in ("Plan C") to collaborating with the child ("Plan B").</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child has meltdowns, explosions, or extreme rigidity</li>
+          <li>Traditional reward and consequence approaches haven't worked — or have made things worse</li>
+          <li>Your child seems to struggle with flexibility and frustration tolerance, not just "won't listen"</li>
+          <li>You are ready to shift from a compliance-focused to a problem-solving-focused approach</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        CPS's core assumption — that challenging behavior reflects lagging skills, not lack of motivation — aligns perfectly with a brain-based understanding. For children whose brains genuinely cannot produce the flexibility or problem-solving demanded of them, CPS meets them where they are. The emphasis on solving specific, concrete problems (rather than abstract behavior goals) is an excellent fit for brain-based differences.
+      </div>
+    </div>
+  </div>
+
+  <!-- PARENT TRAINING -->
+  <div class="modality-card">
+    <div class="modality-card-header">
+      <h3>Parent Training Programs</h3>
+      <div class="also-known">Also known as: Parent Management Training (PMT), Behavioral Parent Training (BPT)</div>
+      <span class="modality-tag tag-ages">Varies by program</span>
+      <span class="modality-tag tag-high">Brain-Based Fit: Good With Adaptations</span>
+    </div>
+    <div class="modality-card-body">
+      <div class="modality-field">
+        <div class="modality-field-label">What It Asks the Brain to Do</div>
+        <p>Parent training programs teach caregivers specific skills to change the environment around a child's challenging behavior. The core idea: <strong>the caregiver is the primary agent of change.</strong> These programs restructure the environment so the child's brain gets clear, predictable signals (reducing confusion and anxiety), positive behavior gets noticed and reinforced (strengthening those neural pathways), and the caregiver-child relationship improves. They work primarily through environmental change and repetition — not by asking the child to think differently.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Caregiver Involvement</div>
+        <p><strong>The caregiver IS the client.</strong> The therapist works mainly with the caregiver, who then implements skills at home. This is the defining feature of all parent training programs.</p>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">Named Programs Under This Umbrella</div>
+        <ul>
+          <li><strong>Parent Management Training (PMT / Kazdin Model)</strong> — Ages up to 12. The "classic" parent training: parents learn skills through role-play, then practice at home. Typically 8–16 weeks.</li>
+          <li><strong>Parent Management Training – Oregon Model (PMTO)</strong> — Ages 3–16. Focuses on the "coercion cycle" — how parent-child interactions can accidentally reinforce escalating behavior. Teaches five core practices.</li>
+          <li><strong>Parent-Child Interaction Therapy (PCIT)</strong> — Ages 2–7. The therapist coaches the caregiver in real time via an earpiece while the caregiver plays with the child. Builds the relationship first, then adds structure. Mastery-based — families move at their own pace.</li>
+          <li><strong>Triple P (Positive Parenting Program)</strong> — Birth to 16. A tiered system with five levels of intensity, from light-touch prevention to intensive family intervention.</li>
+          <li><strong>The Incredible Years</strong> — Infant through age 12. Group-based program using video modeling and group discussion. Separate curricula for parents, children, and teachers.</li>
+          <li><strong>Helping the Noncompliant Child (HNC)</strong> — Ages 3–8. Two-phase approach: build the positive relationship first, then add clear instructions and follow-through. Mastery-based.</li>
+          <li><strong>Defiant Children / Defiant Teens (Barkley)</strong> — Structured parent training with a strong focus on ADHD-related defiance and executive function challenges.</li>
+        </ul>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">FASD-Specific Parent Training Programs</div>
+        <ul>
+          <li><strong>Families Moving Forward (FMF)</strong> — Specifically designed for FASD. Focuses on changing the environment and caregiver expectations rather than changing the child. Teaches caregivers to reframe behavior as brain-based rather than intentional. Includes school consultation and community connections. <em>This is the most FASD-specific parent training program available.</em></li>
+          <li><strong>Parents and Children Together (PACT)</strong> — Also designed for FASD. Uses the "How is your engine running?" metaphor to teach about arousal and regulation states. Addresses behavior regulation, executive functioning, and parent effectiveness.</li>
+        </ul>
+      </div>
+      <div class="modality-field">
+        <div class="modality-field-label">How to Know If It Might Be a Good Fit</div>
+        <ul>
+          <li>Your child's behavior is the primary concern and you want concrete skills to handle it</li>
+          <li>You want to be the one doing the work, not waiting for a therapist to "fix" your child</li>
+          <li>You want peer support from other caregivers (group-based programs like Incredible Years)</li>
+          <li>For FASD specifically: ask whether the program has been adapted for brain-based differences, or look for FMF/PACT</li>
+        </ul>
+      </div>
+      <div class="brain-note">
+        <strong>Brain-Based Consideration</strong>
+        The environmental and behavioral approach is a strength for brain-based differences — these programs change the world around the child rather than expecting the child to change. However, standard parent training programs may need adaptation: expectations for speed of behavior change should be adjusted, reward systems may need to be simpler and more concrete, and caregivers need to understand the brain-based reasons for behavior — not just label it as "noncompliance." Programs designed specifically for FASD (like Families Moving Forward) have this understanding built in.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- DOWNLOAD BANNER -->
+<div class="download-banner">
+  <p>Download a printable version of this guide to bring to your next appointment or share with your treatment team.</p>
+  <a href="handouts/Caregiver-Therapy-Guide-Handout.pdf" class="cta-btn cta-primary" target="_blank">Download PDF Version</a>
+  <p style="margin-top: 20px; font-size: 14px;">This guide is part of the <a href="caregivers.html" style="color: #2c5aa0; font-weight: 500;">For Caregivers</a> section of Brain-Based Mental Health.</p>
+</div>
+
+<!-- FOOTER -->
+<footer style="display: flex; align-items: center; justify-content: space-between; text-align: left;">
+  <img src="images/fasd-united-logo.png" alt="FASD United" style="height: 44px; width: auto;">
+  <p style="margin: 0;">Sponsored by the FASD United Mental Health Work Group</p>
+</footer>
+
+<!-- Mobile menu script -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

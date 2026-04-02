@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Rights as a Caregiver in Mental Health Treatment — Brain-Based Mental Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+  /* Handout-specific styles */
+  .handout-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+  }
+  .handout-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 400px 400px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 350px 350px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 300px 300px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 250px 250px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .handout-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 3px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 3px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(circle 3px at 90% 15%, rgba(167,139,250,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 15% 80%, rgba(56,189,248,0.4) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .handout-header-inner {
+    position: relative;
+    z-index: 1;
+    padding: 60px 40px 50px;
+  }
+  .handout-header-inner img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+  }
+  .handout-header-inner h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    max-width: 750px;
+    margin: 0 auto 12px;
+  }
+  .handout-header-inner .subtitle {
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .handout-header-rule {
+    height: 4px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  /* Section cards for web */
+  .handout-sections {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 40px 60px;
+  }
+  .handout-card {
+    display: grid;
+    grid-template-columns: 5px 1fr;
+    gap: 0;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    transition: box-shadow 0.2s;
+  }
+  .handout-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .handout-card-accent { background: #2c5aa0; }
+  .handout-card-body { padding: 24px 28px; }
+  .handout-card-body h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 10px;
+  }
+  .handout-card-body p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin: 0 0 10px;
+  }
+  .handout-card-body p:last-child {
+    margin-bottom: 0;
+  }
+  .handout-card-body .source-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #2c5aa0;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 4px;
+  }
+  .handout-card-body .source-link:hover {
+    text-decoration: underline;
+  }
+  .handout-card-body .source-label {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+  .handout-card-body .try-saying {
+    background: #f0f5fa;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    font-size: 15px;
+    color: #1a3a6b;
+    line-height: 1.6;
+  }
+  .handout-card-body .try-saying strong {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .handout-card:nth-child(even) .handout-card-accent { background: #0e8a6e; }
+  .handout-card:nth-child(even) .handout-card-body h3 { color: #0e8a6e; }
+
+  /* Disclaimer */
+  .handout-disclaimer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+  }
+  .handout-disclaimer .disclaimer-box {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 20px 24px;
+    font-size: 14px;
+    color: #713f12;
+    line-height: 1.6;
+  }
+  .handout-disclaimer .disclaimer-box strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+
+  /* Download banner */
+  .download-banner {
+    background: #f7f9fc;
+    text-align: center;
+    padding: 32px 40px;
+    border-top: 1px solid #e0e6ed;
+  }
+  .download-banner p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .handout-header-inner { padding: 40px 20px 30px; }
+    .handout-header-inner h1 { font-size: 26px; }
+    .handout-sections { padding: 30px 20px 40px; }
+    .handout-card-body { padding: 18px 20px; }
+    .handout-disclaimer { padding: 0 20px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="site-name">Brain-Based Mental Health</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="professionals.html">Professionals</a></li>
+    <li><a href="caregivers.html">Caregivers</a></li>
+    <li><a href="self-advocates.html">Self-Advocates</a></li>
+    <li><a href="organizations.html">Organizations</a></li>
+    <li><a href="resources.html">Resources</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<div class="handout-header">
+  <div class="handout-header-bg"></div>
+  <div class="handout-header-inner">
+    <img src="images/Brain.png" alt="Brain-Based Mental Health">
+    <h1>Your Rights as a Caregiver in Mental Health Treatment</h1>
+    <p class="subtitle">When you walk into your child's therapist's office, you are not just a bystander. You are a partner in their care — and you have rights.</p>
+  </div>
+  <div class="handout-header-rule"></div>
+</div>
+
+<!-- SECTIONS -->
+<div class="handout-sections">
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Informed Consent</h3>
+      <p>Before your child's therapy begins, the therapist must explain what treatment they are recommending, why they are recommending it, what it involves, what the potential risks and benefits are, and what alternatives exist — including the option of no treatment. You must agree before treatment starts. This is not a one-time conversation. If the treatment approach changes, you should be informed and asked to consent again.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "Can you walk me through what this treatment involves and why you're recommending it for my child?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standards 3.10 &amp; 10.01 — Informed Consent</a><br>
+      <a class="source-link" href="https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English" target="_blank">NASW Code of Ethics, Section 1.03 — Informed Consent</a><br>
+      <a class="source-link" href="https://www.counseling.org/ethics/code-of-ethics" target="_blank">ACA Code of Ethics, Section A.2 — Informed Consent</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Know What Type of Therapy Is Being Used</h3>
+      <p>You have every right to ask: "What type of therapy are you using with my child? Why this approach? Is there research supporting it for my child's specific needs?" A therapist should be able to name the modality (such as CBT, play therapy, EMDR, or DBT), explain why it was chosen, and discuss whether there is evidence that it works for your child's situation. This is part of informed consent — if a therapist cannot or will not explain what they are doing, that is a concern.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "What approach are you using with my child, and what does the research say about it for kids with brain-based differences?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standard 10.01(a) — Nature and Course of Therapy</a><br>
+      <a class="source-link" href="https://www.apa.org/practice/resources/evidence" target="_blank">APA Policy on Evidence-Based Practice in Psychology</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Participate in Treatment Planning</h3>
+      <p>You have the right to be involved in developing your child's treatment plan — to understand the goals, to provide input about what is and is not working, and to be part of decisions about changes in direction. A therapist should not create a treatment plan in isolation and refuse to discuss it with you. You bring essential knowledge about your child's history, daily functioning, strengths, and what has already been tried.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "I'd like to understand the treatment goals and share what I'm seeing at home. Can we set up time to review the plan together?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standard 10.01 — Informed Consent to Therapy</a><br>
+      <a class="source-link" href="https://www.samhsa.gov/" target="_blank">SAMHSA National Guidelines — Family-Driven Care</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Access Your Child's Treatment Records</h3>
+      <p>Under federal law, as a parent or legal guardian you generally have the right to see your child's mental health treatment records. A therapist cannot simply refuse to share records because "it's confidential." You can request to inspect and obtain copies, and the provider must respond within 30 days. There are limited exceptions — for example, if a therapist believes access would cause harm to the child, or if your child consented to treatment independently under your state's law.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "I'd like to request a copy of my child's treatment records. What is your process for that?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/personal-representatives/index.html" target="_blank">HIPAA Privacy Rule — Parents as Personal Representatives (45 CFR &sect; 164.502(g))</a><br>
+      <a class="source-link" href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html" target="_blank">HIPAA Right of Access (45 CFR &sect; 164.524)</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Ask About the Therapist's Qualifications</h3>
+      <p>You can ask a therapist: "What is your degree and license? Have you worked with children who have FASD or brain-based differences? How much experience do you have with my child's specific needs? Do you have training in the approach you are using?" The therapist should answer these questions honestly. Misrepresenting qualifications is an ethical violation. You can also verify any therapist's license through your state's licensing board — these are public records.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "Can you tell me about your experience working with kids who have brain-based differences like FASD?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standards 2.01 &amp; 5.01 — Competence and Honest Representation</a><br>
+      <a class="source-link" href="https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English" target="_blank">NASW Code of Ethics, Section 4.06 — Misrepresentation</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Confidentiality Protections</h3>
+      <p>Your child's mental health information is protected. The therapist cannot share your child's information with the school, other family members, or anyone else without proper authorization. As the parent or guardian, you have the right to know who the therapist is sharing information with and to authorize or deny those disclosures. You can also request an accounting of disclosures — a log of who has received your child's information and when.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "Who has access to my child's treatment information, and what would you need from me before sharing it with anyone?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.hhs.gov/hipaa/for-professionals/privacy/index.html" target="_blank">HIPAA Privacy Rule (45 CFR Parts 160 &amp; 164)</a><br>
+      <a class="source-link" href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/accounting-of-disclosures/index.html" target="_blank">HIPAA Right to Accounting of Disclosures (45 CFR &sect; 164.528)</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Request a Different Provider</h3>
+      <p>You are never locked in to a specific therapist. If the fit is not right — if the approach isn't working, if the therapist doesn't understand your child's needs, or for any reason at all — you can request a different provider. If the therapist is part of a practice or agency, you can ask to be assigned to someone else. The therapist has an ethical obligation to help with the transition, not to make you feel guilty for leaving.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "I appreciate your time, but I think we need to find a provider who is a better fit for my child's needs. Can you help with a referral?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standards 3.12 &amp; 10.10 — Interruption and Termination</a><br>
+      <a class="source-link" href="https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English" target="_blank">NASW Code of Ethics, Section 1.16 — Termination of Services</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to a Second Opinion</h3>
+      <p>You can seek evaluation or consultation from another qualified professional at any time — about a diagnosis, a treatment recommendation, or any clinical question. The current therapist cannot prevent this. If something doesn't feel right, or if you want to confirm that the recommended path is the best one for your child, getting another perspective is always an option.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "I'd like to get a second opinion on this diagnosis (or treatment plan). Can you share the relevant records with another provider I choose?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standard 10.04 — Providing Therapy to Those Served by Others</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Understand Billing and Insurance Coverage</h3>
+      <p>You have the right to understand what therapy costs and what your insurance covers. Under federal law, if your insurance plan covers mental health services, it cannot impose stricter limits on those services than on medical or surgical care — this means co-pays, deductibles, visit limits, and prior authorization rules for mental health must be comparable to medical benefits. You can also ask for a Good Faith Estimate of costs before treatment begins.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "Can you provide a Good Faith Estimate of costs? And can you help me understand what my insurance will cover?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.cms.gov/marketplace/private-health-insurance/mental-health-parity" target="_blank">Mental Health Parity and Addiction Equity Act (MHPAEA)</a><br>
+      <a class="source-link" href="https://www.healthcare.gov/coverage/mental-health-substance-abuse-coverage/" target="_blank">ACA Essential Health Benefits — Mental Health Coverage</a><br>
+      <a class="source-link" href="https://www.cms.gov/nosurprises" target="_blank">No Surprises Act — Good Faith Estimates</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Refuse or Discontinue Treatment</h3>
+      <p>You can decide to stop your child's therapy at any time, for any reason. Consent to treatment is voluntary and can be withdrawn. The therapist may share their clinical perspective or recommend continued treatment, but the decision is yours. A therapist should never use guilt, coercion, or threats to keep you in treatment. (The exception is court-ordered treatment — if a court has ordered therapy, your ability to discontinue may be limited by the court order.)</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "We've decided to pause (or end) treatment. What do we need to do to close out, and can you provide a summary of the work so far?"
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://supreme.justia.com/cases/federal/us/530/57/" target="_blank">Troxel v. Granville (2000) — Parental Rights as Fundamental</a><br>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standard 3.10(b) — Informed Consent</a>
+    </div>
+  </div>
+
+  <div class="handout-card">
+    <div class="handout-card-accent"></div>
+    <div class="handout-card-body">
+      <h3>The Right to Be Involved in Discharge and Transition Planning</h3>
+      <p>When therapy is ending — whether goals have been met, your child is moving to a different level of care, or the therapist is leaving the practice — you have the right to be part of that process. This includes advance notice that discharge is being planned, a summary of progress, recommendations for ongoing support, and referrals to other providers if needed. A therapist should not abruptly end services without giving you time to plan.</p>
+      <div class="try-saying">
+        <strong>You can say:</strong>
+        "Before we wrap up, I'd like to discuss what progress has been made, what to watch for going forward, and whether my child needs any follow-up services."
+      </div>
+      <p class="source-label">Sources</p>
+      <a class="source-link" href="https://www.apa.org/ethics/code" target="_blank">APA Ethics Code, Standard 10.10 — Terminating Therapy</a><br>
+      <a class="source-link" href="https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English" target="_blank">NASW Code of Ethics, Section 1.16 — Termination of Services</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- DISCLAIMER -->
+<div class="handout-disclaimer">
+  <div class="disclaimer-box">
+    <strong>A Note About State Laws</strong>
+    Mental health law varies by state. The age at which a minor can consent to their own mental health treatment ranges from 12 to 16 depending on where you live, and some details about record access and confidentiality may differ. The rights described here are grounded in federal law and national professional ethics codes, but we encourage you to check your specific state's laws as well. This information is for educational purposes and is not legal advice. If you have specific legal questions, consult an attorney familiar with your state's mental health law.
+  </div>
+</div>
+
+<!-- DOWNLOAD BANNER -->
+<div class="download-banner">
+  <p>Download a printable version of this handout to bring to your next appointment.</p>
+  <a href="handouts/Caregiver-Rights-Mental-Health-Handout.pdf" class="cta-btn cta-primary" target="_blank">Download PDF Version</a>
+  <p style="margin-top: 20px; font-size: 14px;">This handout is part of the <a href="caregivers.html" style="color: #2c5aa0; font-weight: 500;">For Caregivers</a> section of Brain-Based Mental Health.</p>
+</div>
+
+<!-- FOOTER -->
+<footer style="display: flex; align-items: center; justify-content: space-between; text-align: left;">
+  <img src="images/fasd-united-logo.png" alt="FASD United" style="height: 44px; width: auto;">
+  <p style="margin: 0;">Sponsored by the FASD United Mental Health Work Group</p>
+</footer>
+
+<!-- Mobile menu script -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
