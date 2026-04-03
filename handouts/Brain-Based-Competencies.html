@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain-Based Pathway: Competencies Framework</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 1.5; color: #222; background: #fff; }
+
+  @media print {
+    body { font-size: 10pt; line-height: 1.4; }
+    .handout { padding: 0; max-width: 100%; }
+    .pro-header, .section-accent { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+
+  .handout { max-width: 850px; margin: 0 auto; padding: 16px; }
+
+  /* === Professional Header === */
+  .pro-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .pro-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 300px 300px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 250px 250px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 200px 200px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 180px 180px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .pro-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 2px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .pro-header-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+  }
+  .pro-header-logo {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pro-header-logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .pro-header-text h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .pro-header-text .header-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+  }
+  .pro-header-rule {
+    position: relative;
+    z-index: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  /* Intro section */
+  .intro {
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.55;
+  }
+  .intro p { margin-bottom: 8px; }
+  .a11y-note {
+    font-size: 10.5px;
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+    margin-top: 4px;
+  }
+
+  /* Two-level cards side by side */
+  .levels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .level-card {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+  }
+  .level-card.informed .section-accent { background: #0e8a6e; }
+  .level-card.responsive .section-accent { background: #2c5aa0; }
+  .level-card .section-body { padding: 10px 12px; }
+  .level-card .section-body h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .level-card.informed .section-body h2 { color: #0e8a6e; }
+  .level-card.responsive .section-body h2 { color: #2c5aa0; }
+  .level-card .section-body .level-tagline {
+    font-size: 11px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 6px;
+  }
+  .level-card .section-body p {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* Section heading for competency groups */
+  .competency-group-heading {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin: 16px 0 6px 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #e0e6ed;
+  }
+  .competency-group-note {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  /* Competency section cards */
+  .section-card {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    margin-bottom: 10px;
+  }
+  .section-accent { background: #2c5aa0; }
+  .section-body { padding: 10px 12px; }
+  .section-body h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 3px;
+  }
+  .section-body .comp-description {
+    font-size: 11px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .section-body .level-label {
+    font-size: 11px;
+    font-weight: 700;
+    margin: 6px 0 3px 0;
+  }
+  .level-label.informed { color: #0e8a6e; }
+  .level-label.responsive { color: #2c5aa0; }
+  .section-body ul {
+    margin: 0 0 4px 18px;
+    padding: 0;
+  }
+  .section-body ul li {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 2px;
+  }
+
+  /* Alternating accent colors */
+  .section-card:nth-child(odd) .section-accent { background: #2c5aa0; }
+  .section-card:nth-child(even) .section-accent { background: #0e8a6e; }
+  .section-card:nth-child(odd) .section-body h2 { color: #1a3a6b; }
+  .section-card:nth-child(even) .section-body h2 { color: #0e8a6e; }
+
+  /* Advanced section cards — all blue/teal accent */
+  .advanced-cards .section-card .section-accent { background: #2c5aa0; }
+  .advanced-cards .section-card .section-body h2 { color: #1a3a6b; }
+
+  /* Footer */
+  .handout-footer {
+    border-top: 2px solid #e0e6ed;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .handout-footer img {
+    height: 36px;
+    width: auto;
+  }
+  .handout-footer .credits {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .handout-footer a {
+    color: #2c5aa0;
+    text-decoration: none;
+  }
+  .handout-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="handout">
+
+  <!-- HEADER -->
+  <div class="pro-header">
+    <div class="pro-header-bg"></div>
+    <div class="pro-header-inner">
+      <div class="pro-header-logo">
+        <img src="../images/Brain.png" alt="Brain-Based Mental Health">
+      </div>
+      <div class="pro-header-text">
+        <h1>Brain-Based Pathway: Competencies Framework</h1>
+        <div class="header-sub">A Developmental Roadmap for Trauma-Informed, Neurobehavioral Care</div>
+      </div>
+    </div>
+    <div class="pro-header-rule"></div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <p>The Brain-Based Pathway provides clear benchmarks for professionals working with individuals with FASD and other brain-based differences. It maps the journey from foundational knowledge to advanced, dynamic practice through two competency levels and six core developmental stages.</p>
+    <p class="a11y-note">This document uses color alongside text labels to distinguish competency levels. Green highlights indicate Brain-Based Informed content; blue/teal highlights indicate Brain-Based Responsive content. All information is also conveyed in text.</p>
+  </div>
+
+  <!-- TWO LEVELS OF PRACTICE -->
+  <h3 class="competency-group-heading">Two Levels of Practice</h3>
+
+  <div class="levels-grid">
+    <div class="level-card informed">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Brain-Based Informed Practice</h2>
+        <div class="level-tagline">Foundational understanding — beginning application</div>
+        <p>Brain-based informed practice represents the foundational level of understanding regarding (a) brain functioning and its impact on behavior, learning, and emotional regulation, and (b) the therapeutic process itself. Practitioners at this level have completed introductory training and have fundamental knowledge of prenatal alcohol exposure and its impact on brain functioning and behavior. They demonstrate understanding of the importance of applying a brain-based lens to their work; however, they remain in the preliminary stages of translating this theoretical knowledge into consistent, evidence-based practice applications.</p>
+      </div>
+    </div>
+
+    <div class="level-card responsive">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Brain-Based Responsive Practice</h2>
+        <div class="level-tagline">Advanced integration — real-time adaptation</div>
+        <p>Brain-based responsive practice represents the advanced level of understanding regarding (a) brain functioning and its impact on behavior, learning, and emotional regulation, and (b) the therapeutic process itself. Practitioners at this level demonstrate the ability to think holistically about the whole person and consistently adapt their methods, environmental factors, and interactions in real-time. They maintain a strong foundation in brain-based approaches through evidence-based accommodations, ongoing caregiver collaboration, interdisciplinary consultation, and regular professional development.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CORE COMPETENCY AREAS -->
+  <h3 class="competency-group-heading">Core Competency Areas</h3>
+
+  <!-- 1. Foundational Knowledge -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Foundational Knowledge</h2>
+      <div class="comp-description">Understanding brain development, neuroplasticity, and how neurobiological processes influence behavior and learning across the lifespan</div>
+      <div class="level-label informed">Brain-Based Informed</div>
+      <ul>
+        <li>Basic understanding of brain development, function, and neuroplasticity across the lifespan</li>
+        <li>Recognition of how neurobiological processes influence behavior and learning</li>
+        <li>Awareness of transference and countertransference dynamics in therapeutic relationships, particularly related to executive functioning, sensory processing, and emotional regulation challenges</li>
+      </ul>
+      <div class="level-label responsive">Brain-Based Responsive</div>
+      <ul>
+        <li>Comprehensive understanding of brain development, function, and neuroplasticity with ability to apply across diverse presentations</li>
+        <li>Dynamic recognition and navigation of transference and countertransference in real-time</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2. Trauma Integration -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Trauma Integration</h2>
+      <div class="comp-description">Recognizing how trauma alters brain functioning and integrating this understanding with neurodevelopmental differences</div>
+      <div class="level-label informed">Brain-Based Informed</div>
+      <ul>
+        <li>Recognize how trauma alters brain areas governing emotional regulation, memory, executive functioning, and stress response</li>
+        <li>Understand concepts like window of tolerance, unconscious awareness of safety or threat, and lasting changes in neural pathways</li>
+        <li>Recognize that cognitive deficits from prenatal alcohol exposure create barriers to processing trauma therapy</li>
+      </ul>
+      <div class="level-label responsive">Brain-Based Responsive</div>
+      <ul>
+        <li>Skilled implementation of interventions that account for permanent limitations by emphasizing environmental modifications, caregiver training, and concrete approaches</li>
+        <li>Adapt trauma interventions using neurobehavioral model with bottom-up approaches (focusing on body awareness and regulation before cognitive processing)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. PAE Understanding -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Prenatal Alcohol Exposure (PAE) Understanding</h2>
+      <div class="comp-description">Deep knowledge of how prenatal alcohol exposure affects brain structure, function, and presentation</div>
+      <div class="level-label informed">Brain-Based Informed</div>
+      <ul>
+        <li>Recognition of nuanced and complex presentations within prenatal alcohol exposure</li>
+        <li>Understand how prenatal exposures affect brain structure and function</li>
+        <li>Understand the importance of screening for prenatal alcohol exposure across all ages, recognizing that a large number of individuals remain undiagnosed</li>
+        <li>Recognize organic brain differences that impact self-regulation, executive functioning, social cognition, memory, and learning</li>
+        <li>Create accommodations and include support systems in treatment</li>
+      </ul>
+      <div class="level-label responsive">Brain-Based Responsive</div>
+      <ul>
+        <li>Expertise in addressing brain differences across the neurodiversity spectrum, particularly when FASD is identified as a co-occurring condition</li>
+        <li>Skilled in nuanced FASD screening tailored to adoptive parents, birth parents, or adults, recognizing negative screens do not rule out FASD. Communicates sensitively, connects to resources, and supports referrals based on neurobiological understanding and co-occurring conditions</li>
+        <li>Skilled ability to implement individualized accommodations based on neurobiological understanding</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4. Cause-Effect Reasoning -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Cause-Effect Reasoning</h2>
+      <div class="comp-description">Understanding that brain damage affects abstract thinking and traditional consequences may be ineffective</div>
+      <div class="level-label informed">Brain-Based Informed</div>
+      <ul>
+        <li>Understand that individuals with PAE have impaired cause-and-effect reasoning due to brain damage affecting abstract thinking and working memory</li>
+        <li>Recognition that traditional behavior modification may be ineffective with delayed consequences</li>
+      </ul>
+      <div class="level-label responsive">Brain-Based Responsive</div>
+      <ul>
+        <li>Therapeutic interventions utilize immediate, concrete consequences and explicitly teach causal relationships</li>
+        <li>Real-time adaptation of approaches based on client's capacity for abstract reasoning</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. Client Education -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Client Education</h2>
+      <div class="comp-description">Explaining symptoms and neurobiology in accessible, non-pathologizing ways that reduce shame</div>
+      <div class="level-label informed">Brain-Based Informed</div>
+      <ul>
+        <li>Ability to explain how symptoms relate to underlying brain processes in accessible, non-pathologizing ways</li>
+        <li>Help clients understand their neurobiology to reduce shame and increase self-compassion</li>
+      </ul>
+      <div class="level-label responsive">Brain-Based Responsive</div>
+      <ul>
+        <li>Develop effective coping strategies collaboratively that work with rather than against brain functioning patterns</li>
+        <li>Empower clients and support systems with actionable neurobiological understanding</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6. Case Conceptualization -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Case Conceptualization</h2>
+      <div class="comp-description">Integrating brain-based factors into assessment, diagnosis, and treatment planning</div>
+      <div class="level-label informed">Brain-Based Informed</div>
+      <ul>
+        <li>Recognition of brain-based factors in client presentation, case conceptualization, and treatment planning</li>
+      </ul>
+      <div class="level-label responsive">Brain-Based Responsive</div>
+      <ul>
+        <li>Holistic integration: Think comprehensively about co-morbid mental health and medical diagnoses associated with PAE</li>
+        <li>Dynamic treatment planning that evolves with client presentation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 7. Professional Development -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Professional Development</h2>
+      <div class="comp-description">Ongoing learning and skill-building in brain-based approaches</div>
+      <div class="level-label informed">Brain-Based Informed</div>
+      <ul>
+        <li>Completion of relevant training and educational materials in brain-based approaches</li>
+      </ul>
+      <div class="level-label responsive">Brain-Based Responsive</div>
+      <ul>
+        <li>Application of knowledge acquired through advanced training, mentoring, consultation, and extensive practice experience</li>
+        <li>Ongoing interdisciplinary consultation and regular professional development</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ADVANCED RESPONSIVE COMPETENCIES -->
+  <h3 class="competency-group-heading">Advanced Responsive Competencies</h3>
+  <p class="competency-group-note">The following competencies are exclusive to the Brain-Based Responsive level. They represent the hallmarks of advanced, integrated neurobehavioral practice and build upon all core competency areas above.</p>
+
+  <div class="advanced-cards">
+
+    <!-- 8. Real-Time Adaptation -->
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Real-Time Adaptation</h2>
+        <div class="comp-description">The ability to recognize regulatory states and shift therapeutic approach dynamically during sessions</div>
+        <div class="level-label responsive">Brain-Based Responsive</div>
+        <ul>
+          <li>Recognition of regulatory states and developmental capacity with ability to shift therapeutic approach dynamically during sessions</li>
+          <li>Observe early dysregulation indicators and immediately implement co-regulation strategies and sensory interventions</li>
+          <li>Modify session objectives and approach in real-time, prioritizing client's current neurobiological capacity</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9. Intervention Modification -->
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Intervention Modification</h2>
+        <div class="comp-description">Adapting therapeutic techniques to match brain functioning patterns</div>
+        <div class="level-label responsive">Brain-Based Responsive</div>
+        <ul>
+          <li>Incorporate movement or sensory strategies to support nervous system regulation</li>
+          <li>Adjust expectations and pacing based on executive functioning capacity</li>
+          <li>Maintain therapeutic alliance while adapting approaches</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 10. Reflective Practice -->
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Reflective Practice</h2>
+        <div class="comp-description">Continuous self-awareness about expectations, biases, and assumptions</div>
+        <div class="level-label responsive">Brain-Based Responsive</div>
+        <ul>
+          <li>Continuous, active self-reflection of personal expectations and potential biases in treatment planning and service delivery</li>
+          <li>Acknowledge that expectations vary across clients and may shift over time, requiring ongoing awareness and modifications throughout treatment</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="handout-footer">
+    <img src="../images/fasd-united-logo.png" alt="FASD United">
+    <div class="credits">
+      Sponsored by the FASD United Mental Health Work Group<br>
+      <a href="https://tcfasd.github.io/Brain-Based-Mental-Health-/professionals.html#step-0">Learn more: Step 0 — Why This Matters</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

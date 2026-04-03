@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips for Creating a Brain-Based Informed Mental Health Treatment Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 1.5; color: #222; background: #fff; }
+
+  @media print {
+    body { font-size: 10pt; line-height: 1.4; }
+    .handout { padding: 0; max-width: 100%; }
+    .pro-header, .section-accent { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+
+  .handout { max-width: 850px; margin: 0 auto; padding: 16px; }
+
+  .pro-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .pro-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 300px 300px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 250px 250px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 200px 200px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 180px 180px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .pro-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 2px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .pro-header-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+  }
+  .pro-header-logo {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pro-header-logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .pro-header-text h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .pro-header-text .header-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+  }
+  .pro-header-rule {
+    position: relative;
+    z-index: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  .section-card {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    margin-bottom: 10px;
+  }
+  .section-accent { background: #2c5aa0; }
+  .section-body { padding: 10px 12px; }
+  .section-body h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 5px;
+  }
+  .section-body p, .section-body li {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+  }
+  .section-body ul {
+    padding-left: 16px;
+    margin-top: 4px;
+  }
+  .section-body ul li {
+    margin-bottom: 3px;
+  }
+
+  .section-card:nth-child(odd) .section-accent { background: #2c5aa0; }
+  .section-card:nth-child(even) .section-accent { background: #0e8a6e; }
+  .section-card:nth-child(odd) .section-body h2 { color: #1a3a6b; }
+  .section-card:nth-child(even) .section-body h2 { color: #0e8a6e; }
+
+  .handout-footer {
+    border-top: 2px solid #e0e6ed;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .handout-footer img {
+    height: 36px;
+    width: auto;
+  }
+  .handout-footer .credits {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .handout-footer a {
+    color: #2c5aa0;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="handout">
+
+  <!-- HEADER -->
+  <div class="pro-header">
+    <div class="pro-header-bg"></div>
+    <div class="pro-header-inner">
+      <div class="pro-header-logo">
+        <img src="../images/Brain.png" alt="Brain logo">
+      </div>
+      <div class="pro-header-text">
+        <h1>Tips for Creating a Brain-Based Informed Mental Health Treatment Plan</h1>
+        <div class="header-sub">Brain-Based Practice: From Understanding to Action</div>
+      </div>
+    </div>
+    <div class="pro-header-rule"></div>
+  </div>
+
+  <!-- CONTENT CARDS -->
+  <div>
+
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Involving Caregivers and Supportive Adults in Treatment</h2>
+        <p>While the individual is the primary client, clinicians may need to consider involving caregivers and other supportive adults in treatment. This approach recognizes that the client's mental health challenges may stem from an environment that does not fully accommodate or understand their brain-based differences, leading to unrealistic expectations. Equipping caregivers and key adults can help create a more understanding and adaptive environment, ultimately reducing symptoms. This collaborative approach is an important consideration at all stages of life, including in adulthood.</p>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Fostering Interdependency Over Independency</h2>
+        <p>The goal of treatment is to create an environment of Interdependency versus Independency. It is important for brain-based informed mental health clinicians to reassess the concepts of "dependency" and "enabling" within treatment and systems.</p>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Recognizing Caregiver Brain-Based Differences</h2>
+        <p>Recognize that caregivers also may have their own brain-based differences and challenges. Set realistic, brain-friendly goals for caregivers to ensure they are supported in their role.</p>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Assessing Learning Styles of All Participants</h2>
+        <p>A brain-based informed mental health clinician assesses the learning styles of everyone involved in the treatment plan, including the client, caregivers, and other support providers such as teachers. Understanding whether they are visual, auditory, or experiential learners allows for the delivery of information in a way that is most effective for them. This may include using videos, written materials, hands-on practice, or verbal explanations to ensure meaningful engagement and understanding.</p>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Establishing Felt Safety and Trust</h2>
+        <p>An individual with a brain-based difference could have also experienced traumatic events that affect how they trust and connect with others. To foster an interdependent relationship where they feel comfortable accepting help, it is essential to first establish a sense of felt safety with both the clinician and supportive adults. This foundation is crucial for meaningful engagement and effective growth.</p>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Considering Environmental Influences on Treatment</h2>
+        <p>It's important to recognize that while not a formal treatment goal, the environment significantly influences the therapeutic process. Brain-based informed mental health clinicians should consider factors such as lighting, colors, clutter, and transitions, as these impact the client not only in the therapy office but also in other settings like home, school, and the workplace. A well-designed environment can promote regulation, reduce stress, and support skill development, enhancing the effectiveness of treatment.</p>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-accent"></div>
+      <div class="section-body">
+        <h2>Building Strength-Based, Developmentally Appropriate Goals</h2>
+        <p>When developing the treatment plan, it is important to review the assessment, focusing on the individual's brain-based strengths and challenges to ensure the goals are appropriate.</p>
+        <ul>
+          <li>Encourage the individual to express their own goals and preferences, ensuring their voice is central to the process.</li>
+          <li>While treatment plans often emphasize areas for improvement, it's equally important to center them around an individual's strengths. Incorporating natural abilities and interests into goals enhances learning, fosters growth, and makes challenges more manageable.</li>
+          <li>Treatment objectives should align with their current cognitive and emotional development, making them both attainable and meaningful.</li>
+          <li>Set goals that are aligned with the client's developmental stage, not chronological age. Each person has a unique developmental timeline, so interventions should be tailored accordingly.</li>
+          <li>Recognize that individuals may struggle to apply skills across different settings. Work with the whole support system to ensure consistency, understanding, and integration of skills across all environments (home, school, therapy settings).</li>
+          <li>Adjusting the pace of treatment is important, as individuals with brain-based challenges might require additional time to develop new skills. Their specific challenges may require simplifying treatment goals and breaking them into manageable steps. Goals should be realistic, outcome-oriented, and open-ended rather than time-restricted, allowing for steady progress and lasting change.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="handout-footer">
+    <img src="../images/fasd-united-logo.png" alt="FASD United">
+    <div class="credits">
+      Sponsored by The Florida Center in Collaboration with the<br>
+      FASD United Mental Health Work Group and the FASD Collaborative SIG Mental Health Group
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

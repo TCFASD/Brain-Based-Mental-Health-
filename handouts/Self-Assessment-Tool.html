@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain-Based Practice Self-Assessment</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 1.5; color: #222; background: #fff; }
+
+  @media print {
+    body { font-size: 10pt; line-height: 1.4; }
+    .handout { padding: 0; max-width: 100%; }
+    .pro-header, .section-accent, .advanced-badge, .scoring-table th, .pathway-card { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .no-print { display: none; }
+  }
+
+  .handout { max-width: 850px; margin: 0 auto; padding: 16px; }
+
+  /* === Professional Header === */
+  .pro-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .pro-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 300px 300px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 250px 250px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 200px 200px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 180px 180px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .pro-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 2px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .pro-header-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+  }
+  .pro-header-logo {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pro-header-logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .pro-header-text h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .pro-header-text .header-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+  }
+  .pro-header-rule {
+    position: relative;
+    z-index: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  /* Intro area */
+  .intro-box {
+    background: #f7f9fc;
+    border: 1px solid #e0e6ed;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .intro-box p {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+  .intro-box p:last-child { margin-bottom: 0; }
+  .intro-box .instructions {
+    font-size: 11.5px;
+    color: #555;
+    font-style: italic;
+  }
+
+  /* Rating scale legend */
+  .scale-legend {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 14px;
+    padding: 8px 12px;
+    background: #f0f4f8;
+    border-radius: 6px;
+    border: 1px solid #e0e6ed;
+  }
+  .scale-legend span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+  }
+  .scale-legend span em {
+    font-weight: 400;
+    font-style: normal;
+    color: #666;
+  }
+
+  /* Section cards for assessment */
+  .assessment-section {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    margin-bottom: 10px;
+  }
+  .section-accent { background: #2c5aa0; }
+  .section-body { padding: 12px 14px; }
+  .section-body h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 2px;
+  }
+  .section-body .section-desc {
+    font-size: 11px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  /* Alternating accent colors */
+  .assessment-section:nth-child(odd) .section-accent { background: #2c5aa0; }
+  .assessment-section:nth-child(even) .section-accent { background: #0e8a6e; }
+  .assessment-section:nth-child(odd) .section-body h2 { color: #1a3a6b; }
+  .assessment-section:nth-child(even) .section-body h2 { color: #0e8a6e; }
+
+  /* Assessment items */
+  .assessment-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .assessment-item:last-child { border-bottom: none; }
+  .item-text {
+    flex: 1;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.45;
+    padding-top: 1px;
+  }
+  .rating-options {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .rating-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    font-size: 10px;
+    color: #888;
+    min-width: 28px;
+  }
+  .rating-options input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2c5aa0;
+    cursor: pointer;
+    margin: 0;
+  }
+  .assessment-section:nth-child(even) .rating-options input[type="radio"] {
+    accent-color: #0e8a6e;
+  }
+
+  /* Advanced badge */
+  .advanced-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  /* Before You Score section */
+  .reflection-section {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    margin-bottom: 12px;
+    margin-top: 4px;
+  }
+  .reflection-section .section-accent { background: #7c3aed; }
+  .reflection-section .section-body h2 { color: #5b21b6; }
+  .reflection-question {
+    margin-bottom: 10px;
+  }
+  .reflection-question label {
+    display: block;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 4px;
+    line-height: 1.45;
+  }
+  .reflection-question textarea {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid #d0d5dd;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #333;
+    resize: vertical;
+    line-height: 1.45;
+  }
+  .reflection-question textarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.15);
+  }
+  .reflection-question:last-child { margin-bottom: 0; }
+
+  /* Scoring table */
+  .scoring-section {
+    margin-bottom: 12px;
+  }
+  .scoring-section h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 8px;
+  }
+  .scoring-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+    margin-bottom: 10px;
+  }
+  .scoring-table th {
+    background: linear-gradient(135deg, #1a3a6b, #2c5aa0);
+    color: #fff;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    padding: 8px 10px;
+    text-align: left;
+    border: 1px solid #1a3a6b;
+  }
+  .scoring-table td {
+    padding: 8px 10px;
+    border: 1px solid #e0e6ed;
+    color: #333;
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  .scoring-table tr:nth-child(even) td {
+    background: #f7f9fc;
+  }
+  .scoring-note {
+    font-size: 11.5px;
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+    background: #f7f9fc;
+    border-left: 3px solid #7c3aed;
+    padding: 10px 14px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 12px;
+  }
+
+  /* Pathways */
+  .pathways-section h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 10px;
+  }
+  .pathways-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .pathway-card {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+  }
+  .pathway-card-header {
+    padding: 10px 14px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .pathway-card:first-child .pathway-card-header {
+    background: linear-gradient(135deg, #1a3a6b, #2c5aa0);
+  }
+  .pathway-card:last-child .pathway-card-header {
+    background: linear-gradient(135deg, #0d5c4a, #0e8a6e);
+  }
+  .pathway-card-header .pathway-sub {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.8);
+    margin-top: 2px;
+  }
+  .pathway-card-body {
+    padding: 10px 14px;
+  }
+  .pathway-card-body ul {
+    list-style: none;
+    padding: 0;
+  }
+  .pathway-card-body li {
+    font-size: 11.5px;
+    color: #333;
+    line-height: 1.5;
+    padding: 3px 0 3px 16px;
+    position: relative;
+  }
+  .pathway-card:first-child .pathway-card-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2c5aa0;
+  }
+  .pathway-card:last-child .pathway-card-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #0e8a6e;
+  }
+
+  /* Footer */
+  .handout-footer {
+    border-top: 2px solid #e0e6ed;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .handout-footer img {
+    height: 36px;
+    width: auto;
+  }
+  .handout-footer .credits {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .handout-footer a {
+    color: #2c5aa0;
+    text-decoration: none;
+  }
+  .handout-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="handout">
+
+  <!-- HEADER -->
+  <div class="pro-header">
+    <div class="pro-header-bg"></div>
+    <div class="pro-header-inner">
+      <div class="pro-header-logo">
+        <img src="../images/Brain.png" alt="Brain-Based Mental Health">
+      </div>
+      <div class="pro-header-text">
+        <h1>Brain-Based Practice Self-Assessment</h1>
+        <div class="header-sub">Brain-Based Practice: From Understanding to Action</div>
+      </div>
+    </div>
+    <div class="pro-header-rule"></div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-box">
+    <p>Identify where you are in your clinical development with brain-based approaches — and which learning pathway fits where you are right now. There are no right or wrong answers.</p>
+    <p class="instructions"><strong>How to use this:</strong> Rate yourself on what you actually do, not what you know or intend. Work through each section in order. Items marked <span class="advanced-badge" style="vertical-align: baseline;">Advanced</span> reflect integrated, expert-level practice — if these feel out of reach right now, that's useful information.</p>
+  </div>
+
+  <!-- RATING SCALE -->
+  <div class="scale-legend">
+    <span>1 = <em>Not Yet</em></span>
+    <span>2 = <em>Emerging</em></span>
+    <span>3 = <em>Developing</em></span>
+    <span>4 = <em>Integrated</em></span>
+  </div>
+
+  <form id="self-assessment-form">
+
+  <!-- SECTION 1 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>1. Foundational Knowledge</h2>
+      <div class="section-desc">How brain development and neurobiology shape behavior, learning, and the therapeutic relationship</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I can describe basic principles of brain development and neuroplasticity across the lifespan in my own words.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s1q1" value="1">1</label>
+          <label><input type="radio" name="s1q1" value="2">2</label>
+          <label><input type="radio" name="s1q1" value="3">3</label>
+          <label><input type="radio" name="s1q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I understand how differences in brain structure and function influence behavior, learning, and emotional regulation.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s1q2" value="1">1</label>
+          <label><input type="radio" name="s1q2" value="2">2</label>
+          <label><input type="radio" name="s1q2" value="3">3</label>
+          <label><input type="radio" name="s1q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I recognize when executive functioning, sensory processing, or regulation differences may be driving a client's behavior.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s1q3" value="1">1</label>
+          <label><input type="radio" name="s1q3" value="2">2</label>
+          <label><input type="radio" name="s1q3" value="3">3</label>
+          <label><input type="radio" name="s1q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I am aware of my own transference and countertransference reactions when working with clients who have regulation or executive functioning challenges.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s1q4" value="1">1</label>
+          <label><input type="radio" name="s1q4" value="2">2</label>
+          <label><input type="radio" name="s1q4" value="3">3</label>
+          <label><input type="radio" name="s1q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I can dynamically notice and work with transference and countertransference as they arise in the session in real time.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s1q5" value="1">1</label>
+          <label><input type="radio" name="s1q5" value="2">2</label>
+          <label><input type="radio" name="s1q5" value="3">3</label>
+          <label><input type="radio" name="s1q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>2. Trauma Integration</h2>
+      <div class="section-desc">Recognizing how trauma alters brain functioning alongside neurodevelopmental differences</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I understand how trauma impacts brain areas involved in emotional regulation, memory, executive functioning, and stress response.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s2q1" value="1">1</label>
+          <label><input type="radio" name="s2q1" value="2">2</label>
+          <label><input type="radio" name="s2q1" value="3">3</label>
+          <label><input type="radio" name="s2q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I use concepts like 'window of tolerance' and neuroception (safety/threat detection) to guide my understanding of client behavior.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s2q2" value="1">1</label>
+          <label><input type="radio" name="s2q2" value="2">2</label>
+          <label><input type="radio" name="s2q2" value="3">3</label>
+          <label><input type="radio" name="s2q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I recognize how cognitive and processing deficits (e.g., from prenatal alcohol exposure) can limit a client's ability to engage in traditional trauma therapy.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s2q3" value="1">1</label>
+          <label><input type="radio" name="s2q3" value="2">2</label>
+          <label><input type="radio" name="s2q3" value="3">3</label>
+          <label><input type="radio" name="s2q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I adapt trauma interventions to include bottom-up/body-based approaches before focusing on cognitive processing.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s2q4" value="1">1</label>
+          <label><input type="radio" name="s2q4" value="2">2</label>
+          <label><input type="radio" name="s2q4" value="3">3</label>
+          <label><input type="radio" name="s2q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I intentionally modify trauma interventions and goals to account for permanent neurodevelopmental limitations, rather than assuming skills will catch up with enough effort.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s2q5" value="1">1</label>
+          <label><input type="radio" name="s2q5" value="2">2</label>
+          <label><input type="radio" name="s2q5" value="3">3</label>
+          <label><input type="radio" name="s2q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>3. Prenatal Alcohol Exposure (PAE) Understanding</h2>
+      <div class="section-desc">Knowledge of how PAE affects brain structure, function, and presentation across the lifespan</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I am familiar with the range of presentations associated with prenatal alcohol exposure and FASD, including subtle and complex profiles.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s3q1" value="1">1</label>
+          <label><input type="radio" name="s3q1" value="2">2</label>
+          <label><input type="radio" name="s3q1" value="3">3</label>
+          <label><input type="radio" name="s3q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I understand how prenatal exposures can alter brain structure and function in ways that affect self-regulation, executive functioning, social skills, memory, and learning.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s3q2" value="1">1</label>
+          <label><input type="radio" name="s3q2" value="2">2</label>
+          <label><input type="radio" name="s3q2" value="3">3</label>
+          <label><input type="radio" name="s3q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I routinely consider and/or screen for prenatal alcohol exposure when relevant, across the lifespan and in diverse settings.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s3q3" value="1">1</label>
+          <label><input type="radio" name="s3q3" value="2">2</label>
+          <label><input type="radio" name="s3q3" value="3">3</label>
+          <label><input type="radio" name="s3q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I create and use accommodations for clients with suspected or confirmed PAE/FASD and intentionally involve caregivers and support systems.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s3q4" value="1">1</label>
+          <label><input type="radio" name="s3q4" value="2">2</label>
+          <label><input type="radio" name="s3q4" value="3">3</label>
+          <label><input type="radio" name="s3q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I feel competent having sensitive conversations about possible FASD with adoptive parents, birth parents, or adults, and connecting them to resources and referrals.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s3q5" value="1">1</label>
+          <label><input type="radio" name="s3q5" value="2">2</label>
+          <label><input type="radio" name="s3q5" value="3">3</label>
+          <label><input type="radio" name="s3q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>4. Cause-Effect Reasoning</h2>
+      <div class="section-desc">Understanding that brain differences affect abstract thinking and that traditional consequences may not work</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I understand that many individuals with PAE/FASD have impaired cause-effect reasoning due to brain-based differences.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s4q1" value="1">1</label>
+          <label><input type="radio" name="s4q1" value="2">2</label>
+          <label><input type="radio" name="s4q1" value="3">3</label>
+          <label><input type="radio" name="s4q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I recognize when delayed or abstract consequences (e.g., loss of privileges hours later) are ineffective or confusing for a client.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s4q2" value="1">1</label>
+          <label><input type="radio" name="s4q2" value="2">2</label>
+          <label><input type="radio" name="s4q2" value="3">3</label>
+          <label><input type="radio" name="s4q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I intentionally use immediate, concrete consequences or feedback when teaching new skills or expectations.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s4q3" value="1">1</label>
+          <label><input type="radio" name="s4q3" value="2">2</label>
+          <label><input type="radio" name="s4q3" value="3">3</label>
+          <label><input type="radio" name="s4q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I explicitly teach cause-effect relationships using visual, concrete, or experiential methods.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s4q4" value="1">1</label>
+          <label><input type="radio" name="s4q4" value="2">2</label>
+          <label><input type="radio" name="s4q4" value="3">3</label>
+          <label><input type="radio" name="s4q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I regularly adjust my approach in real time based on a client's observable capacity for abstract reasoning and understanding.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s4q5" value="1">1</label>
+          <label><input type="radio" name="s4q5" value="2">2</label>
+          <label><input type="radio" name="s4q5" value="3">3</label>
+          <label><input type="radio" name="s4q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>5. Client Education</h2>
+      <div class="section-desc">Explaining symptoms and neurobiology in accessible, non-pathologizing ways that reduce shame</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I can explain how a client's symptoms relate to brain processes in language that is clear and non-pathologizing.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s5q1" value="1">1</label>
+          <label><input type="radio" name="s5q1" value="2">2</label>
+          <label><input type="radio" name="s5q1" value="3">3</label>
+          <label><input type="radio" name="s5q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I intentionally frame brain-based challenges in ways that reduce shame and support self-compassion.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s5q2" value="1">1</label>
+          <label><input type="radio" name="s5q2" value="2">2</label>
+          <label><input type="radio" name="s5q2" value="3">3</label>
+          <label><input type="radio" name="s5q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I collaborate with clients to identify coping strategies that work with, rather than against, their brain functioning patterns.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s5q3" value="1">1</label>
+          <label><input type="radio" name="s5q3" value="2">2</label>
+          <label><input type="radio" name="s5q3" value="3">3</label>
+          <label><input type="radio" name="s5q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I help caregivers and support systems understand the client's neurobiology so they can adjust expectations and responses.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s5q4" value="1">1</label>
+          <label><input type="radio" name="s5q4" value="2">2</label>
+          <label><input type="radio" name="s5q4" value="3">3</label>
+          <label><input type="radio" name="s5q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I see client and caregiver education about neurobiology as a core part of my therapeutic work, not an optional extra.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s5q5" value="1">1</label>
+          <label><input type="radio" name="s5q5" value="2">2</label>
+          <label><input type="radio" name="s5q5" value="3">3</label>
+          <label><input type="radio" name="s5q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>6. Case Conceptualization</h2>
+      <div class="section-desc">Integrating brain-based factors into assessment, diagnosis, and treatment planning</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I routinely consider brain-based factors (e.g., neurodevelopment, trauma, PAE, sensory processing) when conceptualizing cases.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s6q1" value="1">1</label>
+          <label><input type="radio" name="s6q1" value="2">2</label>
+          <label><input type="radio" name="s6q1" value="3">3</label>
+          <label><input type="radio" name="s6q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I integrate co-occurring mental health and medical conditions into a holistic, neurobehavioral case formulation.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s6q2" value="1">1</label>
+          <label><input type="radio" name="s6q2" value="2">2</label>
+          <label><input type="radio" name="s6q2" value="3">3</label>
+          <label><input type="radio" name="s6q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">My treatment plans reflect realistic expectations aligned with the client's neurodevelopmental capacities.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s6q3" value="1">1</label>
+          <label><input type="radio" name="s6q3" value="2">2</label>
+          <label><input type="radio" name="s6q3" value="3">3</label>
+          <label><input type="radio" name="s6q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I revise case conceptualizations and treatment plans as I learn more about the client's regulatory patterns, strengths, and limitations.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s6q4" value="1">1</label>
+          <label><input type="radio" name="s6q4" value="2">2</label>
+          <label><input type="radio" name="s6q4" value="3">3</label>
+          <label><input type="radio" name="s6q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I can clearly articulate how brain-based factors influence my clinical decisions for a specific client.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s6q5" value="1">1</label>
+          <label><input type="radio" name="s6q5" value="2">2</label>
+          <label><input type="radio" name="s6q5" value="3">3</label>
+          <label><input type="radio" name="s6q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>7. Professional Development</h2>
+      <div class="section-desc">Ongoing learning and skill-building in brain-based approaches</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I have completed at least some formal training (courses, workshops, readings) in brain-based or neurobehavioral approaches.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s7q1" value="1">1</label>
+          <label><input type="radio" name="s7q1" value="2">2</label>
+          <label><input type="radio" name="s7q1" value="3">3</label>
+          <label><input type="radio" name="s7q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I seek out additional training or consultation when I recognize a gap in my brain-based or FASD-related knowledge.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s7q2" value="1">1</label>
+          <label><input type="radio" name="s7q2" value="2">2</label>
+          <label><input type="radio" name="s7q2" value="3">3</label>
+          <label><input type="radio" name="s7q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I engage in ongoing interdisciplinary consultation (e.g., with medical providers, OTs, educators) to better understand brain-based needs.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s7q3" value="1">1</label>
+          <label><input type="radio" name="s7q3" value="2">2</label>
+          <label><input type="radio" name="s7q3" value="3">3</label>
+          <label><input type="radio" name="s7q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I intentionally plan professional development activities each year related to neurodevelopment, FASD, or trauma-informed practice.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s7q4" value="1">1</label>
+          <label><input type="radio" name="s7q4" value="2">2</label>
+          <label><input type="radio" name="s7q4" value="3">3</label>
+          <label><input type="radio" name="s7q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I can identify specific ways my practice has changed over time because of ongoing training, mentoring, or consultation.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s7q5" value="1">1</label>
+          <label><input type="radio" name="s7q5" value="2">2</label>
+          <label><input type="radio" name="s7q5" value="3">3</label>
+          <label><input type="radio" name="s7q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>8. Real-Time Adaptation</h2>
+      <div class="section-desc">Recognizing regulatory states and shifting your approach dynamically during sessions</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I can quickly recognize when a client is moving outside their window of tolerance or becoming dysregulated.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s8q1" value="1">1</label>
+          <label><input type="radio" name="s8q1" value="2">2</label>
+          <label><input type="radio" name="s8q1" value="3">3</label>
+          <label><input type="radio" name="s8q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I adjust my approach in the moment (e.g., slowing down, simplifying, changing modalities) to match the client's regulatory and developmental capacity.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s8q2" value="1">1</label>
+          <label><input type="radio" name="s8q2" value="2">2</label>
+          <label><input type="radio" name="s8q2" value="3">3</label>
+          <label><input type="radio" name="s8q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I intentionally use co-regulation strategies (voice, pacing, posture, sensory input) when I notice early signs of dysregulation.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s8q3" value="1">1</label>
+          <label><input type="radio" name="s8q3" value="2">2</label>
+          <label><input type="radio" name="s8q3" value="3">3</label>
+          <label><input type="radio" name="s8q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I am comfortable modifying or even setting aside my planned session agenda when a client's neurobiological state requires it.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s8q4" value="1">1</label>
+          <label><input type="radio" name="s8q4" value="2">2</label>
+          <label><input type="radio" name="s8q4" value="3">3</label>
+          <label><input type="radio" name="s8q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I view 'following the nervous system' as more important than 'sticking to the treatment plan' in any given session.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s8q5" value="1">1</label>
+          <label><input type="radio" name="s8q5" value="2">2</label>
+          <label><input type="radio" name="s8q5" value="3">3</label>
+          <label><input type="radio" name="s8q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 9 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>9. Intervention Modification</h2>
+      <div class="section-desc">Adapting therapeutic techniques to match brain functioning patterns</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I routinely incorporate movement, sensory tools, or regulation activities into sessions when needed.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s9q1" value="1">1</label>
+          <label><input type="radio" name="s9q1" value="2">2</label>
+          <label><input type="radio" name="s9q1" value="3">3</label>
+          <label><input type="radio" name="s9q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I adjust the pacing, complexity, and length of tasks based on the client's executive functioning capacity.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s9q2" value="1">1</label>
+          <label><input type="radio" name="s9q2" value="2">2</label>
+          <label><input type="radio" name="s9q2" value="3">3</label>
+          <label><input type="radio" name="s9q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I simplify language, increase structure, or add visual supports to make interventions more accessible.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s9q3" value="1">1</label>
+          <label><input type="radio" name="s9q3" value="2">2</label>
+          <label><input type="radio" name="s9q3" value="3">3</label>
+          <label><input type="radio" name="s9q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I can maintain a strong therapeutic alliance even while frequently adapting methods and expectations.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s9q4" value="1">1</label>
+          <label><input type="radio" name="s9q4" value="2">2</label>
+          <label><input type="radio" name="s9q4" value="3">3</label>
+          <label><input type="radio" name="s9q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I see adaptation of interventions — rather than the client 'trying harder' — as central to effective brain-based work.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s9q5" value="1">1</label>
+          <label><input type="radio" name="s9q5" value="2">2</label>
+          <label><input type="radio" name="s9q5" value="3">3</label>
+          <label><input type="radio" name="s9q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 10 -->
+  <div class="assessment-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>10. Reflective Practice</h2>
+      <div class="section-desc">Ongoing self-awareness about your own expectations, biases, and assumptions</div>
+
+      <div class="assessment-item">
+        <div class="item-text">I regularly reflect on my own expectations for clients and whether these are realistic given brain-based differences.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s10q1" value="1">1</label>
+          <label><input type="radio" name="s10q1" value="2">2</label>
+          <label><input type="radio" name="s10q1" value="3">3</label>
+          <label><input type="radio" name="s10q1" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I examine my biases and assumptions about behavior (e.g., 'won't' vs. 'can't') and how they might affect my clinical decisions.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s10q2" value="1">1</label>
+          <label><input type="radio" name="s10q2" value="2">2</label>
+          <label><input type="radio" name="s10q2" value="3">3</label>
+          <label><input type="radio" name="s10q2" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text">I seek feedback or supervision when I feel stuck, frustrated, or judgmental toward a client or family.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s10q3" value="1">1</label>
+          <label><input type="radio" name="s10q3" value="2">2</label>
+          <label><input type="radio" name="s10q3" value="3">3</label>
+          <label><input type="radio" name="s10q3" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I understand that expectations and goals may need to shift over time as I learn more about the client's neurobiology and environment.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s10q4" value="1">1</label>
+          <label><input type="radio" name="s10q4" value="2">2</label>
+          <label><input type="radio" name="s10q4" value="3">3</label>
+          <label><input type="radio" name="s10q4" value="4">4</label>
+        </div>
+      </div>
+      <div class="assessment-item">
+        <div class="item-text"><span class="advanced-badge">Advanced</span> I use ongoing self-reflection to intentionally adjust my practice — not just to process feelings.</div>
+        <div class="rating-options">
+          <label><input type="radio" name="s10q5" value="1">1</label>
+          <label><input type="radio" name="s10q5" value="2">2</label>
+          <label><input type="radio" name="s10q5" value="3">3</label>
+          <label><input type="radio" name="s10q5" value="4">4</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEFORE YOU SCORE -->
+  <div class="reflection-section">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Before You Score</h2>
+      <p style="font-size: 12px; color: #333; margin-bottom: 12px; line-height: 1.5;">Take a few minutes before reviewing the scoring guide. These questions will help you make sense of your ratings.</p>
+
+      <div class="reflection-question">
+        <label>Where do you feel most confident in your current brain-based practice?</label>
+        <textarea placeholder="Type your response here..."></textarea>
+      </div>
+      <div class="reflection-question">
+        <label>Where do you feel most stretched or uncertain?</label>
+        <textarea placeholder="Type your response here..."></textarea>
+      </div>
+      <div class="reflection-question">
+        <label>Is there a specific client population or clinical situation you want to understand better?</label>
+        <textarea placeholder="Type your response here..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  </form>
+
+  <!-- SCORING GUIDE -->
+  <div class="scoring-section">
+    <h2>Scoring Guide</h2>
+    <table class="scoring-table">
+      <thead>
+        <tr>
+          <th>Your Pattern</th>
+          <th>What It Suggests</th>
+          <th>Pathway</th>
+          <th>Next Step</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mostly 1s and 2s</td>
+          <td>Earlier in your learning — or this population is newer to you.</td>
+          <td>Brain-Based Informed</td>
+          <td>Stage 1: Foundational Knowledge</td>
+        </tr>
+        <tr>
+          <td>Mix of 2s and 3s</td>
+          <td>Real experience; developing consistency. Informed solidifies your foundation.</td>
+          <td>Brain-Based Informed</td>
+          <td>Brain-Based Pathway</td>
+        </tr>
+        <tr>
+          <td>Mostly 3s</td>
+          <td>Strong awareness and growing integration. Ready to step into Responsive.</td>
+          <td>Brain-Based Responsive</td>
+          <td>Brain-Based Pathway</td>
+        </tr>
+        <tr>
+          <td>Mix of 3s and 4s on items 1–3; lower on 4–5</td>
+          <td>Solid foundation; room to develop advanced real-time skills.</td>
+          <td>Brain-Based Responsive</td>
+          <td>Brain-Based Pathway</td>
+        </tr>
+        <tr>
+          <td>Mostly 3s and 4s across all items</td>
+          <td>Advanced, integrated level. Consider joining Reflective Supervision.</td>
+          <td>Brain-Based Responsive</td>
+          <td>Stage 6: Community</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="scoring-note">
+      It's common to rate yourself higher in areas that feel familiar and lower in areas that are newer. If you work primarily with neurotypical clients, some items may feel unfamiliar — that's exactly what this pathway addresses. Starting where you actually are is not a step back; it's how the learning sticks.
+    </div>
+  </div>
+
+  <!-- PATHWAYS AT A GLANCE -->
+  <div class="pathways-section">
+    <h2>Pathways at a Glance</h2>
+    <div class="pathways-grid">
+      <div class="pathway-card">
+        <div class="pathway-card-header">
+          Brain-Based Informed
+          <div class="pathway-sub">For clinicians building their foundation</div>
+        </div>
+        <div class="pathway-card-body">
+          <ul>
+            <li>Core brain development and neuroplasticity concepts</li>
+            <li>FASD screening and neurodevelopmental presentations</li>
+            <li>Trauma integration with brain-based understanding</li>
+            <li>Shame-reducing psychoeducation approaches</li>
+            <li>Brain-informed case conceptualization</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pathway-card">
+        <div class="pathway-card-header">
+          Brain-Based Responsive
+          <div class="pathway-sub">For clinicians ready for advanced integration</div>
+        </div>
+        <div class="pathway-card-body">
+          <ul>
+            <li>Real-time regulatory recognition and co-regulation</li>
+            <li>Dynamic intervention modification mid-session</li>
+            <li>Advanced FASD case conceptualization</li>
+            <li>Bottom-up trauma approaches for complex presentations</li>
+            <li>Reflective Supervision with seasoned practitioners</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="handout-footer">
+    <img src="../images/fasd-united-logo.png" alt="FASD United">
+    <div class="credits">
+      Sponsored by the FASD United Mental Health Work Group<br>
+      <a href="https://tcfasd.github.io/Brain-Based-Mental-Health-/professionals.html#step-0">Learn more: Step 0 — Why This Matters</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

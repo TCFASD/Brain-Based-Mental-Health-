@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidence-Based Assessments for Brain-Based Informed Mental Health Treatment</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 1.5; color: #222; background: #fff; }
+
+  @media print {
+    body { font-size: 10pt; line-height: 1.4; }
+    .handout { padding: 0; max-width: 100%; }
+    .pro-header, .section-accent, .assess-table th { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+
+  .handout { max-width: 850px; margin: 0 auto; padding: 16px; }
+
+  /* === Professional Header === */
+  .pro-header {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 30%, #2c5aa0 55%, #1a6b5a 80%, #0d3b2e 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .pro-header-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background:
+      radial-gradient(ellipse 300px 300px at 15% 50%, #a78bfa, transparent),
+      radial-gradient(ellipse 250px 250px at 80% 30%, #38bdf8, transparent),
+      radial-gradient(ellipse 200px 200px at 50% 80%, #34d399, transparent),
+      radial-gradient(ellipse 180px 180px at 30% 20%, #f472b6, transparent);
+    pointer-events: none;
+  }
+  .pro-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle 2px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 25% 60%, rgba(167,139,250,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 40% 15%, rgba(56,189,248,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 55% 75%, rgba(52,211,153,0.5) 0%, transparent 100%),
+      radial-gradient(circle 2px at 70% 35%, rgba(244,114,182,0.4) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 85% 65%, rgba(255,255,255,0.35) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .pro-header-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+  }
+  .pro-header-logo {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pro-header-logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .pro-header-text h1 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .pro-header-text .header-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+  }
+  .pro-header-rule {
+    position: relative;
+    z-index: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f472b6, #a78bfa);
+  }
+
+  /* Section cards */
+  .section-card {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8ecf1;
+    margin-bottom: 10px;
+  }
+  .section-accent { background: #2c5aa0; }
+  .section-body { padding: 10px 12px; }
+  .section-body h2 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 5px;
+  }
+  .section-body p {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+  }
+  .section-body ul {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+    margin: 5px 0 5px 18px;
+  }
+  .section-body li {
+    margin-bottom: 2px;
+  }
+
+  /* Alternating accent colors */
+  .section-card:nth-child(odd) .section-accent { background: #2c5aa0; }
+  .section-card:nth-child(even) .section-accent { background: #0e8a6e; }
+  .section-card:nth-child(odd) .section-body h2 { color: #1a3a6b; }
+  .section-card:nth-child(even) .section-body h2 { color: #0e8a6e; }
+
+  /* Assessment Table */
+  .assess-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 10px; }
+  .assess-table th { background: #1a3a6b; color: white; font-family: 'Lexend', sans-serif; font-weight: 600; font-size: 10px; text-align: left; padding: 6px 8px; border: 1px solid #e8ecf1; }
+  .assess-table td { padding: 6px 8px; border: 1px solid #e8ecf1; color: #333; vertical-align: top; }
+  .assess-table tr:nth-child(even) { background: #f9fafb; }
+
+  /* Footer */
+  .handout-footer {
+    border-top: 2px solid #e0e6ed;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .handout-footer img {
+    height: 36px;
+    width: auto;
+  }
+  .handout-footer .credits {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .handout-footer a {
+    color: #2c5aa0;
+    text-decoration: none;
+  }
+  .handout-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="handout">
+
+  <!-- HEADER -->
+  <div class="pro-header">
+    <div class="pro-header-bg"></div>
+    <div class="pro-header-inner">
+      <div class="pro-header-logo">
+        <img src="../images/Brain.png" alt="Brain-Based Mental Health">
+      </div>
+      <div class="pro-header-text">
+        <h1>Evidence-Based Assessments for Brain-Based Informed Mental Health Treatment</h1>
+        <div class="header-sub">Brain-Based Practice: From Understanding to Action</div>
+      </div>
+    </div>
+    <div class="pro-header-rule"></div>
+  </div>
+
+  <!-- SECTION 1: What Are We Assessing? -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>What Are We Assessing?</h2>
+      <p>Traditional mental health assessments often overlook brain function, despite the complexity and overlap of many mental health conditions. To gain a more comprehensive understanding, brain-based informed mental health clinicians can integrate additional assessments, such as IEPs, neuropsychological evaluations, and developmental evaluations (OT, PT, SLP), into their treatment approach. As they transition into a brain-based informed mental health practice, they can learn how to interpret these reports meaningfully and connect results to behavioral support strategies. Additionally, for those without formal evaluations, alternative methods can help assess brain function more effectively.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Prior to Initial Assessment -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Prior to Initial Assessment</h2>
+      <p>Requesting and reviewing patients' existing documents can enhance the assessment process. Consider obtaining and analyzing the following:</p>
+      <ul>
+        <li>Previous neuropsychological assessments</li>
+        <li>Previous Occupational Therapy (OT) evaluations and treatment plans</li>
+        <li>Previous Speech and Language evaluations and treatment plans</li>
+        <li>Previous school evaluations</li>
+        <li>Individualized Education Plan (IEP)</li>
+        <li>Previous mental health evaluations and treatment plans</li>
+        <li>Medical and medication records</li>
+        <li>Client/Patient interviews regarding prenatal and birth history, including assessment of prenatal alcohol exposure (PAE), prenatal drug exposure (PDE), or other potential factors</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Assessments to Consider -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Assessments to Consider</h2>
+      <p>An effective assessment process includes screening for prenatal alcohol exposure. Familiarizing oneself with language that reduces stigma is essential when assessing for PAE. Refer to the following guides:</p>
+      <ul>
+        <li>Prenatal Alcohol Exposure Assessment</li>
+        <li>Language and Stigma Guide</li>
+      </ul>
+      <p>Experts recommend a comprehensive neuropsychological evaluation to assess strengths, deficits, co-occurring conditions, and early childhood trauma. If such an evaluation has not been previously administered, clinicians can rely on their observations of an individual's conceptual, social, and practical skills through informal assessments.</p>
+      <p style="margin-top: 5px;">Two informal assessments include:</p>
+      <ul>
+        <li>Vanessa Spiller's Ability Wheel</li>
+        <li>FASCETS Neurobehavioral Exploration Tool (Clinicians must be trained in the FASCETS Neurobehavioral Model for appropriate application and can access more information about the training at FASCETS Center for Neurodiversity)</li>
+      </ul>
+      <p style="margin-top: 5px;">If informal assessments indicate additional needs outside the clinician's scope, referrals should be made accordingly.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Common Evidence-Based Assessments -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Common Evidence-Based Assessments for Brain-Based Challenges</h2>
+      <table class="assess-table">
+        <thead>
+          <tr>
+            <th>Primary Characteristic</th>
+            <th>Evidence-Based Assessment</th>
+            <th>Age Range</th>
+            <th>Who Can Administer / Where to Find Results</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Memory</strong></td>
+            <td>1. Mini Mental Status Exam for Children<br>2. Children's Memory Scale<br>3. WRAML-2<br>4. NEPSY-II</td>
+            <td>1. 3-17<br>2. 5-16<br>3. 5-90<br>4. 7-12</td>
+            <td>1. Any trained professional<br>2. Neuropsychologist / Neuropsychology report<br>3. Neuropsychology or School Psychology report<br>4. Neuropsychology or School Psychology report</td>
+          </tr>
+          <tr>
+            <td><strong>Development</strong></td>
+            <td>1. Bayley Scale of Infant Development (4th ed.)<br>2. Vineland Adaptive Behavior Scale</td>
+            <td>1. 1 month-43 months<br>2. Birth-90</td>
+            <td>1. Trained individual<br>2. Masters-level professional in psychology, education, or social work</td>
+          </tr>
+          <tr>
+            <td><strong>Sensory Issues</strong></td>
+            <td>1. Sensory Profile</td>
+            <td>Infant: birth-6 months<br>Toddler: 7-35 months<br>Child: 3-14 years</td>
+            <td>Caregivers and teachers (rating forms) / Occupational Therapist</td>
+          </tr>
+          <tr>
+            <td><strong>Processing Speed &amp; Thought Process</strong></td>
+            <td>1. WPPSI<br>2. WISC<br>3. WAIS<br>4. IQ Tests</td>
+            <td>1. 2.6-7.7 years<br>2. 6-16 years<br>3. 16-90 years</td>
+            <td>Psychologists / Psychological &amp; School Psychological reports</td>
+          </tr>
+          <tr>
+            <td><strong>Speech/Language</strong></td>
+            <td>1. CASL-2</td>
+            <td>1. 3-21 years old</td>
+            <td>Speech-Language Pathologist / Speech and Language Evaluations (school or private)</td>
+          </tr>
+          <tr>
+            <td><strong>Auditory Processing</strong></td>
+            <td>1. Dichotic listening tests<br>2. Speech-in-noise tests<br>3. Auditory discrimination tests<br>4. Monaural low-redundancy tests<br>5. Rapid alternating speech tests<br>6. Pitch pattern sequence tests<br>7. SCAN (test for APD)</td>
+            <td>Varies</td>
+            <td>Speech-Language Therapists / Audiologists / Speech-Language or Audiologist Reports</td>
+          </tr>
+          <tr>
+            <td><strong>Learning Style</strong></td>
+            <td>1. VARK Assessment<br>2. Learning Style Inventory for Children<br>3. Observation during play &amp; daily activities</td>
+            <td>1. 12+<br>2. Elementary school<br>3. Under 6</td>
+            <td>1. Self-administered questionnaire<br>2. Teachers, school counselors, educational psychologists<br>3. Caregivers, parents, teachers</td>
+          </tr>
+          <tr>
+            <td><strong>Behavioral Functioning</strong></td>
+            <td>1. BASC-3<br>2. BRIEF</td>
+            <td>1. 2-21 years<br>2. 5-18 years</td>
+            <td>1. Psychologists, trained individuals (Teachers &amp; Parents can complete rating forms)<br>2. Parent questionnaire</td>
+          </tr>
+          <tr>
+            <td><strong>Attention/Executive Functioning</strong></td>
+            <td>1. Conners Comprehensive Behavior Rating Scale<br>2. Conners Parent &amp; Teacher Rating Scale<br>3. Conners Early Childhood</td>
+            <td>1. 6-18<br>2. 6-18<br>3. 2-6</td>
+            <td>1. Trained mental health professionals<br>2. Parents &amp; teachers (rating forms)<br>3. Trained professionals, teachers, parent rating forms</td>
+          </tr>
+          <tr>
+            <td><strong>Trauma</strong></td>
+            <td>CATS (Child and Adolescent Trauma Screen)</td>
+            <td>1. 3-6 years<br>2. 7-17 years</td>
+            <td>1. Caregiver report<br>2. Caregiver &amp; self-report</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Other Considerations -->
+  <div class="section-card">
+    <div class="section-accent"></div>
+    <div class="section-body">
+      <h2>Other Considerations</h2>
+      <ul>
+        <li>Assess the cognitive capacity of the support system (parent/caregiver/support person)</li>
+        <li>Evaluate the learning style of the support system</li>
+        <li>Assess the level of stressors within the environment and support system</li>
+        <li>Identify available resources and services for both the client and their support system</li>
+      </ul>
+      <p style="margin-top: 5px;">By integrating these evidence-based assessments into mental health treatment, clinicians can better understand brain function and provide targeted, individualized support to enhance patient outcomes.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="handout-footer">
+    <img src="../images/fasd-united-logo.png" alt="FASD United">
+    <div class="credits">
+      Sponsored by The Florida Center in Collaboration with the FASD United Mental Health Work Group<br>
+      and the FASD Collaborative SIG Mental Health Group
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
