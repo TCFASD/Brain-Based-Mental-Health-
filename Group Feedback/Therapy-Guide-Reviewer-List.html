@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapy Guide Reviewer List</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2c2c2c;
+            background: #f9f8f5;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            border: 1px solid #d4d0c8;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #5b7a6a;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #3a5a4a;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .modality-section {
+            margin-bottom: 30px;
+        }
+
+        .modality-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #3a5a4a;
+            padding: 8px 12px;
+            background: #f0eeea;
+            border-left: 4px solid #5b7a6a;
+            border-radius: 0 4px 4px 0;
+            margin-bottom: 10px;
+        }
+
+        .no-match {
+            font-size: 13px;
+            color: #999;
+            font-style: italic;
+            padding: 6px 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        th {
+            background: #5b7a6a;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 8px 12px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 7px 12px;
+            border-bottom: 1px solid #e8e5de;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #faf9f7;
+        }
+
+        td.email a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+
+        td.email a:hover {
+            text-decoration: underline;
+        }
+
+        td.status {
+            width: 100px;
+            text-align: center;
+        }
+
+        .checkbox {
+            width: 16px;
+            height: 16px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #777;
+            font-style: italic;
+            padding-left: 12px;
+            margin-top: 2px;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 25px 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #5b7a6a;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Therapy Guide Reviewer List</h1>
+            <p>Clinicians from the FASD Mental Health Work Group matched to therapy modalities<br>covered in "A Caregiver's Guide to Mental Health Therapies"</p>
+        </div>
+
+        <!-- CBT -->
+        <div class="modality-section">
+            <div class="modality-title">Cognitive Behavioral Therapy (CBT)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Christie Petrenko</td><td class="email"><a href="mailto:christie_petrenko@urmc.rochester.edu">christie_petrenko@urmc.rochester.edu</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Brighton Brooks</td><td class="email"><a href="mailto:FairbanksMovement@gmail.com">FairbanksMovement@gmail.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Romnee Auerbach</td><td class="email"><a href="mailto:rauerbach@trilliumfamily.org">rauerbach@trilliumfamily.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Alison Voyer</td><td class="email"><a href="mailto:alison.voyer@eastersealsucp.com">alison.voyer@eastersealsucp.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Laura Gumbiner</td><td class="email"><a href="mailto:gumbinerl@kreiderservices.org">gumbinerl@kreiderservices.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Jaquelinne Anderson</td><td class="email"><a href="mailto:jackie.anderson@thefloridacenter.org">jackie.anderson@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Keagan McKinney</td><td class="email"><a href="mailto:kmckinney@wonderlandkids.org">kmckinney@wonderlandkids.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Chris Troutt</td><td class="email"><a href="mailto:chris@papillioncenter.org">chris@papillioncenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Crissa Harman</td><td class="email"><a href="mailto:crissa.harman@thefloridacenter.org">crissa.harman@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Jessica Wilson</td><td class="email"><a href="mailto:jessicawilsontherapist@gmail.com">jessicawilsontherapist@gmail.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Anika Trancik</td><td class="email"><a href="mailto:anika.trancik@thefloridacenter.org">anika.trancik@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+            <div class="note">Anika Trancik trained in Coping Cats (CBT for younger kids)</div>
+        </div>
+
+        <!-- TF-CBT -->
+        <div class="modality-section">
+            <div class="modality-title">Trauma-Focused CBT (TF-CBT)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Amelia Schock</td><td class="email"><a href="mailto:amelia@nurturingfamilycounseling.com">amelia@nurturingfamilycounseling.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Alison Blanchet</td><td class="email"><a href="mailto:alison.blanchet@gulfcoastcac.org">alison.blanchet@gulfcoastcac.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Tami Eller</td><td class="email"><a href="mailto:teller@alaska.edu">teller@alaska.edu</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Christie Petrenko</td><td class="email"><a href="mailto:christie_petrenko@urmc.rochester.edu">christie_petrenko@urmc.rochester.edu</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Brighton Brooks</td><td class="email"><a href="mailto:FairbanksMovement@gmail.com">FairbanksMovement@gmail.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Alison Voyer</td><td class="email"><a href="mailto:alison.voyer@eastersealsucp.com">alison.voyer@eastersealsucp.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Laura Gumbiner</td><td class="email"><a href="mailto:gumbinerl@kreiderservices.org">gumbinerl@kreiderservices.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Jaquelinne Anderson</td><td class="email"><a href="mailto:jackie.anderson@thefloridacenter.org">jackie.anderson@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Keagan McKinney</td><td class="email"><a href="mailto:kmckinney@wonderlandkids.org">kmckinney@wonderlandkids.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Chris Troutt</td><td class="email"><a href="mailto:chris@papillioncenter.org">chris@papillioncenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Jessica Wilson</td><td class="email"><a href="mailto:jessicawilsontherapist@gmail.com">jessicawilsontherapist@gmail.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+        </div>
+
+        <!-- DBT -->
+        <div class="modality-section">
+            <div class="modality-title">Dialectical Behavior Therapy (DBT)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Kristal Pollack</td><td class="email"><a href="mailto:kristal.pollack@thefloridacenter.org">kristal.pollack@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Christie Petrenko</td><td class="email"><a href="mailto:christie_petrenko@urmc.rochester.edu">christie_petrenko@urmc.rochester.edu</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Laura Gumbiner</td><td class="email"><a href="mailto:gumbinerl@kreiderservices.org">gumbinerl@kreiderservices.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Anika Trancik</td><td class="email"><a href="mailto:anika.trancik@thefloridacenter.org">anika.trancik@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+        </div>
+
+        <!-- Play Therapy -->
+        <div class="modality-section">
+            <div class="modality-title">Play Therapy</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Janessa Nikols</td><td class="email"><a href="mailto:jnikols@centerforneurobehavioralguidance.org">jnikols@centerforneurobehavioralguidance.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Laura Gumbiner</td><td class="email"><a href="mailto:gumbinerl@kreiderservices.org">gumbinerl@kreiderservices.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Keagan McKinney</td><td class="email"><a href="mailto:kmckinney@wonderlandkids.org">kmckinney@wonderlandkids.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Erin Goodman</td><td class="email"><a href="mailto:erin@papillioncenter.com">erin@papillioncenter.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Anika Trancik</td><td class="email"><a href="mailto:anika.trancik@thefloridacenter.org">anika.trancik@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Jessica Wilson</td><td class="email"><a href="mailto:jessicawilsontherapist@gmail.com">jessicawilsontherapist@gmail.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+        </div>
+
+        <!-- EMDR -->
+        <div class="modality-section">
+            <div class="modality-title">EMDR (Eye Movement Desensitization and Reprocessing)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Alison Blanchet</td><td class="email"><a href="mailto:alison.blanchet@gulfcoastcac.org">alison.blanchet@gulfcoastcac.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Alison Voyer</td><td class="email"><a href="mailto:alison.voyer@eastersealsucp.com">alison.voyer@eastersealsucp.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+        </div>
+
+        <!-- Somatic Experiencing -->
+        <div class="modality-section">
+            <div class="modality-title">Somatic Experiencing (SE)</div>
+            <div class="no-match">No matches in the work group. External reviewer needed.</div>
+        </div>
+
+        <!-- Theraplay -->
+        <div class="modality-section">
+            <div class="modality-title">Theraplay</div>
+            <div class="no-match">No matches in the work group. External reviewer needed.</div>
+        </div>
+
+        <!-- DDP -->
+        <div class="modality-section">
+            <div class="modality-title">Dyadic Developmental Psychotherapy (DDP)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Janessa Nikols</td><td class="email"><a href="mailto:jnikols@centerforneurobehavioralguidance.org">jnikols@centerforneurobehavioralguidance.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+        </div>
+
+        <!-- TBRI -->
+        <div class="modality-section">
+            <div class="modality-title">Trust-Based Relational Intervention (TBRI)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Janessa Nikols</td><td class="email"><a href="mailto:jnikols@centerforneurobehavioralguidance.org">jnikols@centerforneurobehavioralguidance.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Alison Blanchet</td><td class="email"><a href="mailto:alison.blanchet@gulfcoastcac.org">alison.blanchet@gulfcoastcac.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Tami Eller</td><td class="email"><a href="mailto:teller@alaska.edu">teller@alaska.edu</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Erin Goodman</td><td class="email"><a href="mailto:erin@papillioncenter.com">erin@papillioncenter.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Chris Troutt</td><td class="email"><a href="mailto:chris@papillioncenter.org">chris@papillioncenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Crissa Harman</td><td class="email"><a href="mailto:crissa.harman@thefloridacenter.org">crissa.harman@thefloridacenter.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+            <div class="note">Alison Blanchet is a TBRI Practitioner</div>
+        </div>
+
+        <!-- CPS -->
+        <div class="modality-section">
+            <div class="modality-title">Collaborative and Proactive Solutions (CPS)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Janessa Nikols</td><td class="email"><a href="mailto:jnikols@centerforneurobehavioralguidance.org">jnikols@centerforneurobehavioralguidance.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+        </div>
+
+        <!-- Parent Training Programs -->
+        <div class="modality-section">
+            <div class="modality-title">Parent Training Programs (PCIT / Triple P)</div>
+            <table>
+                <tr><th>Name</th><th>Email</th><th>Contacted</th><th>Reviewed</th></tr>
+                <tr><td>Alison Voyer</td><td class="email"><a href="mailto:alison.voyer@eastersealsucp.com">alison.voyer@eastersealsucp.com</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+                <tr><td>Laura Gumbiner</td><td class="email"><a href="mailto:gumbinerl@kreiderservices.org">gumbinerl@kreiderservices.org</a></td><td class="status"><input type="checkbox" class="checkbox"></td><td class="status"><input type="checkbox" class="checkbox"></td></tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            Source: FASD Mental Health Work Group survey responses<br>
+            Cross-referenced with: A Caregiver's Guide to Mental Health Therapies
+        </div>
+    </div>
+</body>
+</html>

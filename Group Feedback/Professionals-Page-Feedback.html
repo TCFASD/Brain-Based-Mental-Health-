@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professionals Page Feedback</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2c2c2c;
+            background: #f9f8f5;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            border: 1px solid #d4d0c8;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #5b7a6a;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #3a5a4a;
+            margin-bottom: 4px;
+        }
+
+        .header h2 {
+            font-size: 17px;
+            color: #5b7a6a;
+            font-weight: normal;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0ddd6;
+        }
+
+        .info-field {
+            flex: 1;
+        }
+
+        .info-field label {
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #555;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-field input {
+            width: 100%;
+            border: none;
+            border-bottom: 1.5px solid #999;
+            padding: 6px 2px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 15px;
+            background: transparent;
+        }
+
+        .info-field input:focus {
+            outline: none;
+            border-bottom-color: #5b7a6a;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-number {
+            font-size: 13px;
+            font-weight: bold;
+            color: #5b7a6a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .question-block {
+            margin-bottom: 22px;
+        }
+
+        .question-block label {
+            font-size: 15px;
+            font-weight: bold;
+            color: #2c2c2c;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .question-block .context {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .question-block textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 10px 12px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 70px;
+            background: white;
+        }
+
+        .question-block textarea:focus {
+            outline: none;
+            border-color: #5b7a6a;
+        }
+
+        .topic-list {
+            font-size: 14px;
+            color: #444;
+            margin: 6px 0 10px 20px;
+            line-height: 1.7;
+        }
+
+        .topic-list li {
+            margin-bottom: 4px;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 30px 0;
+        }
+
+        .step-header {
+            font-size: 15px;
+            font-weight: bold;
+            color: #3a5a4a;
+            margin-bottom: 6px;
+            padding: 6px 10px;
+            background: #f0eeea;
+            border-left: 3px solid #5b7a6a;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #5b7a6a;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .form-container {
+                box-shadow: none;
+                border: none;
+                padding: 30px;
+            }
+            textarea, input {
+                border-color: #999 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1>Brain-Based Mental Health Community</h1>
+            <h2>Professionals Page Feedback</h2>
+        </div>
+
+        <div class="info-row">
+            <div class="info-field">
+                <label>Name</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="info-field">
+                <label>Date</label>
+                <input type="date">
+            </div>
+        </div>
+
+        <div style="background: #eef4f0; border: 1px solid #5b7a6a; border-radius: 6px; padding: 12px 16px; margin-bottom: 25px; text-align: center;">
+            <span style="font-size: 13px; color: #3a5a4a; font-weight: bold;">Review the live website before providing feedback:</span><br>
+            <a href="https://tcfasd.github.io/Brain-Based-Mental-Health-/professionals.html" target="_blank" style="color: #2c5aa0; font-size: 14px; text-decoration: none;">https://tcfasd.github.io/Brain-Based-Mental-Health-/professionals.html</a>
+        </div>
+
+        <!-- SECTION 1: Content & Layout -->
+        <div class="section">
+            <div class="section-number">Question 1</div>
+            <h3>Content &amp; Layout</h3>
+            <p class="section-intro">Please review the Professionals page and share your thoughts on the following:</p>
+
+            <div class="question-block">
+                <label>How is the organization of the content?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Should some sections go ahead of other sections?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Are there some sections that are not needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Do the subtitles make sense for what we want to communicate?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>How is the wording? Any changes? Is it too wordy?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 2: Brain-Based Practice Steps Structure -->
+        <div class="section">
+            <div class="section-number">Question 2</div>
+            <h3>Brain-Based Practice: From Understanding to Action</h3>
+            <p class="section-intro">Steps 1 and 2 were separated in the current draft. Please share your thoughts:</p>
+
+            <div class="question-block">
+                <label>Do Steps 1 and 2 need to be combined?</label>
+                <textarea rows="3"></textarea>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 3: Sample 10-Minute Video Topics -->
+        <div class="section">
+            <div class="section-number">Question 3</div>
+            <h3>Sample 10-Minute Video Topics</h3>
+            <p class="section-intro">We are considering short video topics for each step. Please review the proposed topics and suggest any additions or changes.</p>
+
+            <!-- Step 0 -->
+            <div class="step-header">Step 0: Why This Matters</div>
+            <div class="question-block">
+                <div class="context">Proposed topic:</div>
+                <ul class="topic-list">
+                    <li>Why Being Brain-Based Responsive Makes a Difference in Treatment</li>
+                </ul>
+                <label>Do you feel the proposed topic is needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+            <div class="question-block">
+                <label>Do you recommend other topics for mini trainings?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <!-- Step 1/2 -->
+            <div class="step-header">Step 1 (or Steps 1/2 Combined): Understanding the Brain</div>
+            <div class="question-block">
+                <div class="context">Proposed topics:</div>
+                <ul class="topic-list">
+                    <li>What Is FASD and What Does This Mean in Practice</li>
+                    <li>Screening for FASD and Prenatal Trauma in Practice</li>
+                    <li>The Brain, the Nervous System, and Mental Health: An Overview</li>
+                </ul>
+                <label>Do you feel the proposed topics are needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+            <div class="question-block">
+                <label>Do you recommend other topics for mini trainings?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-header">Step 3: Seeing the Brain in Your Clients</div>
+            <div class="question-block">
+                <div class="context">Proposed topics:</div>
+                <ul class="topic-list">
+                    <li>Interpreting and Applying Clinical Testing</li>
+                    <li>What Happens When You Have No Testing Available?</li>
+                    <li>Assessing Brain-Based Challenges for Clients and Their Caregivers</li>
+                </ul>
+                <label>Do you feel the proposed topics are needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+            <div class="question-block">
+                <label>Do you recommend other topics for mini trainings?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-header">Step 4: Building a Brain-Based Treatment Plan</div>
+            <div class="question-block">
+                <div class="context">Proposed topic:</div>
+                <ul class="topic-list">
+                    <li>Creating a Treatment Plan That Is Brain-Based Responsive</li>
+                </ul>
+                <label>Do you feel the proposed topic is needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+            <div class="question-block">
+                <label>Do you recommend other topics for mini trainings?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-header">Step 5: Adapting Your Approach</div>
+            <div class="question-block">
+                <div class="context">Proposed topics &mdash; Mini trainings on:</div>
+                <ul class="topic-list">
+                    <li>DBT Through a Brain-Based Lens</li>
+                    <li>PCIT Through a Brain-Based Lens</li>
+                    <li>TBRI Through a Brain-Based Lens</li>
+                    <li>CBT Through a Brain-Based Lens</li>
+                </ul>
+                <label>Do you feel the proposed topics are needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+            <div class="question-block">
+                <label>Do you recommend other topics for mini trainings?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-header">Step 6: Reflective Practice</div>
+            <div class="question-block">
+                <div class="context">Proposed topic:</div>
+                <ul class="topic-list">
+                    <li>Growing Through Reflection: Sustaining Brain-Based Responsive Practice</li>
+                </ul>
+                <label>Do you feel the proposed topic is needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+            <div class="question-block">
+                <label>Do you recommend other topics for mini trainings?</label>
+                <textarea rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="footer">
+            Thank you for your feedback!
+        </div>
+    </div>
+</body>
+</html>

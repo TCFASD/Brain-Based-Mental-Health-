@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Task Tracker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2c2c2c;
+            background: #f9f8f5;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            border: 1px solid #d4d0c8;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #5b7a6a;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #3a5a4a;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #5b7a6a;
+            padding: 10px 14px;
+            border-radius: 4px;
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        th {
+            background: #f0eeea;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px 12px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #3a5a4a;
+            border: 1px solid #d4d0c8;
+        }
+
+        td {
+            padding: 9px 12px;
+            border: 1px solid #d4d0c8;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #faf9f7;
+        }
+
+        td.doc-name {
+            font-weight: bold;
+            color: #2c2c2c;
+            width: 30%;
+        }
+
+        td.assigned {
+            width: 25%;
+        }
+
+        td.assigned input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding: 3px 2px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 13px;
+            background: transparent;
+        }
+
+        td.assigned input:focus {
+            outline: none;
+            border-bottom-color: #5b7a6a;
+        }
+
+        td.date-col {
+            width: 15%;
+        }
+
+        td.date-col input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding: 3px 2px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 12px;
+            background: transparent;
+        }
+
+        td.date-col input:focus {
+            outline: none;
+            border-bottom-color: #5b7a6a;
+        }
+
+        td.status-col {
+            width: 10%;
+            text-align: center;
+        }
+
+        td.status-col select {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 3px 4px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 12px;
+            background: white;
+            cursor: pointer;
+        }
+
+        td.status-col select:focus {
+            outline: none;
+            border-color: #5b7a6a;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #5b7a6a;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 20px;
+                max-width: 100%;
+            }
+            input, select {
+                border-color: #999 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Brain-Based Mental Health Community</h1>
+            <p>Feedback Task Tracker</p>
+        </div>
+
+        <!-- WEBSITE PAGE FEEDBACK -->
+        <div class="section-title">Website Page Feedback</div>
+        <table>
+            <tr>
+                <th>Review Document</th>
+                <th>Person(s) Assigned</th>
+                <th>Date Due</th>
+                <th>Date Received</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td class="doc-name">Home Page Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">Overall Layout Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">About Us Page Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">Professionals Page Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <!-- THERAPY MODALITY FEEDBACK -->
+        <div class="section-title">Therapy Modality Feedback — Caregiver's Guide</div>
+        <table>
+            <tr>
+                <th>Review Document</th>
+                <th>Person(s) Assigned</th>
+                <th>Date Due</th>
+                <th>Date Received</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td class="doc-name">CBT Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">TF-CBT Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">DBT Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">Play Therapy Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">EMDR Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">Somatic Experiencing Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">Theraplay Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">DDP Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">TBRI Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">CPS Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="doc-name">Parent Training Programs Feedback</td>
+                <td class="assigned"><input type="text" placeholder=""></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="date-col"><input type="date"></td>
+                <td class="status-col">
+                    <select>
+                        <option value="">—</option>
+                        <option value="sent">Sent</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="received">Received</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            Brain-Based Mental Health Community — Feedback Task Tracker
+        </div>
+    </div>
+</body>
+</html>

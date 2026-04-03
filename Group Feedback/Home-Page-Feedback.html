@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Feedback</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2c2c2c;
+            background: #f9f8f5;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            border: 1px solid #d4d0c8;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #5b7a6a;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #3a5a4a;
+            margin-bottom: 4px;
+        }
+
+        .header h2 {
+            font-size: 17px;
+            color: #5b7a6a;
+            font-weight: normal;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0ddd6;
+        }
+
+        .info-field {
+            flex: 1;
+        }
+
+        .info-field label {
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #555;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-field input {
+            width: 100%;
+            border: none;
+            border-bottom: 1.5px solid #999;
+            padding: 6px 2px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 15px;
+            background: transparent;
+        }
+
+        .info-field input:focus {
+            outline: none;
+            border-bottom-color: #5b7a6a;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-number {
+            font-size: 13px;
+            font-weight: bold;
+            color: #5b7a6a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .option-block {
+            background: #f5f4f0;
+            border-left: 3px solid #5b7a6a;
+            padding: 16px 20px;
+            margin-bottom: 14px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .option-label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #3a5a4a;
+            margin-bottom: 6px;
+        }
+
+        .option-text {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .preference-row {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .preference-row label {
+            font-size: 13px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .preference-row input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        .comment-line label {
+            font-size: 13px;
+            color: #555;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .comment-line textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 8px 10px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 50px;
+            background: white;
+        }
+
+        .comment-line textarea:focus {
+            outline: none;
+            border-color: #5b7a6a;
+        }
+
+        .question-block {
+            margin-bottom: 22px;
+        }
+
+        .question-block label {
+            font-size: 15px;
+            font-weight: bold;
+            color: #2c2c2c;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .question-block textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 10px 12px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 70px;
+            background: white;
+        }
+
+        .question-block textarea:focus {
+            outline: none;
+            border-color: #5b7a6a;
+        }
+
+        .other-suggestion {
+            margin-top: 14px;
+        }
+
+        .other-suggestion label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .other-suggestion textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 8px 10px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 60px;
+            background: white;
+        }
+
+        .other-suggestion textarea:focus {
+            outline: none;
+            border-color: #5b7a6a;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #e0ddd6;
+            margin: 30px 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #5b7a6a;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .form-container {
+                box-shadow: none;
+                border: none;
+                padding: 30px;
+            }
+            textarea, input {
+                border-color: #999 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1>Brain-Based Mental Health Community</h1>
+            <h2>Home Page Feedback</h2>
+        </div>
+
+        <div class="info-row">
+            <div class="info-field">
+                <label>Name</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="info-field">
+                <label>Date</label>
+                <input type="date">
+            </div>
+        </div>
+
+        <div style="background: #eef4f0; border: 1px solid #5b7a6a; border-radius: 6px; padding: 12px 16px; margin-bottom: 25px; text-align: center;">
+            <span style="font-size: 13px; color: #3a5a4a; font-weight: bold;">Review the live website before providing feedback:</span><br>
+            <a href="https://tcfasd.github.io/Brain-Based-Mental-Health-/index.html" target="_blank" style="color: #2c5aa0; font-size: 14px; text-decoration: none;">https://tcfasd.github.io/Brain-Based-Mental-Health-/index.html</a>
+        </div>
+
+        <!-- SECTION 1: Website Title -->
+        <div class="section">
+            <div class="section-number">Question 1</div>
+            <h3>Website Title</h3>
+            <p class="section-intro">We are selecting a title for the combined website. The title should communicate that this resource is for everyone &mdash; clinicians, caregivers, and self-advocates &mdash; and that understanding the brain is the starting point for effective mental health support. Please rank your preference (1 = top choice, 4 = least preferred) or note any reactions:</p>
+
+            <div class="option-block">
+                <div class="option-label">Option A</div>
+                <div class="option-text">Brain-Based Mental Health: Better Outcomes Start with Understanding the Brain</div>
+                <div class="preference-row">
+                    <label><input type="checkbox"> Top choice</label>
+                    <label><input type="checkbox"> Good</label>
+                    <label><input type="checkbox"> Okay</label>
+                    <label><input type="checkbox"> Not preferred</label>
+                </div>
+                <div class="comment-line">
+                    <label>Comments:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="option-block">
+                <div class="option-label">Option B</div>
+                <div class="option-text">When We Start with the Brain, Everyone Benefits</div>
+                <div class="preference-row">
+                    <label><input type="checkbox"> Top choice</label>
+                    <label><input type="checkbox"> Good</label>
+                    <label><input type="checkbox"> Okay</label>
+                    <label><input type="checkbox"> Not preferred</label>
+                </div>
+                <div class="comment-line">
+                    <label>Comments:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="option-block">
+                <div class="option-label">Option C</div>
+                <div class="option-text">The Brain-Based Approach: Connecting Clinicians, Caregivers, and Self-Advocates</div>
+                <div class="preference-row">
+                    <label><input type="checkbox"> Top choice</label>
+                    <label><input type="checkbox"> Good</label>
+                    <label><input type="checkbox"> Okay</label>
+                    <label><input type="checkbox"> Not preferred</label>
+                </div>
+                <div class="comment-line">
+                    <label>Comments:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="option-block">
+                <div class="option-label">Option D</div>
+                <div class="option-text">It Starts with the Brain: Mental Health That Actually Fits</div>
+                <div class="preference-row">
+                    <label><input type="checkbox"> Top choice</label>
+                    <label><input type="checkbox"> Good</label>
+                    <label><input type="checkbox"> Okay</label>
+                    <label><input type="checkbox"> Not preferred</label>
+                </div>
+                <div class="comment-line">
+                    <label>Comments:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="other-suggestion">
+                <label>Other title suggestion:</label>
+                <textarea rows="2"></textarea>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 2: Home Page Overview Paragraph -->
+        <div class="section">
+            <div class="section-number">Question 2</div>
+            <h3>Home Page Overview Paragraph</h3>
+            <p class="section-intro">The overview paragraph is the first thing visitors read after the title. It explains why the site exists and who built it. Please rank your preference:</p>
+
+            <div class="option-block">
+                <div class="option-label">Option A</div>
+                <div class="option-text">This site was built by therapists, caregivers, and self-advocates who saw the same problem from different sides. Therapists felt unequipped to help their most complex clients. Caregivers felt like no one understood their child. Self-advocates felt like the system was not built for them. We came together because we recognized a fundamental mismatch between how mental health treatment is delivered and how the brain actually works. This site is the result. Here you will find the framework, tools, and resources to bridge that gap, whether you are a clinician looking to better serve your clients, a caregiver searching for answers, or a self-advocate learning to navigate a system that was not designed with your brain in mind.</div>
+                <div class="preference-row">
+                    <label><input type="checkbox"> Top choice</label>
+                    <label><input type="checkbox"> Good</label>
+                    <label><input type="checkbox"> Okay</label>
+                    <label><input type="checkbox"> Not preferred</label>
+                </div>
+                <div class="comment-line">
+                    <label>Comments:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="option-block">
+                <div class="option-label">Option B</div>
+                <div class="option-text">We are therapists, caregivers, and self-advocates who came together around a shared realization: the mental health system was not working for the people who needed it most. Therapists felt stuck, unsure why their training was not reaching certain clients. Caregivers watched their children cycle through treatments that did not fit. Self-advocates struggled in silence, told to try harder in a system that never asked how their brain worked. There is a better way. When we start with the brain, everything changes. This site gives you the framework and tools to find the right support and to provide support in a way that actually works.</div>
+                <div class="preference-row">
+                    <label><input type="checkbox"> Top choice</label>
+                    <label><input type="checkbox"> Good</label>
+                    <label><input type="checkbox"> Okay</label>
+                    <label><input type="checkbox"> Not preferred</label>
+                </div>
+                <div class="comment-line">
+                    <label>Comments:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="option-block">
+                <div class="option-label">Option C</div>
+                <div class="option-text">This site exists because therapists, caregivers, and self-advocates all recognized the same problem. Therapists felt unequipped. Families felt unheard. Self-advocates felt unseen. The common thread was a mental health system built around typical brain functioning, leaving everyone struggling when the brain works differently. We came together to change that. Here you will find the tools and framework to close that gap, so clinicians can provide care that fits, caregivers can find answers that work, and self-advocates can get the support they deserve.</div>
+                <div class="preference-row">
+                    <label><input type="checkbox"> Top choice</label>
+                    <label><input type="checkbox"> Good</label>
+                    <label><input type="checkbox"> Okay</label>
+                    <label><input type="checkbox"> Not preferred</label>
+                </div>
+                <div class="comment-line">
+                    <label>Comments:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
+
+            <div class="other-suggestion">
+                <label>Comments or suggested edits to any of the options above:</label>
+                <textarea rows="3"></textarea>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- SECTION 3: General Home Page Feedback -->
+        <div class="section">
+            <div class="section-number">Question 3</div>
+            <h3>Home Page Content &amp; Layout</h3>
+            <p class="section-intro">Please review the Home Page and share your thoughts on the following:</p>
+
+            <div class="question-block">
+                <label>How is the organization of the content?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Should some sections go ahead of other sections?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Are there some sections that are not needed?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Do the subtitles make sense for what we want to communicate?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>How is the wording? Any changes? Is it too wordy?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Thank you for your feedback!
+        </div>
+    </div>
+</body>
+</html>

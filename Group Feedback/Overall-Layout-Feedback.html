@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overall Layout Feedback</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2c2c2c;
+            background: #f9f8f5;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 60px;
+            border: 1px solid #d4d0c8;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #5b7a6a;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #3a5a4a;
+            margin-bottom: 4px;
+        }
+
+        .header h2 {
+            font-size: 17px;
+            color: #5b7a6a;
+            font-weight: normal;
+        }
+
+        .info-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0ddd6;
+        }
+
+        .info-field {
+            flex: 1;
+        }
+
+        .info-field label {
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #555;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-field input {
+            width: 100%;
+            border: none;
+            border-bottom: 1.5px solid #999;
+            padding: 6px 2px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 15px;
+            background: transparent;
+        }
+
+        .info-field input:focus {
+            outline: none;
+            border-bottom-color: #5b7a6a;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-number {
+            font-size: 13px;
+            font-weight: bold;
+            color: #5b7a6a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .question-block {
+            margin-bottom: 22px;
+        }
+
+        .question-block label {
+            font-size: 15px;
+            font-weight: bold;
+            color: #2c2c2c;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .question-block textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 10px 12px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 70px;
+            background: white;
+        }
+
+        .question-block textarea:focus {
+            outline: none;
+            border-color: #5b7a6a;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #5b7a6a;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .form-container {
+                box-shadow: none;
+                border: none;
+                padding: 30px;
+            }
+            textarea, input {
+                border-color: #999 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1>Brain-Based Mental Health Community</h1>
+            <h2>Overall Layout Feedback</h2>
+        </div>
+
+        <div class="info-row">
+            <div class="info-field">
+                <label>Name</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="info-field">
+                <label>Date</label>
+                <input type="date">
+            </div>
+        </div>
+
+        <div style="background: #eef4f0; border: 1px solid #5b7a6a; border-radius: 6px; padding: 12px 16px; margin-bottom: 25px; text-align: center;">
+            <span style="font-size: 13px; color: #3a5a4a; font-weight: bold;">Review the live website before providing feedback:</span><br>
+            <a href="https://tcfasd.github.io/Brain-Based-Mental-Health-/index.html" target="_blank" style="color: #2c5aa0; font-size: 14px; text-decoration: none;">https://tcfasd.github.io/Brain-Based-Mental-Health-/index.html</a>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Question 1</div>
+            <h3>Font &amp; Colors</h3>
+            <p class="section-intro">Please review the font and color choices used across the website:</p>
+
+            <div class="question-block">
+                <label>How is the font?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>How are the colors?</label>
+                <textarea rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Question 2</div>
+            <h3>Logos</h3>
+            <p class="section-intro">Please share your thoughts on logo usage across the website:</p>
+
+            <div class="question-block">
+                <label>Do we put the FASD United logo throughout the website?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Do we highlight other logos on the website?</label>
+                <textarea rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-number">Question 3</div>
+            <h3>Pictures &amp; Images</h3>
+            <p class="section-intro">Please review the images used across the website and share your thoughts:</p>
+
+            <div class="question-block">
+                <label>Can you look at the pictures? Do they represent what we are wanting to communicate?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Do you have pictures to add?</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="question-block">
+                <label>Can you look at the About Us page? That picture needs to change as it is the same picture as the Home Page. What would be a good one to represent the work group?</label>
+                <textarea rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="footer">
+            Thank you for your feedback!
+        </div>
+    </div>
+</body>
+</html>
