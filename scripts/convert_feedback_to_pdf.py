@@ -575,31 +575,244 @@ def parse_and_convert(html_path, pdf_path):
     c.save()
 
 
+def convert_task_tracker(html_path, pdf_path):
+    """Convert the Feedback Task Tracker HTML to a fillable PDF with dropdowns
+    and JavaScript-driven color coding by status."""
+    import pypdf
+
+    with open(html_path, 'r', encoding='utf-8') as f:
+        soup = BeautifulSoup(f.read(), 'html.parser')
+
+    tmp_path = pdf_path + '.tmp'
+    c = canvas.Canvas(tmp_path, pagesize=letter)
+    form = c.acroForm
+    y = PAGE_H - MARGIN_T
+
+    # Header
+    y = draw_header(c, y, 'Brain-Based Mental Health Community', 'Feedback Task Tracker')
+
+    # Divider
+    c.setStrokeColor(GREEN)
+    c.setLineWidth(2)
+    c.line(MARGIN_L, y, PAGE_W - MARGIN_R, y)
+    c.setLineWidth(1)
+    y -= 16
+
+    # Column layout for tracker table
+    col_widths = [2.0 * inch, 1.5 * inch, 0.95 * inch, 0.95 * inch, 1.1 * inch]
+    table_w = sum(col_widths)
+    headers = ['Review Document', 'Person(s) Assigned', 'Date Due', 'Date Received', 'Status']
+    row_h = 24
+    header_h = 28
+    status_options = ['--', 'Sent', 'In Progress', 'Received', 'Finalized']
+
+    # Track all row prefixes for JS hookup
+    row_prefixes = []
+
+    # Find all section titles and tables
+    section_titles = soup.find_all('div', class_='section-title')
+    tables = soup.find_all('table')
+
+    for sec_idx, (sec_title, table) in enumerate(zip(section_titles, tables)):
+        y = new_page_if_needed(c, y, 80)
+
+        # Section header bar
+        sec_h = 26
+        c.setFillColor(GREEN)
+        c.roundRect(MARGIN_L, y - sec_h, table_w, sec_h, 4, fill=1, stroke=0)
+        c.setFillColor(white)
+        c.setFont('Helvetica-Bold', 11)
+        c.drawString(MARGIN_L + 10, y - 17, sec_title.get_text(strip=True))
+        y -= sec_h
+
+        # Table header row
+        c.setFillColor(LIGHT_BG)
+        c.rect(MARGIN_L, y - header_h, table_w, header_h, fill=1, stroke=0)
+        c.setStrokeColor(LIGHT_GRAY)
+        c.rect(MARGIN_L, y - header_h, table_w, header_h, fill=0, stroke=1)
+
+        cx = MARGIN_L
+        c.setFont('Helvetica-Bold', 7.5)
+        c.setFillColor(DARK_GREEN)
+        for i, h in enumerate(headers):
+            c.drawString(cx + 4, y - 16, h.upper())
+            if i < len(headers) - 1:
+                cx += col_widths[i]
+                c.line(cx, y, cx, y - header_h)
+        y -= header_h
+
+        # Data rows
+        rows = table.find_all('tr')[1:]  # skip header row
+        for row_idx, tr in enumerate(rows):
+            y = new_page_if_needed(c, y, row_h + 5)
+
+            # Alternating background
+            if row_idx % 2 == 1:
+                c.setFillColor(HexColor('#faf9f7'))
+                c.rect(MARGIN_L, y - row_h, table_w, row_h, fill=1, stroke=0)
+
+            # Row border
+            c.setStrokeColor(LIGHT_GRAY)
+            c.rect(MARGIN_L, y - row_h, table_w, row_h, fill=0, stroke=1)
+
+            # Column dividers
+            cx = MARGIN_L
+            for i in range(len(col_widths) - 1):
+                cx += col_widths[i]
+                c.line(cx, y, cx, y - row_h)
+
+            # Document name (static text from first td)
+            td = tr.find('td', class_='doc-name')
+            doc_name = td.get_text(strip=True) if td else f'Row {row_idx}'
+            c.setFillColor(black)
+            c.setFont('Helvetica-Bold', 8.5)
+            c.drawString(MARGIN_L + 4, y - 15, doc_name)
+
+            # Use predictable field names (no counter) so JS can find them
+            prefix = f"s{sec_idx}_r{row_idx}"
+            row_prefixes.append(prefix)
+            field_y = y - row_h + 4
+            field_h = row_h - 8
+            cx = MARGIN_L + col_widths[0]
+
+            # Assigned (text field)
+            form.textfield(
+                name=f'{prefix}_assigned',
+                x=cx + 3, y=field_y,
+                width=col_widths[1] - 6, height=field_h,
+                borderWidth=0,
+                fontSize=9, fontName='Helvetica'
+            )
+            cx += col_widths[1]
+
+            # Date Due (text field)
+            form.textfield(
+                name=f'{prefix}_due',
+                x=cx + 3, y=field_y,
+                width=col_widths[2] - 6, height=field_h,
+                borderWidth=0,
+                fontSize=8, fontName='Helvetica'
+            )
+            cx += col_widths[2]
+
+            # Date Received (text field)
+            form.textfield(
+                name=f'{prefix}_recv',
+                x=cx + 3, y=field_y,
+                width=col_widths[3] - 6, height=field_h,
+                borderWidth=0,
+                fontSize=8, fontName='Helvetica'
+            )
+            cx += col_widths[3]
+
+            # Status (dropdown)
+            form.choice(
+                name=f'{prefix}_status',
+                options=status_options,
+                value='--',
+                x=cx + 3, y=field_y,
+                width=col_widths[4] - 6, height=field_h,
+                borderWidth=1,
+                borderColor=LIGHT_GRAY,
+                fillColor=white,
+                textColor=black,
+                fontSize=8, fontName='Helvetica',
+            )
+
+            y -= row_h
+
+        y -= 20
+
+    # Footer
+    y -= 10
+    c.setStrokeColor(GREEN)
+    c.setLineWidth(2)
+    c.line(MARGIN_L, y, PAGE_W - MARGIN_R, y)
+    y -= 18
+    c.setFont('Helvetica', 10)
+    c.setFillColor(HexColor('#777777'))
+    c.drawCentredString(PAGE_W / 2, y, 'Brain-Based Mental Health Community - Feedback Task Tracker')
+
+    c.save()
+
+    # --- Phase 2: Inject Acrobat JavaScript for color coding ---
+    reader = pypdf.PdfReader(tmp_path)
+    writer = pypdf.PdfWriter()
+    writer.append_pages_from_reader(reader)
+
+    # Copy the AcroForm from the reader
+    if '/AcroForm' in reader.trailer['/Root']:
+        from pypdf.generic import NameObject
+        writer._root_object[NameObject('/AcroForm')] = reader.trailer['/Root']['/AcroForm']
+
+    # Build JS that hooks each status dropdown to color its row
+    js_color_fn = """
+function colorRow(prefix, val) {
+    var c;
+    if (val == "Sent") c = ["RGB", 1.0, 0.973, 0.882];
+    else if (val == "In Progress") c = ["RGB", 0.890, 0.949, 0.992];
+    else if (val == "Received") c = ["RGB", 0.929, 0.906, 0.965];
+    else if (val == "Finalized") c = ["RGB", 0.910, 0.961, 0.914];
+    else c = color.white;
+
+    var suffixes = ["_assigned", "_due", "_recv", "_status"];
+    for (var i = 0; i < suffixes.length; i++) {
+        var f = this.getField(prefix + suffixes[i]);
+        if (f) f.fillColor = c;
+    }
+}
+"""
+
+    # On document open, wire up all status dropdowns
+    js_setup = js_color_fn + "\n"
+    for prefix in row_prefixes:
+        field_name = f"{prefix}_status"
+        js_setup += (
+            f'var f = this.getField("{field_name}");\n'
+            f'if (f) f.setAction("Validate", '
+            f"'colorRow(\"{prefix}\", event.value);');\n"
+        )
+
+    writer.add_js(js_setup)
+
+    with open(pdf_path, 'wb') as out:
+        writer.write(out)
+
+    # Clean up temp file
+    os.remove(tmp_path)
+
+
 def main():
     feedback_dir = 'C:/Users/Tamra/Documents/Brain-Based Mental Health Website/Group Feedback'
+    html_dir = os.path.join(feedback_dir, 'HTML')
+    pdf_dir = os.path.join(feedback_dir, 'PDF')
 
-    html_files = [f for f in os.listdir(feedback_dir)
+    # Convert the Task Tracker separately
+    tracker_html = os.path.join(html_dir, 'Feedback-Task-Tracker.html')
+    tracker_pdf = os.path.join(pdf_dir, 'Feedback-Task-Tracker.pdf')
+    if os.path.exists(tracker_html):
+        try:
+            convert_task_tracker(tracker_html, tracker_pdf)
+            print(f'  Created: Feedback-Task-Tracker.pdf (fillable with dropdowns)')
+        except Exception as e:
+            print(f'  ERROR: Feedback-Task-Tracker.html -> {e}')
+
+    # Convert regular feedback forms
+    html_files = [f for f in os.listdir(html_dir)
                   if f.endswith('.html')
                   and f != 'Therapy-Guide-Reviewer-List.html'
-                  and f != 'Feedback-Task-Tracker.html'
-                  and f != 'test-fillable.pdf']
+                  and f != 'Feedback-Task-Tracker.html']
 
     for html_file in sorted(html_files):
         pdf_file = html_file.replace('.html', '.pdf')
-        html_path = os.path.join(feedback_dir, html_file)
-        pdf_path = os.path.join(feedback_dir, pdf_file)
+        html_path = os.path.join(html_dir, html_file)
+        pdf_path = os.path.join(pdf_dir, pdf_file)
 
         try:
             parse_and_convert(html_path, pdf_path)
             print(f'  Created: {pdf_file}')
         except Exception as e:
             print(f'  ERROR: {html_file} -> {e}')
-
-    # Clean up test file
-    test_file = os.path.join(feedback_dir, 'test-fillable.pdf')
-    if os.path.exists(test_file):
-        os.remove(test_file)
-        print('  Removed test-fillable.pdf')
 
 
 if __name__ == '__main__':
