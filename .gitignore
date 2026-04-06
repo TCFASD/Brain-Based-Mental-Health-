@@ -1,2 +1,5 @@
 ~$*
 *.pyc
+*.json
+!package.json
+.playwright-mcp/
