@@ -9,9 +9,17 @@ description: Fast programmatic editing of Google Sheets via gspread API. Use whe
 
 Editing Google Sheets through Playwright (clicking menus, typing into cells) is extremely slow. Instead, use the `gspread` Python library to make edits programmatically in seconds.
 
-## Setup
+## New Computer Setup
 
-### Libraries (already installed)
+When working on a new computer for the first time:
+
+1. Install the Python libraries:
+   ```
+   pip install gspread google-auth google-auth-oauthlib
+   ```
+2. Copy the service account key file `brain-based-mental-health-60cf6761995a.json` into the project root. This file is gitignored for security, so it must be transferred manually (e.g. USB drive, secure file share, or download from Google Cloud Console > IAM > Service Accounts > Keys).
+
+### Required Libraries
 - `gspread`
 - `google-auth`
 - `google-auth-oauthlib`
