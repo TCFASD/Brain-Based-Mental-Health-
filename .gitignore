@@ -3,3 +3,4 @@
 *.json
 !package.json
 .playwright-mcp/
+.wezterm-title

@@ -71,16 +71,16 @@ def draw_name_date(c, y, form):
     c.drawString(MARGIN_L, y + 4, 'NAME')
     form.textfield(
         name=unique_name('name'), x=MARGIN_L, y=y - 18,
-        width=220, height=20, borderWidth=1,
-        borderColor=LIGHT_GRAY, fontSize=11,
+        width=220, height=24, borderWidth=1,
+        borderColor=LIGHT_GRAY, fontSize=12,
         fontName='Helvetica'
     )
 
     c.drawString(MARGIN_L + 280, y + 4, 'DATE')
     form.textfield(
         name=unique_name('date'), x=MARGIN_L + 280, y=y - 18,
-        width=180, height=20, borderWidth=1,
-        borderColor=LIGHT_GRAY, fontSize=11,
+        width=180, height=24, borderWidth=1,
+        borderColor=LIGHT_GRAY, fontSize=12,
         fontName='Helvetica'
     )
 
@@ -144,8 +144,8 @@ def draw_question_label(c, y, text):
     return y - 2
 
 
-def draw_textarea(c, y, form, rows=3):
-    h = rows * 18
+def draw_textarea(c, y, form, rows=5):
+    h = rows * 22
     y = new_page_if_needed(c, y, h + 10)
     form.textfield(
         name=unique_name('text'), x=MARGIN_L, y=y - h,
@@ -200,7 +200,7 @@ def draw_option_block(c, y, form, label, text, options):
     y = new_page_if_needed(c, y, 120)
 
     # Option background
-    block_h = 14 * len(wrap_text(text, 'Helvetica', 10, CONTENT_W - 30)) + 60
+    block_h = 14 * len(wrap_text(text, 'Helvetica', 10, CONTENT_W - 30)) + 95
     bg_y = y - block_h + 30
 
     # Green left bar
@@ -234,12 +234,12 @@ def draw_option_block(c, y, form, label, text, options):
     c.drawString(MARGIN_L + 12, y + 2, 'Comments:')
     y -= 4
     form.textfield(
-        name=unique_name('comment'), x=MARGIN_L + 12, y=y - 30,
-        width=CONTENT_W - 24, height=30, borderWidth=1,
-        borderColor=LIGHT_GRAY, fontSize=9,
+        name=unique_name('comment'), x=MARGIN_L + 12, y=y - 60,
+        width=CONTENT_W - 24, height=60, borderWidth=1,
+        borderColor=LIGHT_GRAY, fontSize=10,
         fontName='Helvetica', fieldFlags='multiline'
     )
-    return y - 45
+    return y - 75
 
 
 def draw_divider(c, y):
