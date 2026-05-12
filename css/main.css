@@ -86,19 +86,27 @@ nav .nav-links li a.active {
   font-size: 42px;
   font-weight: 600;
   line-height: 1.25;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 .hero .subtitle {
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 300;
   color: #fff;
   opacity: 0.9;
   max-width: 650px;
   margin: 0 auto;
   line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+.hero .title-underline {
+  width: 120px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.85);
+  margin: 0 auto 22px;
+  border-radius: 2px;
 }
 .hero-sm {
   padding: 60px 40px 50px;
@@ -230,6 +238,35 @@ h4 {
   margin-top: 32px;
 }
 
+.bbd-details {
+  margin-top: 22px;
+  text-align: center;
+}
+.bbd-details summary {
+  cursor: pointer;
+  color: #2c5aa0;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 0;
+  display: inline-block;
+  list-style: none;
+  border-bottom: 1px solid #2c5aa0;
+}
+.bbd-details summary::-webkit-details-marker { display: none; }
+.bbd-details summary::after {
+  content: ' \203A';
+  display: inline-block;
+  margin-left: 6px;
+  font-weight: 700;
+}
+.bbd-details[open] summary::after { content: ' \02C5'; }
+.bbd-details summary:hover { color: #1a3a6b; }
+.bbd-details > .three-col {
+  text-align: left;
+  margin-top: 28px;
+}
+
 /* === AUDIENCE CARDS (Home page) === */
 .audiences {
   display: grid;
@@ -315,35 +352,42 @@ h4 {
 /* === WHY SECTION (dark band) === */
 .why-section {
   background: #1a3a6b;
-  color: #fff;
-  padding: 60px 40px;
-  text-align: center;
+  padding: 70px 40px;
 }
-.why-section h2 { color: #fff; }
-.why-section p {
-  max-width: 750px;
-  margin: 0 auto 20px;
+.why-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 48px 56px 48px 64px;
+  border-radius: 12px;
+  border-left: 6px solid #2c5aa0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.why-card h2 { color: #1a3a6b; }
+.why-card p {
+  max-width: 700px;
+  margin: 0 0 18px;
   font-size: 17px;
-  color: #fff;
-  opacity: 0.92;
+  color: #2a3a4a;
+  line-height: 1.6;
 }
-.why-section ul {
+.why-card ul {
   list-style: none;
   max-width: 700px;
-  margin: 24px auto 0;
-  text-align: left;
+  margin: 18px 0 0;
 }
-.why-section ul li {
+.why-card ul li {
   padding: 8px 0 8px 28px;
   position: relative;
   font-size: 16px;
-  color: #fff;
+  color: #2a3a4a;
+  line-height: 1.5;
 }
-.why-section ul li::before {
+.why-card ul li::before {
   content: ">";
   position: absolute;
   left: 0;
-  color: #7db8f0;
+  color: #2c5aa0;
   font-weight: 700;
 }
 
