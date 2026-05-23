@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brain-Based Mental Health: Better Outcomes Start with Understanding the Brain</title>
+<meta name="description" content="Resources, training, and guidance for clinicians, caregivers, and self-advocates navigating FASD and other neurodevelopmental differences.">
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +17,7 @@
     background: #fff;
   }
 
-  /* === NAV BAR === */
+  /* === NAV === */
   nav {
     background: #1a3a6b;
     padding: 0 40px;
@@ -34,6 +35,7 @@
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.3px;
+    text-decoration: none;
   }
   nav ul {
     list-style: none;
@@ -48,9 +50,7 @@
     font-weight: 400;
     transition: color 0.2s;
   }
-  nav ul li a:hover, nav ul li a.active {
-    color: #fff;
-  }
+  nav ul li a:hover, nav ul li a.active { color: #fff; }
 
   /* === HERO === */
   .hero {
@@ -64,18 +64,22 @@
     font-size: 42px;
     font-weight: 600;
     line-height: 1.25;
-    margin-bottom: 12px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 16px;
+  }
+  .hero .title-underline {
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto 20px;
+    border-radius: 2px;
   }
   .hero .subtitle {
-    font-size: 19px;
-    font-weight: 300;
-    opacity: 0.9;
-    max-width: 650px;
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 0.95;
+    max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   /* === SECTIONS === */
@@ -83,10 +87,6 @@
     padding: 60px 40px;
     max-width: 1100px;
     margin: 0 auto;
-  }
-  section.full-width {
-    max-width: 100%;
-    padding: 60px 0;
   }
 
   h2 {
@@ -106,12 +106,10 @@
     line-height: 1.3;
   }
 
-  /* === OVERVIEW SECTION === */
+  /* === OVERVIEW === */
   .overview {
     background: #f7f9fc;
-    border-radius: 0;
     padding: 60px 40px;
-    max-width: 100%;
   }
   .overview-inner {
     max-width: 900px;
@@ -119,102 +117,30 @@
   }
   .overview p {
     font-size: 17px;
-    margin-bottom: 16px;
     color: #333;
   }
 
-  /* === THREE AUDIENCE CARDS === */
-  .audiences {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 40px;
-  }
-  .audience-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .audience-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  }
-  .audience-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
-  .audience-card .card-body {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    min-height: 380px;
-  }
-  .audience-card .card-body p:last-of-type {
-    flex-grow: 1;
-  }
-  .audience-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  .audience-card p {
-    font-size: 15px;
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-  .audience-card .cta {
-    display: inline-block;
-    background: #2c5aa0;
-    color: #fff;
-    padding: 10px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-family: 'Lexend', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background 0.2s;
-  }
-  .audience-card .cta:hover {
-    background: #1a3a6b;
-  }
-
-  /* Card accent colors */
-  .card-clinicians { border-top: 4px solid #2c5aa0; }
-  .card-caregivers { border-top: 4px solid #0e8a6e; }
-  .card-selfadv { border-top: 4px solid #7c3aed; }
-  .card-clinicians h3 { color: #2c5aa0; }
-  .card-caregivers h3 { color: #0e8a6e; }
-  .card-selfadv h3 { color: #7c3aed; }
-  .card-clinicians .cta { background: #2c5aa0; }
-  .card-caregivers .cta { background: #0e8a6e; }
-  .card-selfadv .cta { background: #7c3aed; }
-
-  /* === WHY SECTION === */
+  /* === WHY BRAIN-BASED MATTERS === */
   .why-section {
     background: #1a3a6b;
     color: #fff;
     padding: 60px 40px;
-    text-align: center;
+  }
+  .why-card {
+    max-width: 800px;
+    margin: 0 auto;
   }
   .why-section h2 {
     color: #fff;
   }
   .why-section p {
-    max-width: 750px;
-    margin: 0 auto 20px;
     font-size: 17px;
-    opacity: 0.92;
+    margin-bottom: 14px;
+    opacity: 0.95;
   }
   .why-section ul {
     list-style: none;
-    max-width: 700px;
-    margin: 24px auto 0;
-    text-align: left;
+    margin-top: 16px;
   }
   .why-section ul li {
     padding: 8px 0 8px 28px;
@@ -229,6 +155,188 @@
     font-weight: 700;
   }
 
+  /* === UNDERSTANDING BBD === */
+  details.bbd-details {
+    margin-top: 20px;
+  }
+  details.bbd-details summary {
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    color: #2c5aa0;
+    font-weight: 500;
+    padding: 10px 0;
+    list-style: none;
+  }
+  details.bbd-details summary::-webkit-details-marker { display: none; }
+  details.bbd-details summary::before {
+    content: "> ";
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.2s;
+  }
+  details.bbd-details[open] summary::before { transform: rotate(90deg); }
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 20px;
+  }
+  .info-card {
+    background: #f0f5ff;
+    padding: 28px;
+    border-radius: 10px;
+    border-top: 4px solid #2c5aa0;
+  }
+  .info-card.green {
+    background: #f0faf6;
+    border-top-color: #0e8a6e;
+  }
+  .info-card.green h3 { color: #0e8a6e; }
+  .info-card.purple {
+    background: #f5f0ff;
+    border-top-color: #7c3aed;
+  }
+  .info-card.purple h3 { color: #7c3aed; }
+  .info-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .info-card p, .info-card ul {
+    font-size: 15px;
+    color: #444;
+  }
+  .info-card ul {
+    margin-left: 20px;
+  }
+
+  /* === AUDIENCE CARDS === */
+  .audiences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+  .audience-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  .audience-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  .audience-card .card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .audience-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .audience-card .one-liner {
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .audience-card p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  .audience-card .cta {
+    display: inline-block;
+    background: #2c5aa0;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+  .card-clinicians { border-top: 4px solid #2c5aa0; }
+  .card-caregivers { border-top: 4px solid #0e8a6e; }
+  .card-selfadv { border-top: 4px solid #7c3aed; }
+  .card-clinicians h3 { color: #2c5aa0; }
+  .card-caregivers h3 { color: #0e8a6e; }
+  .card-selfadv h3 { color: #7c3aed; }
+  .card-clinicians .cta { background: #2c5aa0; }
+  .card-caregivers .cta { background: #0e8a6e; }
+  .card-selfadv .cta { background: #7c3aed; }
+
+  /* === TESTIMONIALS === */
+  .testimonials {
+    background: #fafbfc;
+    padding: 50px 40px;
+  }
+  .testimonials-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .testimonial-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    border-left: 4px solid #2c5aa0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .testimonial-card.cg { border-left-color: #0e8a6e; }
+  .testimonial-card.sa { border-left-color: #7c3aed; }
+  .testimonial-quote {
+    font-style: italic;
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .testimonial-source {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+  }
+
+  /* === LANGUAGE MATTERS === */
+  .language-matters {
+    background: #f0f5ff;
+    padding: 40px;
+    border-radius: 10px;
+    border-left: 4px solid #2c5aa0;
+    margin: 0 auto;
+    max-width: 1020px;
+  }
+  .language-matters h2 {
+    margin-bottom: 12px;
+  }
+  .language-matters p {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .language-matters a {
+    color: #2c5aa0;
+    font-weight: 500;
+  }
+
   /* === FOOTER === */
   footer {
     background: #111;
@@ -241,16 +349,16 @@
 
   /* === RESPONSIVE === */
   @media (max-width: 768px) {
-    .audiences { grid-template-columns: 1fr; }
+    .audiences, .testimonial-grid, .three-col { grid-template-columns: 1fr; }
     .hero h1 { font-size: 28px; }
     .hero { padding: 50px 20px 40px; }
-    section, .overview, .why-section { padding: 40px 20px; }
+    section, .overview, .why-section, .testimonials, .language-matters { padding: 40px 20px; }
     nav { padding: 0 16px; }
     nav ul { gap: 12px; }
     nav ul li a { font-size: 12px; }
   }
 
-  /* === DRAFT WATERMARK === */
+  /* === DRAFT BANNER === */
   .draft-banner {
     background: #fbbf24;
     color: #78350f;
@@ -261,19 +369,60 @@
     font-weight: 600;
     letter-spacing: 1px;
   }
+
+  /* === HIGHLIGHT FOR CHANGED CONTENT === */
+  .recent-change {
+    background: #fef3c7;
+    outline: 2px dashed #f59e0b;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* === CHANGE NOTE === */
+  .change-note {
+    background: #fff7ed;
+    border-left: 4px solid #f59e0b;
+    padding: 8px 14px;
+    margin: 0 auto 10px auto;
+    max-width: 1020px;
+    font-size: 12px;
+    color: #78350f;
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.5;
+  }
+  .change-note .tag {
+    display: inline-block;
+    background: #f59e0b;
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .change-note .tag.decision { background: #dc2626; }
+  .change-note .tag.structure { background: #2c5aa0; }
+  .change-note.in-card {
+    margin: 0 0 10px 0;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 </style>
 </head>
 <body>
 
-<div class="draft-banner">DRAFT MOCKUP — FOR REVIEW ONLY — NOT FINAL</div>
+<div class="draft-banner">DRAFT MOCKUP — MIRRORS LIVE SITE STRUCTURE — FOR REVIEW</div>
 
-<!-- NAV -->
+<!-- NAV (matches live) -->
 <nav>
-  <div class="site-name">Brain-Based Mental Health</div>
+  <a href="Home-Page-Draft.html" class="site-name">Brain-Based Mental Health</a>
   <ul>
     <li><a href="#" class="active">Home</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Professionals</a></li>
+    <li><a href="About-Us-Page-Draft.html">About Us</a></li>
+    <li><a href="#">Clinicians</a></li>
     <li><a href="#">Caregivers</a></li>
     <li><a href="#">Self-Advocates</a></li>
     <li><a href="#">Organizations</a></li>
@@ -281,117 +430,168 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (matches live) -->
 <div class="hero">
-  <h1>Brain-Based Mental Health: Better Outcomes Start with Understanding the Brain</h1>
-  <p class="subtitle">Resources, training, and guidance for clinicians, caregivers, and self-advocates navigating FASD and other neurodevelopmental differences.</p>
+  <h1>Brain-Based Mental Health</h1>
+  <div class="title-underline"></div>
+  <p class="subtitle">Better Outcomes Start With Understanding the Brain</p>
 </div>
 
-<!-- OVERVIEW -->
+<!-- OVERVIEW (matches live) -->
 <div class="overview">
   <div class="overview-inner">
-    <p>This site was built by therapists, caregivers, and self-advocates who saw the same problem from different sides. Therapists felt unequipped to help their most complex clients. Caregivers felt like no one understood their child. Self-advocates felt like the system was not built for them.</p>
-    <p>We came together because we recognized a fundamental mismatch between how mental health treatment is delivered and how the brain actually works.</p>
-    <p>This site is the result. Here you will find the framework, tools, and resources to bridge that gap, whether you are a clinician looking to better serve your clients, a caregiver searching for answers, or a self-advocate learning to navigate a system that was not designed with your brain in mind.</p>
+    <p>This site exists because mental health clinicians, caregivers, and self-advocates all recognized the same problem. Therapists felt unequipped. Families felt unheard. Self-advocates felt unseen. The common thread was a mental health system built around typical brain functioning, leaving everyone struggling when the brain works differently. We came together to change that. Here you will find the tools and framework to close that gap, so clinicians can provide care that fits, caregivers can find answers that work, and self-advocates can get the support they deserve.</p>
   </div>
 </div>
 
-<!-- UNDERSTANDING BRAIN-BASED DIFFERENCES -->
+<!-- WHY BRAIN-BASED MATTERS (matches live) -->
+<div class="why-section">
+  <div class="why-card">
+    <h2>Why Brain-Based Matters</h2>
+    <p>Two people with the same diagnosis can function very differently and need very different supports. A brain-based lens moves beyond one-size-fits-all approaches and helps shift from "fixing behavior" to supporting the brain.</p>
+    <p>When supports match how the brain works:</p>
+    <ul>
+      <li>Judgment shifts to compassion and curiosity</li>
+      <li>Behavior management shifts to neurobiological support</li>
+      <li>Environments are changed to work with how someone's brain functions, not against</li>
+      <li>Shame decreases and accurate self-understanding increases</li>
+      <li>Interventions fit the person they are meant to help</li>
+    </ul>
+  </div>
+</div>
+
+<!-- UNDERSTANDING BRAIN-BASED DIFFERENCES (matches live) -->
 <section>
   <h2>Understanding Brain-Based Differences</h2>
-  <p>Brain-based differences are variations in how the brain is structured and functions. These differences shape how we learn, regulate emotions, process information, interact socially, and respond to our environment. They are not behavioral choices. They are not something a person can just push through. They are realities that require understanding, accommodation, and support.</p>
+  <p>Brain-based differences are variations in how the brain is structured and functions. They shape how we learn, regulate emotions, process information, interact socially, and respond to our environment. They are not behavioral choices, and not something a person can simply push through. They are realities that require understanding, accommodation, and support.</p>
 
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 32px;">
+  <details class="bbd-details">
+    <summary>See examples of brain-based differences</summary>
+    <div class="three-col">
+      <div class="info-card">
+        <h3>Developmental Differences</h3>
+        <p>Present from birth or early childhood, these differences may result from genetic factors, prenatal exposures, or early development:</p>
+        <ul>
+          <li>Fetal Alcohol Spectrum Disorder (FASD)</li>
+          <li>Autism Spectrum Disorder (ASD)</li>
+          <li>Attention-Deficit/Hyperactivity Disorder (ADHD)</li>
+          <li>Intellectual disabilities</li>
+          <li>Learning differences</li>
+          <li>Other neurodevelopmental conditions</li>
+        </ul>
+      </div>
 
-    <div style="background: #f0f5ff; padding: 28px; border-radius: 10px; border-top: 4px solid #2c5aa0;">
-      <h3 style="font-size: 18px; margin-bottom: 10px;">Developmental Differences</h3>
-      <p style="font-size: 15px; color: #444; margin-bottom: 12px;">Present from birth or early childhood, these differences may result from genetic factors, prenatal exposures, or early development:</p>
-      <ul style="font-size: 15px; color: #444; margin-left: 20px;">
-        <li>Fetal Alcohol Spectrum Disorder (FASD)</li>
-        <li>Autism Spectrum Disorder (ASD)</li>
-        <li>Attention-Deficit/Hyperactivity Disorder (ADHD)</li>
-        <li>Intellectual disabilities</li>
-        <li>Learning differences</li>
-        <li>Other neurodevelopmental conditions</li>
-      </ul>
+      <div class="info-card green">
+        <h3>Acquired Differences</h3>
+        <p>These occur later in life due to injury, illness, or environmental factors that alter brain function:</p>
+        <ul>
+          <li>Traumatic brain injury (TBI)</li>
+          <li>Stroke</li>
+          <li>Dementia</li>
+          <li>Substance use impacts</li>
+          <li>Medical conditions affecting brain function</li>
+        </ul>
+      </div>
+
+      <div class="info-card purple">
+        <h3>Trauma-Related Changes</h3>
+        <p>Trauma changes the brain. Exposure can significantly reshape brain functioning, affecting emotional regulation, memory, executive functioning, and stress response. Trauma often compounds existing brain-based differences, creating complex presentations that require specialized understanding.</p>
+      </div>
     </div>
-
-    <div style="background: #f0faf6; padding: 28px; border-radius: 10px; border-top: 4px solid #0e8a6e;">
-      <h3 style="font-size: 18px; margin-bottom: 10px; color: #0e8a6e;">Acquired Differences</h3>
-      <p style="font-size: 15px; color: #444; margin-bottom: 12px;">These occur later in life due to injury, illness, or environmental factors that alter brain function:</p>
-      <ul style="font-size: 15px; color: #444; margin-left: 20px;">
-        <li>Traumatic brain injury (TBI)</li>
-        <li>Stroke</li>
-        <li>Dementia</li>
-        <li>Substance use impacts</li>
-        <li>Medical conditions affecting brain function</li>
-      </ul>
-    </div>
-
-    <div style="background: #f5f0ff; padding: 28px; border-radius: 10px; border-top: 4px solid #7c3aed;">
-      <h3 style="font-size: 18px; margin-bottom: 10px; color: #7c3aed;">Trauma-Related Changes</h3>
-      <p style="font-size: 15px; color: #444;">Trauma changes the brain. Exposure can significantly reshape brain functioning, affecting emotional regulation, memory, executive functioning, and stress response. Trauma often compounds existing brain-based differences, creating complex presentations that require specialized understanding.</p>
-    </div>
-
-  </div>
-
-  <p style="margin-top: 28px;">We believe understanding brain-based differences is foundational to effective support. Whether you are a professional, educator, or caregiver, we are here to help you understand brain-based differences well enough to actually make a difference.</p>
+  </details>
 </section>
 
-<!-- THREE AUDIENCE CARDS -->
+<!-- PROPOSAL: One-liners above each audience card -->
+<div class="change-note"><span class="tag decision">Proposal — decision needed</span>Janessa proposed adding a one-liner above each audience card paragraph (current cards open straight with the problem paragraph). Two options per card; team to pick at June meeting. Option A shown below each card, Option B noted in card.</div>
+
+<!-- THREE AUDIENCE CARDS (paragraphs and CTAs match live; one-liners are proposals) -->
 <div class="audiences">
 
   <!-- CLINICIANS -->
   <div class="audience-card card-clinicians">
-    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=400&fit=crop&q=80" alt="Mental health professional in session">
+    <img src="../../images/candidates/home-clinician-session.jpg" alt="Mental health professional in session">
     <div class="card-body">
       <h3>For Clinicians</h3>
-      <p>Your training gave you strong, evidence-based tools. But it likely did not teach you to assess or understand the brain first. When cause-and-effect reasoning is impaired, when executive functioning limits what a client can access in session, when trauma and neurodevelopmental differences overlap, standard approaches stall. You end up questioning your competence, transferring clients, or watching behaviors escalate.</p>
-      <p>Here you will find a framework for understanding what the brain needs before choosing how to treat.</p>
-      <a href="#" class="cta">Explore the Brain-Based Pathway</a>
+      <div class="change-note in-card"><span class="tag decision">Proposal</span>Option A shown. Option B: "Tried everything with complex clients? Assess brain function first."</div>
+      <p class="one-liner recent-change">Most training doesn't fully address how to assess brain function first.</p>
+      <p>Your training gave you strong, evidence-based tools. But it likely did not teach you to assess or understand the brain first. When cause-and-effect reasoning is impaired, when executive functioning limits what a client can access in session, or when trauma and neurodevelopmental differences overlap, standard approaches stall. You end up questioning your competence, transferring clients, or watching behaviors escalate.</p>
+      <a href="#" class="cta">Explore Clinician Resources</a>
     </div>
   </div>
 
   <!-- CAREGIVERS -->
   <div class="audience-card card-caregivers">
-    <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=600&h=400&fit=crop&q=80" alt="Parent and child together">
+    <img src="../../images/Dad%20with%20Teen%20Son.png" alt="Father with teen son">
     <div class="card-body">
       <h3>For Caregivers</h3>
+      <div class="change-note in-card"><span class="tag decision">Proposal</span>Option A shown. Option B: "Traditional strategies fail your child. Get brain-based guidance."</div>
+      <p class="one-liner recent-change">Understand your child and demand approaches that actually fit.</p>
       <p>Your child was referred to therapy, but the treatment was not designed for how their brain works. Providers recommended approaches without understanding how brain-based differences change what is effective. Your child is overwhelmed, you are overwhelmed, and the strategies that are supposed to help lead to more frustration and sometimes more trauma.</p>
-      <p>Here you will find guidance to understand what you are seeing, what to ask for, and how to find treatment that actually fits.</p>
       <a href="#" class="cta">Explore Caregiver Resources</a>
     </div>
   </div>
 
   <!-- SELF-ADVOCATES -->
   <div class="audience-card card-selfadv">
-    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop&q=80" alt="Young adults supporting each other">
+    <div class="change-note in-card"><span class="tag">Proposed picture</span>Tamra proposed 14.png for this card (community photo). Live site currently uses a stock-style group image.</div>
+    <img src="../../Pictures/14.png" alt="Self-advocates in community together" class="recent-change">
     <div class="card-body">
       <h3>For Self-Advocates</h3>
-      <p>You have been told to try therapy, use coping skills, manage your emotions. But nobody asked whether those approaches actually match how your brain works. You may not know the difference between treatment types or how to tell a provider what you need. Meanwhile, therapists expect progress your brain may not be able to deliver the way they are asking for it.</p>
-      <p>Here you will find tools to understand your own brain, language for self-advocacy, and resources that meet you where you are.</p>
+      <div class="change-note in-card"><span class="tag decision">Proposal</span>Option A shown. Option B: "Therapy assumes typical brains. Learn yours + speak up."</div>
+      <p class="one-liner recent-change">Therapy expects "progress" your brain can't deliver that way. Get tools to name what you need.</p>
+      <p>People have told you to go to therapy, use coping skills, and work on your feelings. But no one asked if those things really fit how your brain works. You may not know what kind of help to ask for, or how to tell a therapist what you need. And sometimes therapists expect you to do things your brain just cannot do the way they are asking.</p>
       <a href="#" class="cta">Explore Self-Advocate Resources</a>
     </div>
   </div>
 
 </div>
 
-<!-- WHY BRAIN-BASED MATTERS -->
-<div class="why-section">
-  <h2>Why Brain-Based Matters</h2>
-  <p>Two people with the same diagnosis can function very differently and need very different supports. A brain-based lens moves beyond one-size-fits-all approaches and helps shift from "fixing behavior" to supporting the brain.</p>
-  <p>When supports match how the brain works:</p>
-  <ul>
-    <li>Judgment shifts to compassion and curiosity</li>
-    <li>Behavior management shifts to neurobiological support</li>
-    <li>Environments are changed to work with how someone's brain functions, not against</li>
-    <li>Shame decreases and accurate self-understanding increases</li>
-    <li>Interventions fit the person they are meant to help</li>
-  </ul>
+<!-- PROPOSAL: Testimonials section -->
+<div class="change-note"><span class="tag decision">Proposal — decision needed</span>Three testimonial quotes proposed by Janessa (workgroup-recommended). Placeholders shown — real quotes need to be collected from a real clinician, caregiver, and self-advocate. Team to decide at June meeting whether to include and who provides quotes.</div>
+<div class="testimonials recent-change">
+  <div class="testimonials-inner">
+    <h2 style="text-align: center;">What People Are Saying</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"I love Janessa"</p>
+        <p class="testimonial-source">— Clinician [placeholder]</p>
+      </div>
+      <div class="testimonial-card cg">
+        <p class="testimonial-quote">"Less reactiveness and more strategies that help."</p>
+        <p class="testimonial-source">— Caregiver [placeholder]</p>
+      </div>
+      <div class="testimonial-card sa">
+        <p class="testimonial-quote">"I could explain my brain to providers."</p>
+        <p class="testimonial-source">— Self-advocate [placeholder]</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- FOOTER -->
+<!-- CONTINUED LEARNING BAND (already on live site) -->
+<div class="change-note"><span class="tag">Addition — already on live site</span>New band naming continued learning as a value across the whole field, with honest framing about clinical practice and developing research. Text approved by Tamra; placed between audience cards and footer on the live site.</div>
+<div class="recent-change" style="background: #f0f5ff; padding: 50px 40px; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <p style="font-size: 18px; line-height: 1.7; color: #333; font-style: italic; margin: 0;">
+      This field is still evolving. Some of what you will find here comes from years of clinical practice; research is developing alongside it. We chose to share what we know now rather than wait, and we update as the evidence grows.
+    </p>
+  </div>
+</div>
+
+<!-- PROPOSAL: Language Matters -->
+<div class="change-note"><span class="tag decision">Proposal — decision needed</span>New "Language Matters" section proposed by Janessa, linking out to FASD United's Language & Stigma Guide. Open question for June meeting: does this belong on Home, on Resources, or somewhere else? Shown here for visual review.</div>
+<section style="padding: 40px;">
+  <div class="language-matters recent-change">
+    <h2>Language Matters</h2>
+    <p>The words we choose shape whether people feel seen or blamed, and whether they stay connected to care. Stigmatizing language keeps families from seeking support, reinforces shame, and obscures the neurological reality of FASD. This guide from FASD United helps you recognize harmful language and shift toward affirming communication around FASD, substance use, and lived experience.</p>
+    <p style="margin-bottom: 0;"><a href="#">Download the FASD United Language & Stigma Guide →</a></p>
+  </div>
+</section>
+
+<!-- FOOTER (FASD logo already on live site) -->
 <footer>
+  <div class="change-note" style="max-width: 600px; margin: 0 auto 10px auto; text-align: left;"><span class="tag">Addition — already on live site</span>FASD United logo added to footer for parent-org visibility. White-lettering version used on the dark background.</div>
+  <img src="../../Pictures/FASD%20United%20-%20White%20Lettering.png" alt="FASD United" class="recent-change" style="height: 40px; margin: 0 auto 12px; display: block;">
   <p>Privacy Policy &nbsp;&bull;&nbsp; Disclaimer &nbsp;&bull;&nbsp; Contact</p>
 </footer>
 

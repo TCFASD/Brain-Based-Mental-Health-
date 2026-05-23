@@ -83,6 +83,14 @@
     margin-bottom: 10px;
     margin-top: 24px;
   }
+  h4 {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a3a6b;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
 
   p { margin-bottom: 14px; color: #333; }
 
@@ -108,15 +116,66 @@
     object-fit: cover;
   }
 
+  /* === OUR APPROACH === */
+  .approach-box {
+    background: #f0f5ff;
+    padding: 32px;
+    border-radius: 10px;
+    border-left: 4px solid #2c5aa0;
+  }
+  .approach-box p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* === OUR TEAM === */
+  .team-tier {
+    margin-bottom: 36px;
+  }
+  .team-tier h3 {
+    border-bottom: 2px solid #e0e6ed;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    margin-top: 0;
+  }
+  .leader-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 16px;
+  }
+  .leader-card {
+    background: #f7f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 3px solid #2c5aa0;
+  }
+  .leader-card h4 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .leader-card .credentials {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .leader-card .bio {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* === ORG GRID (affiliates) === */
   .org-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
+    gap: 16px;
+    margin-top: 16px;
   }
   .org-card {
     background: #f7f9fc;
-    padding: 20px;
+    padding: 18px;
     border-radius: 8px;
     text-align: center;
     border: 1px solid #e0e6ed;
@@ -124,11 +183,49 @@
   .org-card p {
     font-family: 'Lexend', sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     color: #1a3a6b;
     margin: 0;
   }
+  .org-card a {
+    color: #1a3a6b;
+    text-decoration: none;
+  }
+  .org-card a:hover {
+    text-decoration: underline;
+  }
 
+  /* === PARTNER LIST (CoP partners) === */
+  .partner-list {
+    list-style: none;
+    margin: 16px 0 0 0;
+    padding: 0;
+  }
+  .partner-list li {
+    background: #f7f9fc;
+    padding: 16px 20px;
+    border-radius: 6px;
+    border-left: 3px solid #2c5aa0;
+    margin-bottom: 10px;
+    font-family: 'Lexend', sans-serif;
+    color: #1a3a6b;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  /* === TRANSPARENCY BLOCK (How We Work) === */
+  .transparency-block {
+    background: #fafbfc;
+    padding: 28px 32px;
+    border-radius: 8px;
+    border: 1px solid #e0e6ed;
+  }
+  .transparency-block p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* === ACCESSIBILITY === */
   .accessibility-box {
     background: #f0f5ff;
     padding: 32px;
@@ -136,10 +233,11 @@
     border-left: 4px solid #2c5aa0;
   }
 
+  /* === CONTACT GRID === */
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
     margin-top: 16px;
   }
   .contact-card {
@@ -153,11 +251,12 @@
     font-size: 15px;
     font-weight: 600;
     color: #1a3a6b;
-    margin-bottom: 6px;
+    margin: 0 0 6px 0;
   }
   .contact-card p {
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
+    line-height: 1.6;
   }
 
   footer {
@@ -179,8 +278,43 @@
     letter-spacing: 1px;
   }
 
+  /* === HIGHLIGHT FOR CHANGED CONTENT (remove once approved) === */
+  .recent-change {
+    background: #fef3c7;
+    outline: 2px dashed #f59e0b;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* === CHANGE NOTE (annotation above each highlighted change) === */
+  .change-note {
+    background: #fff7ed;
+    border-left: 4px solid #f59e0b;
+    padding: 8px 14px;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    color: #78350f;
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.5;
+  }
+  .change-note .tag {
+    display: inline-block;
+    background: #f59e0b;
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
   @media (max-width: 768px) {
-    .two-col, .org-grid, .contact-grid { grid-template-columns: 1fr; }
+    .two-col, .contact-grid { grid-template-columns: 1fr; }
+    .org-grid { grid-template-columns: repeat(2, 1fr); }
+    .leader-grid { grid-template-columns: 1fr; }
     .hero { padding: 40px 20px; }
     section { padding: 40px 20px; }
     .hero h1 { font-size: 28px; }
@@ -194,9 +328,9 @@
 <nav>
   <div class="site-name">Brain-Based Mental Health</div>
   <ul>
-    <li><a href="home-mockup.html">Home</a></li>
+    <li><a href="Home-Page-Draft.html">Home</a></li>
     <li><a href="#" class="active">About Us</a></li>
-    <li><a href="#">Professionals</a></li>
+    <li><a href="#">Clinicians</a></li>
     <li><a href="#">Caregivers</a></li>
     <li><a href="#">Self-Advocates</a></li>
     <li><a href="#">Organizations</a></li>
@@ -213,51 +347,144 @@
   <div class="two-col">
     <div>
       <h2>Who We Are</h2>
+
+      <div class="change-note"><span class="tag">Addition</span>New opening paragraph proposed by Janessa. Gives first-time visitors context about who builds this work and why they came together — what was missing from the current "Who We Are" intro.</div>
+      <p class="recent-change">This work is developed in partnership with organizations, clinicians, researchers, advocates, caregivers, and individuals with lived experience who believe this care shouldn't be this hard to find and share a commitment to making the shift to brain-based care more accessible.</p>
+
       <p>The FASD United Mental Health Work Group is a mental health collaborative dedicated to advancing brain-based, neurodevelopmentally informed care for individuals with FASD and other brain-based differences.</p>
-      <p>This website represents the collective expertise of:</p>
-      <ul>
-        <li>Licensed mental health professionals specializing in FASD and neurodevelopmental conditions</li>
-        <li>FASD researchers and advocates</li>
-        <li>Members of the FASD United Mental Health Work Group</li>
-        <li>Caregivers and individuals with lived experience</li>
-      </ul>
-      <p>All resources are reviewed by qualified professionals and regularly updated to reflect current evidence-based practices.</p>
+
+      <div class="change-note"><span class="tag">Word change</span>Replaces "All resources are reviewed by qualified professionals…" with FASD-expertise-specific language proposed by Janessa. Also adds a "last updated [DATE]" commitment because the page promises regular updates.</div>
+      <p class="recent-change">All resources are reviewed by clinicians and researchers with FASD expertise and regularly updated to reflect current evidence, organized through the Brain-Based Pathway framework. <em>Last updated: [DATE]</em></p>
     </div>
     <div>
-      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=400&fit=crop&q=80" alt="Diverse group of people coming together">
+      <img src="../../Pictures/Affiliate%20Picture.png" alt="FASD United Mental Health Work Group affiliates together">
     </div>
   </div>
 </section>
 
 <hr class="section-divider" style="max-width: 960px; margin: 0 auto;">
 
-<!-- WORK GROUP MEMBERS -->
+<!-- OUR APPROACH (NEW) -->
 <section>
-  <h2>Mental Health Work Group Members</h2>
-  <p>This work is informed by a collaborative group of organizations, clinicians, caregivers, and individuals with lived experience.</p>
-
-  <div class="org-grid">
-    <div class="org-card"><p>FASD United</p></div>
-    <div class="org-card"><p>The Florida Center for Early Childhood</p></div>
-    <div class="org-card"><p>Papillion Center</p></div>
-    <div class="org-card"><p>FASD Focus</p></div>
-    <div class="org-card"><p>FASCETS</p></div>
-    <div class="org-card"><p>Formed Families Forward</p></div>
-    <div class="org-card"><p>Flow Counseling</p></div>
-    <div class="org-card"><p>Wonderlands</p></div>
-    <div class="org-card" style="border: 1px dashed #ccc; background: #fafafa;"><p style="color: #999;">Additional members to be confirmed</p></div>
+  <div class="change-note"><span class="tag">New section</span>"Our Approach" is a brand new section proposed by Janessa. Introduces the Brain-Based Pathway as the central framework guiding everything on the site. The larger workgroup gave thumbs up to this previously.</div>
+  <h2 class="recent-change">Our Approach</h2>
+  <div class="approach-box recent-change">
+    <p>The Brain-Based Pathway is the central framework guiding our professional resources. It is a developmental roadmap for trauma-informed, neurobehavioral practice, supporting clinicians from foundational brain-based understanding to advanced, responsive care across six competency stages.</p>
+    <p>By integrating FASD, neurodevelopmental science, trauma, and neurodiversity-affirming practice, the pathway promotes individualized, compassionate, and effective mental health support for people whose brains work differently.</p>
+    <p>This site exists because we believe the shift to brain-based practice is worth making, and that clinicians, caregivers, and self-advocates shouldn't have to make it alone.</p>
+    <p style="margin-bottom: 0;"><a href="#" style="color: #2c5aa0; font-weight: 500; text-decoration: none;">Explore the Brain-Based Pathway →</a></p>
   </div>
 </section>
 
 <hr class="section-divider" style="max-width: 960px; margin: 0 auto;">
 
-<!-- HOW TO CONNECT -->
+<!-- OUR TEAM (NEW) -->
+<section>
+  <div class="change-note"><span class="tag">New section</span>"Our Team" is a brand new section proposed by Janessa and AK. Organized into three tiers so visitors see the difference between the core leaders, the broader contributing community, and the advisory group.</div>
+  <h2 class="recent-change">Our Team</h2>
+
+  <div class="change-note"><span class="tag">Addition</span>Tier 1: Working Leaders. Names and credentials of the four work group co-leaders. Each bio is a placeholder pending content from the leaders themselves.</div>
+  <div class="team-tier recent-change">
+    <h3>Working Leaders</h3>
+    <p>Co-leaders of the FASD United Mental Health Work Group.</p>
+    <div class="leader-grid">
+      <div class="leader-card">
+        <h4>Tamra Cajo</h4>
+        <p class="credentials">LCSW</p>
+        <p class="bio">[1-2 sentence bio to be added]</p>
+      </div>
+      <div class="leader-card">
+        <h4>Janessa Nikols</h4>
+        <p class="credentials">LCPC</p>
+        <p class="bio">[1-2 sentence bio to be added]</p>
+      </div>
+      <div class="leader-card">
+        <h4>Laura M. Gumbiner</h4>
+        <p class="credentials">PhD, LCP, NCSP</p>
+        <p class="bio">[1-2 sentence bio to be added]</p>
+      </div>
+      <div class="leader-card">
+        <h4>Joanne Sparrow</h4>
+        <p class="credentials">PhD</p>
+        <p class="bio">[1-2 sentence bio to be added]</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="change-note"><span class="tag">Addition</span>Tier 2: Contributors and Affiliates. Includes two corrections from Tamra — FASCETS now links to www.fascets.org, and "Formed Families Forward" has been renamed to "Families Moving Forward Foundations" (its actual name). Logo permissions still need to be confirmed for each org, and key private practice professionals are still to be added.</div>
+  <div class="team-tier recent-change">
+    <h3>Contributors and Affiliates</h3>
+    <p>Organizations and individuals in the field whose expertise and experience contribute to this work.</p>
+    <div class="org-grid">
+      <div class="org-card"><p><a href="https://www.fascets.org/">FASCETS</a></p></div>
+      <div class="org-card"><p>FASD Focus</p></div>
+      <div class="org-card"><p>Flow Counseling</p></div>
+      <div class="org-card"><p><a href="https://familiesmovingforwardprogram.org/">Families Moving Forward Foundations</a></p></div>
+      <div class="org-card"><p>Papillion Center</p></div>
+      <div class="org-card"><p>The Florida Center for Early Childhood</p></div>
+      <div class="org-card"><p>Wonderlands</p></div>
+    </div>
+    <p style="margin-top: 16px; font-style: italic; color: #666; font-size: 14px;">Affiliate list pending confirmation. Key private practice professionals to be added with focus areas and links to their websites.</p>
+  </div>
+
+  <div class="change-note"><span class="tag">Addition</span>Tier 3: Broader Advisory Group. Names the lived experience contributors and clinician advisors who shape content but don't have decision-making authority. Proposed by Janessa.</div>
+  <div class="team-tier recent-change">
+    <h3>Broader Advisory Group</h3>
+    <p>This work is also shaped by a broader advisory group of clinicians, caregivers, and individuals with lived experience. Advisory members contribute to content review, resource development, and direction-setting for the site.</p>
+  </div>
+</section>
+
+<hr class="section-divider" style="max-width: 960px; margin: 0 auto;">
+
+<!-- OUR PARTNERSHIPS (renamed + reframed CoP-specific) -->
+<section>
+  <div class="change-note"><span class="tag">Structural</span>Section renamed from "Mental Health Work Group Members" to "Our Partnerships" (per Janessa). Reframed as Community of Practice-specific (institutional partners supporting clinician learning) — separate from the affiliate orgs above. The org grid you knew has moved up into "Our Team" as contributors.</div>
+  <h2 class="recent-change">Our Partnerships</h2>
+  <p class="recent-change">The institutional partnerships behind our Community of Practice. These organizations support clinician-to-clinician learning across the FASD field.</p>
+  <ul class="partner-list recent-change">
+    <li>FASD United <span style="font-weight: 400; font-size: 13px; color: #666;">(parent organization)</span></li>
+    <li>University of Alberta</li>
+    <li style="font-style: italic; color: #888; background: #fafbfc;">Additional partners to be added</li>
+  </ul>
+</section>
+
+<hr class="section-divider" style="max-width: 960px; margin: 0 auto;">
+
+<!-- HOW WE WORK / ABOUT THIS RESOURCE (NEW) -->
+<section>
+  <div class="change-note"><span class="tag">New section</span>"How We Work" is a brand new transparency section proposed by Janessa. Names co-leaders, conflict of interest, the role of lived experience, and update cadence. Also includes the knowledge source stance from our working group discussion — being honest that some content reflects clinical practice while research is still catching up.</div>
+  <h2 class="recent-change">How We Work</h2>
+  <div class="transparency-block recent-change">
+    <p>The Work Group is co-led by [names/titles] and operates under the umbrella of FASD United Affiliate Network. Content is developed collaboratively and reviewed by clinicians and researchers with FASD expertise before publication.</p>
+
+    <h4>Conflict of Interest</h4>
+    <p>Content decisions are collective. Some group members are also organizational partners. This transparency ensures objectivity.</p>
+
+    <h4>Lived Experience</h4>
+    <p>Integrated through advisory input on content review and direction-setting (advisory, not decision-making authority).</p>
+
+    <h4>Updates</h4>
+    <p>Reviewed annually or as evidence emerges. Last update: [DATE].</p>
+
+    <h4>Where the Knowledge Comes From</h4>
+    <p style="margin-bottom: 0;">Some of what you will find on this site comes from the real-world experience of clinicians doing this work, while research in the field continues to develop. We chose to share what we know now rather than wait, and the site is updated as new evidence emerges.</p>
+  </div>
+</section>
+
+<hr class="section-divider" style="max-width: 960px; margin: 0 auto;">
+
+<!-- HOW TO CONNECT (updated to 3 tiers) -->
 <section>
   <h2>How to Connect</h2>
-  <div class="contact-grid">
+  <div class="change-note"><span class="tag">Structural</span>Changed from 2 contact cards (Training / Feedback) to 3 tiers per Janessa: General FASD Questions, Specific Contributors, and Website Feedback. Who monitors the "Specific Contributors" tier is still to be decided.</div>
+  <div class="contact-grid recent-change">
     <div class="contact-card">
-      <h4>Training or General Questions</h4>
-      <p>FASD United<br>Phone: 202-785-4585<br><a href="https://fasdunited.org/contact-us/" style="color: #2c5aa0;">Contact Form</a></p>
+      <h4>General FASD Questions</h4>
+      <p>FASD United<br>Phone: 202-785-4585<br><a href="mailto:fasdunited@fasdunited.org" style="color: #2c5aa0;">fasdunited@fasdunited.org</a></p>
+    </div>
+    <div class="contact-card">
+      <h4>Specific Contributors</h4>
+      <p>Direct contact via Work Group leaders (see Our Team).<br><em style="color: #888; font-size: 13px;">Monitored by: [TBD]</em></p>
     </div>
     <div class="contact-card">
       <h4>Website Feedback</h4>
@@ -285,6 +512,8 @@
 </section>
 
 <footer>
+  <div class="change-note" style="max-width: 600px; margin: 0 auto 10px auto; text-align: left;"><span class="tag">Addition</span>FASD United logo added to footer to make parent-org connection visible across the site. White-lettering version used for the dark background.</div>
+  <img src="../../Pictures/FASD%20United%20-%20White%20Lettering.png" alt="FASD United" class="recent-change" style="height: 40px; margin: 0 auto 12px; display: block;">
   <p>Privacy Policy &bull; Disclaimer &bull; Contact</p>
 </footer>
 
