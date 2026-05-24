@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Professionals - Brain-Based Mental Health</title>
+<title>For Clinicians - Brain-Based Mental Health</title>
+<meta name="description" content="A guided learning journey for mental health clinicians: from understanding brain-based differences to confidently adapting clinical work.">
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,6 +36,46 @@
 
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
   .two-col img { width: 100%; border-radius: 10px; object-fit: cover; height: 320px; }
+
+  .who-for-box, .what-is-box, .gain-box {
+    background: #f0f5ff;
+    padding: 32px;
+    border-radius: 10px;
+    border-left: 4px solid #2c5aa0;
+    margin-top: 16px;
+  }
+  .who-for-box ul, .gain-box ul { margin-top: 12px; }
+  .self-assess-prompt {
+    background: #1a3a6b;
+    color: #fff;
+    padding: 28px 32px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 700px;
+  }
+  .self-assess-prompt h3 { color: #fff; margin-top: 0; }
+  .self-assess-prompt p { color: rgba(255,255,255,0.9); margin-bottom: 16px; }
+  .self-assess-prompt a {
+    display: inline-block;
+    background: #fff;
+    color: #1a3a6b;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .constraints-note {
+    background: #fef3c7;
+    padding: 18px 22px;
+    border-radius: 8px;
+    border-left: 4px solid #d97706;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #555;
+  }
 
   /* Journey steps */
   .journey-step {
@@ -70,7 +111,6 @@
   }
   .step-content p { font-size: 16px; }
 
-  /* Four pillars within each step */
   .pillars {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -103,29 +143,154 @@
     line-height: 1.4;
   }
 
-  /* Intro step (why this matters) has different color */
-  .step-why .step-number { background: #d97706; }
+  .video-topics {
+    background: #f5f0ff;
+    padding: 14px 18px;
+    border-radius: 6px;
+    border-left: 3px solid #7c3aed;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #555;
+  }
+  .video-topics strong { color: #7c3aed; font-family: 'Lexend', sans-serif; }
 
-  /* CTA */
+  .cop-section {
+    background: #f0faf6;
+    padding: 50px 40px;
+  }
+  .cop-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 36px;
+    border-radius: 12px;
+    border-top: 4px solid #0e8a6e;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .cop-card h2 { color: #0e8a6e; }
+  .cop-card .cop-cta {
+    display: inline-block;
+    background: #0e8a6e;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    margin-top: 12px;
+  }
+
+  /* CoP modal (popup triggered from Step 5 Apply pillar) */
+  dialog#cop-modal {
+    max-width: 700px;
+    width: 90%;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  dialog#cop-modal::backdrop {
+    background: rgba(0,0,0,0.6);
+  }
+  .cop-modal-content {
+    padding: 36px;
+    background: #fff;
+    border-top: 4px solid #0e8a6e;
+    border-radius: 12px;
+    position: relative;
+  }
+  .cop-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+  }
+  .cop-modal-close:hover {
+    color: #1a3a6b;
+  }
+  .cop-modal-content h2 {
+    color: #0e8a6e;
+    margin-bottom: 16px;
+  }
+  .cop-modal-content .cop-cta {
+    display: inline-block;
+    background: #0e8a6e;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    margin-top: 12px;
+  }
+
   .cta-row { display: flex; gap: 16px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
   .cta-btn { display: inline-block; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-family: 'Lexend', sans-serif; font-size: 15px; font-weight: 500; }
-  .cta-primary { background: #2c5aa0; color: #fff; }
-  .cta-primary:hover { background: #1a3a6b; }
-  .cta-outline { background: transparent; color: #2c5aa0; border: 2px solid #2c5aa0; }
-  .cta-outline:hover { background: #2c5aa0; color: #fff; }
   .cta-white { background: #fff; color: #1a3a6b; }
-  .cta-white:hover { background: #e8edf5; }
 
-  /* FAQ */
   .faq-item { border-bottom: 1px solid #e0e6ed; }
-  .faq-question { padding: 18px 0; cursor: pointer; font-family: 'Lexend', sans-serif; font-size: 16px; font-weight: 500; color: #1a3a6b; display: flex; justify-content: space-between; align-items: center; }
-  .faq-question::after { content: "+"; font-size: 22px; color: #2c5aa0; }
-  .faq-question.open::after { content: "\2212"; }
-  .faq-answer { display: none; padding: 0 0 18px 0; font-size: 15px; color: #444; line-height: 1.6; }
-  .faq-answer.show { display: block; }
+  .faq-question { padding: 18px 0; cursor: pointer; font-family: 'Lexend', sans-serif; font-size: 16px; font-weight: 500; color: #1a3a6b; }
+  .faq-answer { padding: 0 0 18px 0; font-size: 15px; color: #444; line-height: 1.6; }
 
-  footer { background: #111; color: rgba(255,255,255,0.6); text-align: center; padding: 24px 40px; font-size: 13px; }
+  footer {
+    background: #111;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 32px 40px;
+    font-size: 13px;
+  }
+  footer img {
+    height: 90px;
+    margin: 0 auto 16px;
+    display: block;
+  }
+
   .draft-banner { background: #fbbf24; color: #78350f; text-align: center; padding: 8px; font-family: 'Lexend', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; }
+
+  .recent-change {
+    background: #fef3c7;
+    outline: 2px dashed #f59e0b;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .change-note {
+    background: #fff7ed;
+    border-left: 4px solid #f59e0b;
+    padding: 8px 14px;
+    margin: 16px auto 10px auto;
+    max-width: 960px;
+    font-size: 12px;
+    color: #78350f;
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.5;
+  }
+  .change-note .tag {
+    display: inline-block;
+    background: #f59e0b;
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .change-note .tag.structure { background: #2c5aa0; }
+  .change-note .tag.question { background: #7c3aed; }
+  .change-note .tag.decision { background: #dc2626; }
+  .change-note.in-card {
+    margin: 0 0 10px 0;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 
   @media (max-width: 768px) {
     .two-col { grid-template-columns: 1fr; }
@@ -134,20 +299,20 @@
     .step-number { width: 48px; height: 48px; font-size: 18px; }
     .hero-pro { height: 280px; }
     .hero-pro h1 { font-size: 28px; }
-    section, .full-bg, .full-bg-dark { padding: 40px 20px; }
+    section, .full-bg, .full-bg-dark, .cop-section { padding: 40px 20px; }
   }
 </style>
 </head>
 <body>
 
-<div class="draft-banner">DRAFT MOCKUP V2 — FOR REVIEW ONLY — NOT FINAL</div>
+<div class="draft-banner">DRAFT MOCKUP — FOR REVIEW</div>
 
 <nav>
   <div class="site-name">Brain-Based Mental Health</div>
   <ul>
     <li><a href="Home-Page-Draft.html">Home</a></li>
     <li><a href="About-Us-Page-Draft.html">About Us</a></li>
-    <li><a href="#" class="active">Professionals</a></li>
+    <li><a href="#" class="active">Clinicians</a></li>
     <li><a href="#">Caregivers</a></li>
     <li><a href="#">Self-Advocates</a></li>
     <li><a href="#">Organizations</a></li>
@@ -157,27 +322,55 @@
 
 <!-- HERO -->
 <div class="hero-pro">
-  <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&h=500&fit=crop&q=80" alt="Therapist in a reflective moment">
+  <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&h=500&fit=crop&q=80" alt="Clinician in a reflective moment">
   <div class="hero-content">
-    <h1>For Mental Health Professionals</h1>
+    <h1>For Clinicians</h1>
     <p>Your training gave you strong tools. But when the brain works differently, those tools need a different starting point.</p>
   </div>
 </div>
 
-<!-- WHEN NOTHING WORKS -->
+<!-- WHO IS THIS FOR? -->
+<section>
+  <h2>Who Is This For?</h2>
+  <div class="who-for-box">
+    <p>This site is built for clinicians working with clients of all ages who have brain-based differences, including:</p>
+    <ul>
+      <li>Clients with FASD or suspected prenatal alcohol exposure</li>
+      <li>Neurodivergent clients (autism, ADHD, intellectual and learning differences)</li>
+      <li>Complex developmental trauma and attachment disruption</li>
+      <li>Clients who have been labeled "treatment-resistant"</li>
+      <li>Anyone whose presentation does not match standard treatment expectations</li>
+    </ul>
+  </div>
+</section>
+
+<!-- BRAIN-BASED MENTAL HEALTH TREATMENT -->
+<section>
+  <h2>Brain-Based Mental Health Treatment</h2>
+  <div class="what-is-box">
+    <p>Brain-based practice is not a separate, manualized treatment. It is a clinical orientation that can be added to existing models like CBT, DBT, TF-CBT, EMDR, PCIT, DDP, CPS, and play therapy. It assumes collaboration with medical and developmental professionals when needed, and emphasizes adapting your practice rather than making diagnoses.</p>
+    <p>Brain-based practice asks for neurodevelopmental humility, recognizing that capacity, not just motivation, shapes what clients can do. It draws on evidence about FASD, complex trauma, and neurodevelopmental conditions, consistent with trauma-informed and neurodiversity-affirming frameworks.</p>
+    <p style="margin-bottom: 0;">It does not replace the need for diagnosis when indicated, nor does it override clinical or ethical guidelines. It is a lens to help clinicians adapt evidence-based practices to clients whose brains work differently.</p>
+  </div>
+</section>
+
+<!-- WHY THIS MATTERS -->
 <section>
   <div class="two-col">
     <div>
-      <h2>When Nothing Works</h2>
+      <h2>Why This Matters</h2>
+      <p>Before learning new frameworks or tools, you need to understand why what you were trained to do is not always landing with certain clients. This section names that gap and why brain-based practice closes it.</p>
       <p>You are a competent clinician with solid training and evidence-based interventions. But your go-to approaches are not landing with certain clients, and neurobiology might be why.</p>
-      <p>Most therapeutic models were built around typical brain functioning. They have real limits when the brain works differently. That might look like:</p>
+      <p>Most therapeutic models were built around typical brain functioning and may need adaptation when brain-based differences are present. That might look like:</p>
       <ul>
-        <li>CBT falling flat because cause-and-effect reasoning is impaired</li>
-        <li>DBT skills that do not generalize due to executive functioning limitations</li>
+        <li>CBT may fall flat when abstract reasoning or generalization are affected, requiring adaptation</li>
+        <li>DBT skills may not generalize easily without repetition and environmental support</li>
         <li>Trauma processing that stalls</li>
-        <li>Behavioral plans that backfire when consequences feel arbitrary</li>
+        <li>Behavioral plans may backfire when consequences feel arbitrary, abstract, or delayed</li>
       </ul>
       <p>The issue is not your competence. The issue is that your training likely did not teach you to assess and understand the brain before choosing how to treat.</p>
+      <p>Your training remains valuable. This is about adding a neurodevelopmental lens that many standard models were not explicitly designed to highlight.</p>
+      <p>Brain-based practice is part of a broader shift in how clinicians understand the people they serve. It sits alongside trauma-informed care, cultural humility, and neurodiversity-affirming practice. Together, these frameworks ask clinicians to expand their identity, not just their toolkit.</p>
     </div>
     <div>
       <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=400&fit=crop&q=80" alt="Clinician in thoughtful reflection">
@@ -194,279 +387,218 @@
   </div>
 </div>
 
+<!-- WHAT YOU WILL GAIN -->
+<section>
+  <h2>What You Will Gain</h2>
+  <div class="gain-box">
+    <ul>
+      <li><strong>Clinical confidence</strong> with clients who used to feel impossible</li>
+      <li><strong>Real-time adaptation</strong> skills that change how you show up in session</li>
+      <li><strong>Reduced frustration</strong> and burnout from cases that used to stall</li>
+      <li><strong>A professional community</strong> who shares your language</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHERE ARE YOU ON THE JOURNEY -->
+<div class="self-assess-prompt">
+  <h3>Where Are You on the Journey?</h3>
+  <p>The brain-based self-assessment scores you on a spectrum from Brain-Based Informed (you know what brain-based differences are) to Brain-Based Responsive (you adapt how you work in real time). Take it to see where you fall and what to focus on next.</p>
+  <a href="../../handouts/Self-Assessment-Tool.html">Take the Self-Assessment</a>
+</div>
+
+<!-- SCORE RESULT MOCKUP -->
+<div class="change-note"><span class="tag decision">Proposed feature</span>Mockup of what the score result could look like. Shows position on the spectrum + a personalized next-step recommendation. Needs to be built (form, scoring logic, results page).</div>
+<div style="background: #fff; padding: 28px; border-radius: 10px; border: 2px dashed #888; max-width: 640px; margin: 20px auto 40px;">
+  <p style="font-size: 12px; color: #666; text-align: center; margin-bottom: 18px; letter-spacing: 0.5px; text-transform: uppercase;"><em>Example result screen — mockup only</em></p>
+  <p style="text-align: center; font-family: 'Lexend', sans-serif; color: #1a3a6b; font-size: 17px; margin-bottom: 18px;"><strong>Your score: Brain-Based Informed (with growth toward Responsive)</strong></p>
+  <div style="position: relative; height: 36px; background: linear-gradient(to right, #fef3c7 0%, #fed7aa 50%, #2c5aa0 100%); border-radius: 18px; margin: 0 30px;">
+    <div style="position: absolute; top: 50%; left: 38%; transform: translate(-50%, -50%); width: 26px; height: 26px; background: #1a3a6b; border: 3px solid #fff; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>
+  </div>
+  <div style="display: flex; justify-content: space-between; margin: 10px 30px 0; font-family: 'Lexend', sans-serif; font-size: 12px; color: #666;">
+    <span>Brain-Based Informed</span>
+    <span>Brain-Based Responsive</span>
+  </div>
+  <p style="margin-top: 20px; font-size: 14px; color: #555; text-align: center; line-height: 1.6;">You have solid foundational knowledge. Focus next on <strong>Step 3 (Treatment Planning with the Brain in Mind)</strong> and <strong>Step 4 (Adapting Your Approach)</strong> to build responsive practice. Consider joining the Community of Practice for peer support as you go.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #e0e6ed;">
+    <div>
+      <h4 style="font-family: 'Lexend', sans-serif; color: #d97706; font-size: 14px; margin-bottom: 6px;">Brain-Based Informed</h4>
+      <p style="font-size: 13px; color: #555; line-height: 1.6; margin: 0;">You know what brain-based differences are. You can name FASD, autism, ADHD, traumatic brain injury, and complex trauma when you see them. You understand the brain shapes behavior, and you ask the right screening questions.</p>
+    </div>
+    <div>
+      <h4 style="font-family: 'Lexend', sans-serif; color: #1a3a6b; font-size: 14px; margin-bottom: 6px;">Brain-Based Responsive</h4>
+      <p style="font-size: 13px; color: #555; line-height: 1.6; margin: 0;">You adapt how you work in real time. You change the pace, the language, the structure, and the goals of treatment to match the brain in front of you. You consult, you adjust, you stay regulated when sessions do not go as planned.</p>
+    </div>
+  </div>
+</div>
+
 <!-- THE JOURNEY -->
 <section>
 
-  <!-- STEP 0: WHY THIS MATTERS -->
-  <div class="journey-step step-why">
-    <div class="step-number" style="background: #d97706;">0</div>
-    <div class="step-content">
-      <h3>Why This Matters</h3>
-      <div class="step-subtitle">The starting point: understanding why brain-based practice changes everything</div>
-      <p>Before learning new frameworks or tools, you need to understand why what you were trained to do is not working with certain clients. This step helps you see the gap between standard mental health training and the neurobiological reality of the people in front of you. It is the "why should I care" that makes everything else stick.</p>
-      <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">📖</div>
-          <div class="pillar-label">Learn</div>
-          <div class="pillar-desc"></div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">💭</div>
-          <div class="pillar-label">Reflect</div>
-          <div class="pillar-desc">Think of a client where nothing worked. What were you missing?</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🔧</div>
-          <div class="pillar-label">Apply</div>
-          <div class="pillar-desc"><a href="../../handouts/Benefits-of-Brain-Based-Clinician-Handout.html" style="color:#2c5aa0;">Benefits of brain-based practice</a><br><a href="../../handouts/Benefits-of-Brain-Based-Clinician-Handout.pdf" style="color:#666;font-size:11px;" target="_blank">Download PDF</a></div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">✓</div>
-          <div class="pillar-label">Check In</div>
-          <div class="pillar-desc">Can you name why standard approaches fall short?</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="change-note"><span class="tag question">Pending question</span>Should Steps 1 and 2 stay separate (current live site) or be combined into one — "Brain-Based Foundations including how trauma and prenatal exposure change the brain"? Combined version shown below; decide at next meeting.</div>
 
-  <!-- STEP 1: UNDERSTANDING THE BRAIN -->
+  <!-- STEP 1 -->
   <div class="journey-step">
     <div class="step-number">1</div>
     <div class="step-content">
-      <h3>Understanding the Brain</h3>
-      <div class="step-subtitle">Learn how the brain works and why it changes everything you do clinically</div>
-      <p>This step builds the neurobiological foundation: brain structure, development, neuroplasticity, and the connection between how the brain is wired and what you see in the room. Most graduate training in mental health does not include meaningful content on neurodevelopment or the neurobiology of regulation. This is where you build that foundation.</p>
+      <h3>Brain-Based Foundations</h3>
+      <div class="step-subtitle">How the brain works, including how trauma and prenatal exposure change it</div>
+      <p>This step builds the neurobiological foundation: brain structure, development, neuroplasticity, and the connection between how the brain is wired and what you see in the room. Many graduate programs provide limited training in neurodevelopment and the neurobiology of regulation. This is where you build that foundation, and where you learn how trauma and prenatal alcohol exposure change the brain itself.</p>
+
       <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">📖</div>
-          <div class="pillar-label">Learn</div>
-          <div class="pillar-desc">Webinars on FASD, brain development, screening</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">💭</div>
-          <div class="pillar-label">Reflect</div>
-          <div class="pillar-desc">When a client frustrates you, what is your first instinct about why?</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🔧</div>
-          <div class="pillar-label">Apply</div>
-          <div class="pillar-desc">Accessible language handout, Florida Center courses</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">✓</div>
-          <div class="pillar-label">Check In</div>
-          <div class="pillar-desc">Self-assessment: Foundational Knowledge items</div>
-        </div>
+        <div class="pillar"><div class="pillar-icon">📖</div><div class="pillar-label">Learn</div><div class="pillar-desc">Webinars on FASD, brain development, screening, trauma integration, PAE impact</div></div>
+        <div class="pillar"><div class="pillar-icon">💭</div><div class="pillar-label">Reflect</div><div class="pillar-desc">When a client frustrates you, what is your first instinct about why?</div></div>
+        <div class="pillar"><div class="pillar-icon">🔧</div><div class="pillar-label">Apply</div><div class="pillar-desc">Accessible language handout, Florida Center courses, screening tools</div></div>
+        <div class="pillar"><div class="pillar-icon">✓</div><div class="pillar-label">Check In</div><div class="pillar-desc">Self-assessment: Foundational Knowledge + Trauma Integration items</div></div>
+      </div>
+
+      <div class="video-topics">
+        <strong>Suggested 10-min video topics:</strong> screening tools, brain domains, barriers to access. Resource: Neurodiversity-Affirming Language in Clinical Practice (FASD United).
       </div>
     </div>
   </div>
 
-  <!-- STEP 2: TRAUMA, FASD, AND THE BRAIN -->
+  <!-- STEP 2 -->
   <div class="journey-step">
     <div class="step-number">2</div>
     <div class="step-content">
-      <h3>Trauma, FASD, and the Brain</h3>
-      <div class="step-subtitle">How trauma and prenatal exposure change the brain you are working with</div>
-      <p>Trauma and prenatal alcohol exposure do not just affect behavior. They change the brain itself, and that changes how you need to show up clinically. This step builds your capacity to hold a therapeutic relationship with clients whose neurobiology requires a fundamentally different approach. You will learn why trauma-informed training and neurodevelopmental training have largely developed in separate worlds, and how to bring them together.</p>
+      <h3>Assessments through a Brain-Based Lens</h3>
+      <div class="step-subtitle">Recognizing brain-based factors as part of assessment, before jumping to treatment</div>
+      <p>Accurate assessment looks different when neurobiology is part of the picture. This step builds your ability to recognize brain-based factors in client presentations and integrate them into your conceptualization.</p>
       <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">📖</div>
-          <div class="pillar-label">Learn</div>
-          <div class="pillar-desc">Trauma integration, PAE impact, bottom-up approaches</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">💭</div>
-          <div class="pillar-label">Reflect</div>
-          <div class="pillar-desc">Think of a client whose trauma and brain differences felt impossible to hold at the same time.</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🔧</div>
-          <div class="pillar-label">Apply</div>
-          <div class="pillar-desc">Screening tools, PAE assessment resources</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">✓</div>
-          <div class="pillar-label">Check In</div>
-          <div class="pillar-desc">Self-assessment: Trauma Integration + PAE items</div>
-        </div>
+        <div class="pillar"><div class="pillar-icon">📖</div><div class="pillar-label">Learn</div><div class="pillar-desc">Brain-based assessment, FASD screening, evaluation interpretation</div></div>
+        <div class="pillar"><div class="pillar-icon">💭</div><div class="pillar-label">Reflect</div><div class="pillar-desc">How often does your intake process screen for prenatal alcohol exposure?</div></div>
+        <div class="pillar"><div class="pillar-icon">🔧</div><div class="pillar-label">Apply</div><div class="pillar-desc">Evidence-based assessments handout</div></div>
+        <div class="pillar"><div class="pillar-icon">✓</div><div class="pillar-label">Check In</div><div class="pillar-desc">Self-assessment: Case Conceptualization items</div></div>
+      </div>
+      <div class="video-topics">
+        <strong>Suggested 10-min video topics:</strong> assessments for caregivers who are also struggling. Resource: screening questions clinicians can use.
       </div>
     </div>
   </div>
 
-  <!-- STEP 3: SEEING THE BRAIN IN YOUR CLIENTS -->
+  <!-- STEP 3 -->
   <div class="journey-step">
     <div class="step-number">3</div>
     <div class="step-content">
-      <h3>Seeing the Brain in Your Clients</h3>
-      <div class="step-subtitle">Learning to look for brain-based factors before jumping to treatment</div>
-      <p>Accurate assessment looks different when neurobiology is part of the picture. This step builds your ability to recognize brain-based factors in client presentations and integrate them into your conceptualization. You will learn about FASD screening, how to interpret neuropsychological and developmental evaluations, and how to treat case conceptualization as a living document that evolves as your understanding of the client deepens.</p>
+      <h3>Treatment Planning with the Brain in Mind</h3>
+      <div class="step-subtitle">Building treatment plans that match actual brain capacity</div>
+      <p>Most treatment plans are built around goals the client should reach. Brain-based treatment planning starts with an honest look at what the client's brain can actually do right now. This step teaches you to design strategies matched to neurobiological capacity.</p>
       <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">📖</div>
-          <div class="pillar-label">Learn</div>
-          <div class="pillar-desc">Brain-based assessment, FASD screening, evaluation interpretation</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">💭</div>
-          <div class="pillar-label">Reflect</div>
-          <div class="pillar-desc">How often does your intake process screen for prenatal alcohol exposure?</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🔧</div>
-          <div class="pillar-label">Apply</div>
-          <div class="pillar-desc">Evidence-based assessments handout</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">✓</div>
-          <div class="pillar-label">Check In</div>
-          <div class="pillar-desc">Self-assessment: Case Conceptualization items</div>
-        </div>
+        <div class="pillar"><div class="pillar-icon">📖</div><div class="pillar-label">Learn</div><div class="pillar-desc">Brain-based treatment planning principles</div></div>
+        <div class="pillar"><div class="pillar-icon">💭</div><div class="pillar-label">Reflect</div><div class="pillar-desc">How much of your last treatment plan assumed the client's brain could do things it might not be able to?</div></div>
+        <div class="pillar"><div class="pillar-icon">🔧</div><div class="pillar-label">Apply</div><div class="pillar-desc">Creating a Brain-Based Treatment Plan handout</div></div>
+        <div class="pillar"><div class="pillar-icon">✓</div><div class="pillar-label">Check In</div><div class="pillar-desc">Self-assessment: Cause-Effect Reasoning + Client Education items</div></div>
+      </div>
+      <div class="video-topics">
+        <strong>Suggested 10-min video topics:</strong> realistic goals, caregiver as part of the treatment, documentation and rationale for insurance, interdisciplinary communication.
       </div>
     </div>
   </div>
 
-  <!-- STEP 4: PLANNING WITH THE BRAIN IN MIND -->
+  <!-- STEP 4 -->
   <div class="journey-step">
     <div class="step-number">4</div>
     <div class="step-content">
-      <h3>Planning with the Brain in Mind</h3>
-      <div class="step-subtitle">Building treatment plans that match actual brain capacity</div>
-      <p>Most treatment plans are built around goals the client should reach. Brain-based treatment planning starts with an honest look at what the client's brain can actually do right now. This step teaches you to design strategies matched to neurobiological capacity, involve caregivers as environmental supports, and set goals around healthy interdependence rather than pushing for independence the brain cannot sustain.</p>
+      <h3>Adapting Your Approach</h3>
+      <div class="step-subtitle">Making your existing modalities work for different brains</div>
+      <p>CBT, DBT, TBRI, PCIT are not wrong for clients with brain-based differences. They often need to be adapted from the inside out. This step teaches you to ask: what does this intervention assume about the brain, and does this brain meet those assumptions?</p>
       <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">📖</div>
-          <div class="pillar-label">Learn</div>
-          <div class="pillar-desc">Brain-based treatment planning principles</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">💭</div>
-          <div class="pillar-label">Reflect</div>
-          <div class="pillar-desc">How much of your last treatment plan assumed the client's brain could do things it might not be able to?</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🔧</div>
-          <div class="pillar-label">Apply</div>
-          <div class="pillar-desc">Treatment plan tips handout</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">✓</div>
-          <div class="pillar-label">Check In</div>
-          <div class="pillar-desc">Self-assessment: Cause-Effect Reasoning + Client Education items</div>
-        </div>
+        <div class="pillar"><div class="pillar-icon">📖</div><div class="pillar-label">Learn</div><div class="pillar-desc">Evidence-based treatment adaptations for brain-based differences</div></div>
+        <div class="pillar"><div class="pillar-icon">💭</div><div class="pillar-label">Reflect</div><div class="pillar-desc">When a session does not go as planned, do you adjust your objective or ask the client to adjust their capacity?</div></div>
+        <div class="pillar"><div class="pillar-icon">🔧</div><div class="pillar-label">Apply</div><div class="pillar-desc">Evidence-based treatments and accommodations handout</div></div>
+        <div class="pillar"><div class="pillar-icon">✓</div><div class="pillar-label">Check In</div><div class="pillar-desc">Self-assessment: Real-Time Adaptation + Intervention Modification items</div></div>
+      </div>
+      <div class="video-topics">
+        <strong>Suggested 10-min video topics:</strong> DDP (Dyadic Developmental Psychotherapy), Collaborative Problem Solving (CPS), Play Therapy, nervous system (sensory and safety cues).
       </div>
     </div>
   </div>
 
-  <!-- STEP 5: ADAPTING YOUR APPROACH -->
+  <!-- STEP 5 -->
   <div class="journey-step">
     <div class="step-number">5</div>
     <div class="step-content">
-      <h3>Adapting Your Approach</h3>
-      <div class="step-subtitle">Making your existing modalities work for different brains</div>
-      <p>CBT, DBT, TBRI, PCIT are not wrong for clients with brain-based differences. They often need to be adapted from the inside out. This step teaches you to ask: what does this intervention assume about the brain, and does this brain meet those assumptions? If not, what needs to change? At the advanced level, this happens in real time during sessions.</p>
+      <h3>Reflective Supervision &amp; Community</h3>
+      <div class="step-subtitle">Reflective supervision, consultation, and our Community of Practice</div>
+      <p>Brain-based work is demanding. The clients are complex, the systems are often broken, and the gap between what you know needs to happen and what you can actually provide is real. This step connects you to reflective supervision, interdisciplinary consultation, and our Community of Practice — clinicians sharing language, cases, and ongoing learning together.</p>
       <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">📖</div>
-          <div class="pillar-label">Learn</div>
-          <div class="pillar-desc">Evidence-based treatment adaptations for brain-based differences</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">💭</div>
-          <div class="pillar-label">Reflect</div>
-          <div class="pillar-desc">When a session does not go as planned, do you adjust your objective or ask the client to adjust their capacity?</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🔧</div>
-          <div class="pillar-label">Apply</div>
-          <div class="pillar-desc">Evidence-based treatments and accommodations handout</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">✓</div>
-          <div class="pillar-label">Check In</div>
-          <div class="pillar-desc">Self-assessment: Real-Time Adaptation + Intervention Modification items</div>
-        </div>
+        <div class="pillar"><div class="pillar-icon">📖</div><div class="pillar-label">Learn</div><div class="pillar-desc">Reflective supervision, professional development</div></div>
+        <div class="pillar"><div class="pillar-icon">💭</div><div class="pillar-label">Reflect</div><div class="pillar-desc">Who do you call when you are stuck with a complex client?</div></div>
+        <div class="pillar"><div class="pillar-icon">🔧</div><div class="pillar-label">Apply</div><div class="pillar-desc"><a href="#" onclick="document.getElementById('cop-modal').showModal(); return false;" style="color: #2c5aa0; text-decoration: none; display: block;">Read about our Community of Practice</a><a href="#" onclick="document.getElementById('cop-modal').showModal(); return false;" style="color: #2c5aa0; text-decoration: none; display: block; margin-top: 4px;">Join the consultation and reflection group</a></div></div>
+        <div class="pillar"><div class="pillar-icon">✓</div><div class="pillar-label">Check In</div><div class="pillar-desc">Self-assessment: Reflective Practice items</div></div>
       </div>
-    </div>
-  </div>
-
-  <!-- STEP 6: GROWING TOGETHER -->
-  <div class="journey-step">
-    <div class="step-number">6</div>
-    <div class="step-content">
-      <h3>Growing Together</h3>
-      <div class="step-subtitle">Reflective supervision, consultation, and community</div>
-      <p>Brain-based work is demanding. The clients are complex, the systems are often broken, and the gap between what you know needs to happen and what you can actually provide is real. Clinicians who stay in this work sustainably have found ways to process that gap through supervision, community, and honest self-reflection, rather than carrying it alone. This step connects you to reflective supervision, interdisciplinary consultation, and a community of practitioners who share your language.</p>
-      <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">📖</div>
-          <div class="pillar-label">Learn</div>
-          <div class="pillar-desc">Reflective supervision, professional development</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">💭</div>
-          <div class="pillar-label">Reflect</div>
-          <div class="pillar-desc">Who do you call when you are stuck with a complex client? Does that person share your brain-based framework?</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🔧</div>
-          <div class="pillar-label">Apply</div>
-          <div class="pillar-desc">Join the consultation and reflection group</div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">✓</div>
-          <div class="pillar-label">Check In</div>
-          <div class="pillar-desc">Self-assessment: Reflective Practice items</div>
-        </div>
+      <div class="video-topics">
+        <strong>Suggested video topics (may not need a video):</strong> why reflective practice matters for complex clients, managing burnout, reflective practice / case-consult guide.
       </div>
     </div>
   </div>
 
 </section>
 
-<!-- CTA SECTION -->
-<div class="full-bg-dark">
-  <div class="inner" style="text-align: center;">
-    <h2 style="color: #fff;">Where Are You on the Journey?</h2>
-    <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 24px;">Take the self-assessment to find out where you already are and where to focus next. You do not need to start at step one if you are already further along.</p>
-    <div class="cta-row">
-      <a href="../../handouts/Self-Assessment-Tool.html" class="cta-btn cta-white">Take the Self-Assessment</a>
-      <a href="../../handouts/Brain-Based-Competencies.html" class="cta-btn" style="background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.5);">View Full Competency Definitions</a>
-    </div>
+<!-- COMMUNITY OF PRACTICE — hidden, triggered by Step 5 Apply pillar -->
+<dialog id="cop-modal">
+  <div class="cop-modal-content">
+    <button class="cop-modal-close" onclick="document.getElementById('cop-modal').close()" aria-label="Close">&times;</button>
+    <h2>Community of Practice</h2>
+    <p>The Brain-Based Mental Health Community of Practice is where clinicians keep learning together. It is the clinician-specific home for continued learning — peer consultation, shared language, case discussion, and ongoing development across the FASD field.</p>
+    <p><strong>Who it is for:</strong> mental health clinicians working with FASD and other brain-based differences.</p>
+    <p><strong>What happens there:</strong> structured peer learning, case consultation, access to resources, and connection to other practitioners doing this work.</p>
+    <p><strong>Institutional partners:</strong> FASD United, University of Alberta, and additional partners to be added.</p>
+    <p style="margin-bottom: 0;"><a href="#" class="cop-cta">Join the Community of Practice</a></p>
   </div>
-</div>
+</dialog>
 
 <!-- FAQ -->
 <section>
   <h2>Frequently Asked Questions</h2>
 
   <div class="faq-item">
-    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">I do not work with FASD specifically. Is this still relevant?</div>
-    <div class="faq-answer">Yes. The brain-based framework applies to any client whose brain works differently, including autism, ADHD, intellectual disabilities, learning differences, traumatic brain injury, and complex trauma. FASD is a primary focus because it is one of the most commonly missed conditions, but the clinical skills transfer broadly.</div>
+    <div class="faq-question">I do not work with FASD specifically. Is this still relevant?</div>
+    <div class="faq-answer">Yes. Because FASD is often underdiagnosed — estimates suggest as many as 1 in 20 people may be affected — you are likely already working with clients whose brains may have been shaped by prenatal alcohol exposure that has not been identified. Beyond FASD, the brain-based framework applies to any client whose brain works differently, including autism, ADHD, intellectual disabilities, learning differences, traumatic brain injury, and complex trauma. The clinical skills you build here transfer broadly.</div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">How does this relate to trauma-informed care?</div>
+    <div class="faq-question">How does this relate to trauma-informed care?</div>
     <div class="faq-answer">Brain-based practice builds on and extends trauma-informed care. Trauma-informed care changed the question from "what is wrong with you" to "what happened to you." Brain-based practice adds "how does your brain process what happened, and what does it need now?" The two frameworks are complementary.</div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">Will this work with my therapeutic approach?</div>
+    <div class="faq-question">Will this work with my therapeutic approach?</div>
     <div class="faq-answer">This does not replace your existing modalities. It helps you adapt what you already use, whether that is CBT, DBT, EMDR, play therapy, or another approach, so it fits the neurobiological reality of the client in front of you.</div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">Do I need to go through every step in order?</div>
-    <div class="faq-answer">Not necessarily. The self-assessment helps you identify where you already are. If you have strong foundational knowledge but struggle with treatment planning, you can focus there. The steps build on each other, but your development will not be uniform across all of them, and that is normal.</div>
+    <div class="faq-question">Do I need to go through every step in order?</div>
+    <div class="faq-answer">Not necessarily. The self-assessment helps you identify where you already are. The steps build on each other, but your development will not be uniform across all of them, and that is normal.</div>
   </div>
 
   <div class="faq-item">
-    <div class="faq-question" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('show');">Is there certification or CE available?</div>
-    <div class="faq-answer">Training through The Florida Center for Early Childhood offers continuing education credits. Visit the training calendar on the Education page for current offerings and CE details.</div>
+    <div class="faq-question">How do I realistically do this in my current setting?</div>
+    <div class="faq-answer">[Answer to be drafted. Suggested elements: acknowledge time, billing, and caseload constraints; offer small, sustainable adaptations rather than full overhauls; point to handouts that work in short slots.]</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">My clinic won't support this approach — what do I do?</div>
+    <div class="faq-answer">[Answer to be drafted. Suggested elements: language for talking to supervisors; small individual changes that don't need approval; advocacy resources; connection to the Community of Practice for peer support.]</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">I don't have access to a neuropsych eval.</div>
+    <div class="faq-answer">[Answer to be drafted. Suggested elements: screening tools clinicians can use without a full eval; what to look for in clinical presentation; how to document brain-based observations without overstepping scope.]</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">I don't have an official diagnosis for my client.</div>
+    <div class="faq-answer">[Answer to be drafted. Suggested elements: brain-based practice does not require a formal diagnosis; how to work with suspected brain-based differences; the diagnosis gap as a clinical reality.]</div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>Privacy Policy &bull; Disclaimer &bull; Contact</p>
+  <img src="../../Pictures/FASD%20United%20-%20White%20Lettering.png" alt="FASD United">
+  <p>Privacy Policy &nbsp;&bull;&nbsp; Disclaimer &nbsp;&bull;&nbsp; Contact</p>
 </footer>
 
 </body>
