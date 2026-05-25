@@ -1,0 +1,8 @@
+- [Writing style: no AI tells](writing-style-no-ai-tells.md) — keep website copy plain and human-sounding
+- [Team structure (three tiers)](team-structure-three-tiers.md) — Working Leaders, Contributors, Partnerships are separate sections on About Us
+- [CoP is for clinicians only](cop-clinicians-only.md) — affects how the Community of Practice is introduced on Home
+- [FASD United is the parent org](fasd-united-parent-org.md) — logo serves as a recurring visual anchor across the site
+- [Knowledge source stance](knowledge-source-stance.md) — site mixes practice experience and research; the stance should be visible to visitors
+- [Verify live site first](verify-live-site-first.md) — re-read live HTML files before editing mockups or describing current site state
+- [Open questions](open-questions.md) — tracked questions for FASD United and the working group (June meeting decisions)
+- [Pathway structures by audience](pathway-structures-by-audience.md) — proposed caregiver and self-advocate pathways mirroring the clinician pathway (future build)
